@@ -1,0 +1,29 @@
+
+#menuNav{
+	border: 1px solid red;
+}
+
+li{
+	display: inline;
+	border: 1px solid blue;
+}
+
+#logoNav{
+	width: 30px;
+	height: 30px;
+}
+
+div{
+	border: 1px solid black;
+	margin-top: 10px;
+}
+
+#galeria{
+	width: 100%;
+	height: 400px ;
+}
+
+#timeline{
+	width: 100%;
+	height: 400px ;
+}
