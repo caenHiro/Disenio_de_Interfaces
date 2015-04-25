@@ -20,12 +20,12 @@
 	width: 150px;
 }
 body{
-	background: url(../img/fondo.jpg);
+	background: url(../imges/fondo.jpg);
 	background-repeat: repeat;
 	background-size: contain;
 }
 
-li{
+.lineas{
 	display: inline;
 	border: 1px solid blue;
 }
