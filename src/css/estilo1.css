@@ -1,32 +1,57 @@
+html,body{
+	height: 100%;
+}
+
 #menu{
 width: 100%;
-height: 140px;
+height: 9em;
 }
 
 #logo {
 	float: left;
-	width: 20%;
+	width: 19%;
 	height:100%;
+	border-right: 0.3em solid white;
 }
 #navegacion{
-	background-color: #000000;
+	
 	float:left;
-	width: 60%;
+	width: 80%;
 	height:100%;
 }
 #menuNav{
+	float: left;
 	background-color: #C8C8C8;
-	margin: 10% 0% 0% 0%;
-	/*border: 1px solid red;*/
 	width: 100%;
-	height:40%;
+	height: 42%;
+
 }
+#espacio_sup{
+	background-color: #FE2E2E;
+	width: 100%;
+	height: 55%;
+	float: left;
+	border-bottom: 0.3em solid white;
+}
+/**
 #inicioSesion{
 	float: left;
 	background-color: #FE2E2E;
 	
 	width: 20%;
 	height: 100%;
+}
+*/
+
+#galeria{
+	margin-top: 1%;
+}
+
+a {
+	position: relative;
+	color: #09f;
+	text-decoration: none;
+	font-family: sans-serif;
 }
 
 ul{
@@ -56,7 +81,7 @@ li{
 
 body{
 	width: 98%;
-	height: 500px;	
+	/*height: 500px;	*/
 }
 /**
 div{
