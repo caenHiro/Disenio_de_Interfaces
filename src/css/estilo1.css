@@ -1,6 +1,6 @@
 #menu{
 width: 100%;
-height: 170px;
+height: 140px;
 }
 
 #logo {
@@ -12,7 +12,7 @@ height: 170px;
 	background-color: #000000;
 	float:left;
 	width: 60%;
-	height:160px;
+	height:100%;
 }
 #menuNav{
 	background-color: #C8C8C8;
@@ -26,20 +26,28 @@ height: 170px;
 	background-color: #FE2E2E;
 	
 	width: 20%;
-	height: 160px;
+	height: 100%;
+}
+a{
+	margin-top: 10px;
 }
 ul{
 	width: 100%;
 	height: 100%;
-	margin: 0px 0px 0px 0px;
+	padding-left: 0%;
+	margin: 0%;
+	/*margin: 0px 0px 0px 0px;*/
 }
 
 li{
-	margin-top: 10px;
+	text-align: center;
+	width: 20%;
+	height: 100%;
 	float: left;
-	padding: 10px 4% 10px 4%;
+	/*padding: 10px 4% 10px 4%;*/
 	display: inline;
 	/*border: 1px solid blue;*/
+
 }
 
 #logoNav{
