@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../css/estilo1.css">
+	<script type='text/javascript' src='../js/script.js'></script>
 </head>
 	<body>
 		<header>
@@ -51,15 +52,16 @@
 				<br>
 				<span>Fecha</span>
 				<br>
-				<input type="text" id="telefono">
+				<input list="fechas" id="fecha" onclick="recogeFecha()">
+					<datalist id="fechas"></datalist>
 				<br>
 				<span>Hora</span>
 				<br>
-				<input type="text" id="telefono">
+				<input type="text" id="hora">
 				<br>
 				<span>No. de personas</span>
 				<br>
-				<input type="text" id="telefono">
+				<input type="text" id="n_personas">
 				<br><br>
 				<button> Reservar</button>
 			</form>
