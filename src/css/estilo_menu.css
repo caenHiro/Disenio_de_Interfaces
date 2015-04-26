@@ -23,14 +23,141 @@ body{
 	background: url(../imges/fondo.jpg);
 	background-repeat: repeat;
 	background-size: contain;
+	height: 100%;
 }
 
-.lineas{
-	display: inline;
-	border: 1px solid blue;
+.lin{
+	border: 1px solid green;
 }
 
 #logoNav{
 	width: 30px;
 	height: 30px;
+}
+
+#menu{
+width: 100%;
+height: 9em;
+}
+
+#logo {
+	float: left;
+	width: 19%;
+	height:100%;
+	border-right: 0.3em solid white;
+}
+#navegacion{
+	
+	float:left;
+	width: 80%;
+	height:100%;
+}
+#menuNav{
+	float: left;
+	background-color: #C8C8C8;
+	width: 100%;
+	height: 42%;
+
+}
+#espacio_sup{
+	background-color: #FE2E2E;
+	width: 100%;
+	height: 55%;
+	float: left;
+	border-bottom: 0.3em solid white;
+}
+/**
+#inicioSesion{
+	float: left;
+	background-color: #FE2E2E;
+	
+	width: 20%;
+	height: 100%;
+}
+*/
+
+#galeria{
+	margin-top: 1%;
+}
+
+a,span {
+	position: relative;
+	color: #09f;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+h1,h2,h3 {
+	color: #09f;
+	text-decoration: none;
+	font-family: sans-serif;	
+}
+ul{
+	width: 100%;
+	height: 100%;
+	padding-left: 0%;
+	margin: 0%;
+	/*margin: 0px 0px 0px 0px;*/
+}
+
+.li_menu{
+	text-align: center;
+	width: 16%;
+	height: 45%;
+	float: left;
+	/*padding: 10px 4% 10px 4%;*/
+	display: inline;
+	/*border: 1px solid blue;*/
+	padding: 2% 2% 2% 2%;
+}
+
+#logoNav{
+	width: 100%;
+	height: 100%;
+}
+
+
+body{
+	width: 98%;
+	/*height: 500px;	*/
+}
+
+#mapa_mesas{
+
+	float: left;
+	border: 0.2em solid blue;
+	width: 75%;
+	height: 25em;
+
+}
+#form_reservacion{
+	float: left;
+	width:23%;
+	height: 100%;
+	padding-top: 1em;
+
+}
+#form_reserva{
+	/*width: 97%;*/
+	/*padding: 1em;*/
+	margin: 1em 0em 0em 2em;
+}
+
+#reservaciones{
+	margin: 1em 0em 0em 2em;
+	/*border: 0.3em solid black;*/
+	width: 90%;
+	height:100%;
+	padding: 2em 2em 2em 2em;
+}
+.recuadro{
+	float: left;
+	
+	border-radius: 1px 60px 1px;
+	
+	/*border-radius:80px/70px;*/
+	/*border: 3px solid #BADA55;*/
+	background: #BADA55;
+	width: 20%;
+	height: 10em;
+	margin: 1em;
 }
