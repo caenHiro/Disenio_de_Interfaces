@@ -1,0 +1,59 @@
+
+.navegacion{
+   
+    margin:3% 10% 3% 0%;
+    border: 1px solid black;
+	padding: 1% 60% 3% 1%; 
+	position: absolute;
+	left: 30%;
+
+}
+
+.barra{
+	position: absolute;
+	border: 1px solid black;
+	padding: 15px 20px 18px 20px;
+	margin: 0% 1% 1% 0%;
+	top: 1%;
+	left: 33%;
+	
+}
+
+
+.info{
+	margin: 50;
+	position:absolute;
+	top:150;
+}
+
+
+.cuadro{
+	margin:20;
+	border:1px solid;
+	border-color: rgb(192, 187, 187);
+	padding: 2 650 150 10; 
+}
+
+.cuadro-derecho{
+	margin:30;
+	border:1px solid;
+	border-color: rgb(192, 187, 187);
+	padding: 2 300 384 10; 
+	position: absolute;
+	left: 830;
+	top:32;
+}
+
+.texto{
+	margin: 10%;
+	position:absolute;
+	top:15%;
+	padding: 5% 10% 0% 0%;
+}
+
+#mapa{
+	margin:10%;
+	position: absolute;
+	left: 120%;
+	top:0%;
+}
