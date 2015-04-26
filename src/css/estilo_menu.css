@@ -28,8 +28,11 @@ body{
 
 .lin{
 	border: 1px solid green;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: center;
+	text-align: center;
 }
-
 #logoNav{
 	width: 30px;
 	height: 30px;
