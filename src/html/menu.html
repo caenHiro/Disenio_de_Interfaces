@@ -1,31 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<title>El Kfetal®</title>
-	<link rel="stylesheet" type="text/css" href="../css/estilo_menu.css">
-	<link rel="stylesheet" href="../css/estilos1.css">
+    <meta charset="UTF-8">
+    <title>El Kfetal®</title>
+    <link rel="stylesheet" type="text/css" href="../css/estilo_menu.css">
     <!--Camera-->
     <link rel='stylesheet' id='camera-css'  href='../css/camera.css' type='text/css' media='all'>
-    <style>
-
-        a:hover {
-            text-decoration: none;
-        }
-        #back_to_camera {
-            clear: both;
-            display: block;
-            height: 80px;
-            line-height: 40px;
-            padding: 20px;
-        }
-        .fluid_container {
-            margin: 0 auto;
-            max-width: 800px;
-            width: 90%;
-        }
-    </style>
-
     <script type='text/javascript' src='../js/jquery.min.js'></script>
     <script type='text/javascript' src='../js/jquery.mobile.customized.min.js'></script>
     <script type='text/javascript' src='../js/jquery.easing.1.3.js'></script>
@@ -46,6 +26,7 @@
         });
     </script>
     <!--Camera-->
+    <script type='text/javascript' src='../js/script_menu.js'></script>
 </head>
 <body>
     <header>
@@ -73,20 +54,20 @@
         </div>
     </header>
 <br>
-	<div id="menu_barra"><h3 style="color:black; text-align: center">Menú</h3>
-		<ul>
-            <li class="lin">Cafe</li>
-            <li class="lin">Infusiones</li>
-            <li class="lin">Te Chai</li>
-            <li class="lin">Capuchino</li>
-            <li class="lin">Malteadas</li>
-            <li class="lin">Soda Italiana</li>
-            <li class="lin">Smoothies</li>
-            <li class="lin">Frappes</li>
-            <li class="lin">Snack</li>
-            <li class="lin">Otros</li>
+    <div id="menu_barra"><h3 style="color:black; text-align: center">Menú</h3>
+        <ul>
+            <li class="lin" ><button id="cafe_gal">Cafe</button></li>
+            <li class="lin" id="infudion">Infusiones</li>
+            <li class="lin" id="chai">Te Chai</li>
+            <li class="lin" id="capuchino">Capuchino</li>
+            <li class="lin" id="malteada">Malteadas</li>
+            <li class="lin" id="soda">Soda Italiana</li>
+            <li class="lin" id="smoot">Smoothies</li>
+            <li class="lin" id="frap">Frappes</li>
+            <li class="lin" id="snack">Snack</li>
+            <li class="lin" id="otros">Otros</li>
         </ul>
-	</div>
+    </div>
 
     <!--Galeria-->
     <div class="fluid_container" id="galeria">
@@ -114,8 +95,6 @@
             </div>
     </div>
     <!--Galeria-->
-	<!--<div id="galeria_menu">soy la galeria
-		<div id="descripcion_Alimento">soy la descripcion</div>
-	</div>-->
+        <div id="descripcion_Alimento">soy la descripcion</div>
 </body>
 </html>

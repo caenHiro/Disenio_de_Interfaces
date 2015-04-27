@@ -20,7 +20,7 @@
 	width: 150px;
 }
 body{
-	background: url(../imges/fondo.jpg);
+	background: url(../images/fondo.jpg);
 	background-repeat: repeat;
 	background-size: contain;
 	height: 100%;
@@ -164,3 +164,20 @@ body{
 	height: 10em;
 	margin: 1em;
 }
+
+
+        a:hover {
+            text-decoration: none;
+        }
+        #back_to_camera {
+            clear: both;
+            display: block;
+            height: 80px;
+            line-height: 40px;
+            padding: 20px;
+        }
+        .fluid_container {
+            margin: 0 auto;
+            max-width: 800px;
+            width: 90%;
+        }
