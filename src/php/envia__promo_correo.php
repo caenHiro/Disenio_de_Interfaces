@@ -49,8 +49,8 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure = "ssl";
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 465;
-$mail->Username = "caen@ciencias.unam.mx";
-$mail->Password = "308264113";
+$mail->Username = "correo";
+$mail->Password = "contraseña";
 
 
 $mail->From = "caen@ciencias.unam.mx";
