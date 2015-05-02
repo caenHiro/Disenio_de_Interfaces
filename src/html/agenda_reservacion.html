@@ -58,7 +58,7 @@
 		</div>
 
 		<div id = "form_reservacion">
-			<!--<form id="form_reserva"> -->
+			<div id="form_reserva">
 				<span>Nombre</span>
 				<br>
 				<input type="text" id="nombre">
@@ -87,8 +87,11 @@
 				<br>
 				<input type="text" id="n_personas">
 				<br><br>
-				<button onclick="envia_reservacion()"> Reservar</button>
-			<!--</form>-->
+				<button onclick="valida_reservacion()"> Reservar</button>
+				<br>
+				<div id="error_form"></div>
+			</div>
+
 		</div>
 	</body>
 
