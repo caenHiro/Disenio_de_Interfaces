@@ -21,6 +21,7 @@
             <div id="navegacion">
 
                 <section id="espacio_sup">
+	<a href="../../../Index.html" style = " float:right">Cerrar sesion</a>
 
                 </section>
                 <nav id="menuNav">
@@ -34,48 +35,40 @@
         </div>
     </header>
 
+		<center>
+		<h1>Envia promociones</h1>
+		</center>
+		<br>
 
-		<h1>Ejemplo CK Editor</h1>
-		<textarea cols="50" id="editor1" name="editor1" rows="10">
+		<div style = "width: 100.6%">
+
+		<textarea cols="50" id="editor1" name="editor1" rows="10" >
 		</textarea>
+		</div>
+
 		<script type="text/javascript">
 		CKEDITOR.replace( 'editor1', {
 		toolbar: [
 			['Source','-','Save','NewPage','Preview','-','Templates'],
 			['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
 			['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
-			['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'],
 			'/',
 			['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
-			['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
-			['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
-			['Link','Unlink','Anchor'],
-			['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'],
-			'/',
-			['Styles','Format','Font','FontSize'],
-			['TextColor','BGColor'],
-			['Maximize', 'ShowBlocks','-','About','EqnEditor']
+
 		]
 		});
 
 
-
-
-
-function cambiar()
-{
-  document.getElementById('data').innerHTML = CKEDITOR.instances['editor1'].getData();
-}
-
-//var contenido = CKEDITOR.instances['miTextArea'].getData();
 		</script>
 
 
 
+<br>
+<br>
 
 
 
-<button onclick="cambiar()" > Aceptar </button>
+<button onclick="envia_promo_correo()" > Aceptar </button>
 <br>
 <br>
 <br>
@@ -86,4 +79,6 @@ function cambiar()
 
 
 </body>
+
+<script src="../../js/script.js"></script>
 </html>

@@ -89,7 +89,7 @@ function valida_reservacion(){
   var nombre = document.getElementById("nombre").value;
   var telefono = document.getElementById("telefono").value;
   var correo = document.getElementById("correo").value;
-  var dia = document.getElementById("dia_reservacion").value; 
+  var dia = document.getElementById("dia_reservacion").value;
   var hora_llegada = document.getElementById("hora_llegada").value;
   var hora_salida = document.getElementById("hora_salida").value;
   var n_personas = document.getElementById("n_personas").value;
@@ -163,7 +163,34 @@ function mandaReservacion(parametros){
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
-                
+
+                alert(ajax.responseText);
+
+              }
+         }
+         ajax.send(parametros);
+       }
+
+
+       function cambiar(){
+  document.getElementById('data').innerHTML = CKEDITOR.instances['editor1'].getData();
+}
+
+function envia_promo_correo(){
+
+  var correo = CKEDITOR.instances['editor1'].getData();
+
+  var parametros = "correo="+correo;
+  manda_promo_correo(parametros);
+}
+
+function manda_promo_correo(parametros){
+          var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/envia__promo_correo.php", true);
+         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+
                 alert(ajax.responseText);
 
               }
