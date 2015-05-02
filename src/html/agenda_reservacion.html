@@ -5,7 +5,8 @@
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../css/estilo1.css">
 	<script type='text/javascript' src='../js/script.js'></script>
-
+	<script type='text/javascript' src='../js/jquery.min.js'></script>
+	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
  	<script src= "../js/moverMesa.js"></script>
@@ -57,7 +58,7 @@
 		</div>
 
 		<div id = "form_reservacion">
-			<form id="form_reserva">
+			<!--<form id="form_reserva"> -->
 				<span>Nombre</span>
 				<br>
 				<input type="text" id="nombre">
@@ -72,23 +73,22 @@
 				<br>
 				<span>Fecha</span>
 				<br>
-				<input list="fechas" id="fecha" onclick="recogeFecha()">
-					<datalist id="fechas"></datalist>
+				<input type="date" id="dia_reservacion">
 				<br>
 				<span>Hora de llegada</span>
 				<br>
-				<input type="date" id="fecha_llegada">
+				<input type="time" id="hora_llegada">
 				<br>
 				<span>Hora de salida</span>
 				<br>
-				<input type="date" id="hora_salida">
+				<input type="time" id="hora_salida">
 				<br>
 				<span>No. de personas</span>
 				<br>
 				<input type="text" id="n_personas">
 				<br><br>
-				<button> Reservar</button>
-			</form>
+				<button onclick="envia_reservacion()"> Reservar</button>
+			<!--</form>-->
 		</div>
 	</body>
 
