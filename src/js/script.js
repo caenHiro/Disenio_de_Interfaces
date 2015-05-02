@@ -122,6 +122,8 @@ function envia_promo_correo(){
   var correo = CKEDITOR.instances['editor1'].getData();
 
   var parametros = "correo="+correo;
+  parametros = parametros.split("<p>&nbsp;</p>").join(" <br> ");
+  console.log( parametros);
   manda_promo_correo(parametros);
 }
 

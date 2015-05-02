@@ -50,7 +50,7 @@ $mail->SMTPSecure = "ssl";
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 465;
 $mail->Username = "caen@ciencias.unam.mx";
-$mail->Password = "";
+$mail->Password = "308264113";
 
 
 $mail->From = "caen@ciencias.unam.mx";
@@ -58,11 +58,13 @@ $mail->FromName = "caen";
 $mail->Subject = "[Prueba]";
 //$mail->AltBody = "Hola, te doy mi nuevo numero\nxxxx.";
 $mail->MsgHTML( $_POST["correo"]);
+echo $mail->MsgHTML( $_POST["correo"]);
 
 $mail->AddAddress("e.sc.a@hotmail.com");
 $mail->IsHTML(true);
 
 if(!$mail->Send()) {
+  echo $_POST["correo"];
   echo "Error: " . $mail->ErrorInfo;
 } else {
   echo "Mensaje enviado correctamente";
