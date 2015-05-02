@@ -88,11 +88,11 @@ function envia_reservacion(){
 
   var nombre = document.getElementById("nombre").value;
   var telefono = document.getElementById("telefono").value;
-  var correo = document.getElementById("correo");
-  var dia = document.getElementById("dia_reservacion"); 
-  var hora_llegada = document.getElementById("hora_llegada");
-  var hora_salida = document.getElementById("hora_salida");
-  var n_personas = document.getElementById("n_personas");
+  var correo = document.getElementById("correo").value;
+  var dia = document.getElementById("dia_reservacion").value; 
+  var hora_llegada = document.getElementById("hora_llegada").value;
+  var hora_salida = document.getElementById("hora_salida").value;
+  var n_personas = document.getElementById("n_personas").value;
 
   var parametros = "nombre="+nombre+"&telefono="+telefono;
   mandaReservacion(parametros);
@@ -103,12 +103,10 @@ function mandaReservacion(parametros){
          ajax.open("POST", "../php/envia_reservacion.php", true);
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
-              if(ajax.status == 200 && ajax.readyState == 4){
+             if(ajax.status == 200 && ajax.readyState == 4){
                 
                 alert(ajax.responseText);
 
-              } else {
-                  alert("No hay conexión");
               }
          }
          ajax.send(parametros);
