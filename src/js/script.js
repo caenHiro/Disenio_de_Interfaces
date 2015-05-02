@@ -46,7 +46,7 @@ function validarNumerosCantidad(e) { // 1
         ajax.onreadystatechange = function(){
             if(ajax.status == 200 && ajax.readyState == 4){
             if(ajax.responseText ==  10 ){
-                window.location.href = "../html/administrador.html" ;
+                window.location.href = "../html/administrador/reservaciones.html" ;
             }
               document.getElementById("data").innerHTML = ajax.responseText;
 
@@ -84,6 +84,32 @@ function validarNumerosCantidad(e) { // 1
          ajax.send(parametros);
        }
 
+function envia_reservacion(){
 
+  var nombre = document.getElementById("nombre").value;
+  var telefono = document.getElementById("telefono").value;
+  var correo = document.getElementById("correo");
+  var dia = document.getElementById("dia_reservacion"); 
+  var hora_llegada = document.getElementById("hora_llegada");
+  var hora_salida = document.getElementById("hora_salida");
+  var n_personas = document.getElementById("n_personas");
 
+  var parametros = "nombre="+nombre+"&telefono="+telefono;
+  mandaReservacion(parametros);
+}
 
+function mandaReservacion(parametros){
+          var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../php/envia_reservacion.php", true);
+         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+              if(ajax.status == 200 && ajax.readyState == 4){
+                
+                alert(ajax.responseText);
+
+              } else {
+                  alert("No hay conexión");
+              }
+         }
+         ajax.send(parametros);
+       }
