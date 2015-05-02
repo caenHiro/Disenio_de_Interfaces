@@ -20,9 +20,10 @@
 	width: 150px;
 }
 body{
-	background: url(../imges/fondo.jpg);
+	background: url(../images/fondo.jpg);
 	background-repeat: repeat;
 	background-size: contain;
+	opacity: 15%;
 }
 
 .lineas{
