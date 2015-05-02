@@ -5,6 +5,16 @@
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../css/estilo1.css">
 	<script type='text/javascript' src='../js/script.js'></script>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+ 	<script src= "../js/moverMesa.js"></script>
+	<style>
+	.mesaTop{position: absolute; top: 17em; left: 3em;}
+	.mesaBottom{position: absolute; top: 28em; left: 3em;}
+	.mesaLeft{left: 50em;}
+	.cajaA{position: absolute; top: 17em; left: 3em;}
+	</style>
 </head>
 	<body>
 		<header>
@@ -18,19 +28,19 @@
 
 
 
-						<section id="espacio_sup">
-				<a href="inicio.html" style = " float:right">Inicio de sesion</a>
+				<section id="espacio_sup">
+					<a href="inicio.html" style = " float:right">Inicio de sesion</a>
 				</section>
 
 
 
 					<nav id="menuNav">
 						<ul>
-			            	 <li><a href="../../Index.html">Home</a></li>
-                     				   <li><a href="menu.html">Menú</a></li>
-                        			<li><a href="reservaciones.html">Reservación</a></li>
+			            	<li><a href="../../Index.html">Home</a></li>
+                     		<li><a href="menu.html">Menú</a></li>
+                        	<li><a href="agenda_reservacion.html">Reservación</a></li>
 			            	<li><a href="contacto.html">Contacto</a></li>
-			            	<li><a href="#">Nosotros</a></li>
+			            	<li><a href="nosotros.html">Nosotros</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -40,7 +50,10 @@
 
 		<h3> Mapa de Mesas </h3>
 		<div id = "mapa_mesas">
-
+		<img id = "1" src="../images/mesa.png" dragstart="" class = "mesaTop" draggable="true">
+		<img id = "2" src="../images/mesa.png" class = "mesaTop mesaLeft" draggable="true">
+		<img id = "3" src="../images/mesa.png" class = "mesaBottom" draggable="true">
+		<img id = "4" src="../images/mesa.png" class = "mesaBottom  mesaLeft" draggable="true">
 		</div>
 
 		<div id = "form_reservacion">

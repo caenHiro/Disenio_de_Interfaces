@@ -1,0 +1,37 @@
+.info{
+	margin: 4%;
+	position:absolute;
+	top:45%;
+}
+
+
+.cuadro{
+	margin:20;
+	border:1px solid;
+	border-color: rgb(192, 187, 187);
+	padding: 1% 500% 90% 1%; 
+}
+
+.cuadro-derecho{
+	margin:20%;
+	border:1px solid;
+	border-color: rgb(192, 187, 187);
+	padding: 2% 200% 255% 10%; 
+	position: absolute;
+	left: 550%;
+	top:6%;
+}
+
+.texto{
+	margin: 10%;
+	position:absolute;
+	top:15%;
+	padding: 5% 10% 0% 0%;
+}
+
+#mapa{
+	margin:10%;
+	position: absolute;
+	left: 120%;
+	top:0%;
+}

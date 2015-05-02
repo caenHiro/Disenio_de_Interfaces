@@ -1,13 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<title>El Kfetal®</title>
-	<link rel="stylesheet" type="text/css" href="../css/estilo_menu.css">
-	<link rel="stylesheet" href="../css/estilo1.css">
+    <meta charset="UTF-8">
+    <title>El Kfetal®</title>
+    <link rel="stylesheet" type="text/css" href="../css/estilo_menu.css">
+    <!--Camera-->
+    <link rel='stylesheet' id='camera-css'  href='../css/camera.css' type='text/css' media='all'>
+    <script type='text/javascript' src='../js/jquery.min.js'></script>
+    <script type='text/javascript' src='../js/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='../js/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='../js/camera.min.js'></script>
+    <script>
+        jQuery(function(){
+
+            jQuery('#camera_wrap_1').camera({
+                thumbnails: true
+            });
+
+            jQuery('#camera_wrap_2').camera({
+                height: '400px',
+                loader: 'bar',
+                pagination: false,
+                thumbnails: true
+            });
+        });
+    </script>
+    <!--Camera-->
+    <script type='text/javascript' src='../js/script_menu.js'></script>
 </head>
-
-
-
 <body>
     <header>
         <div id="menu">
@@ -23,64 +43,58 @@
                 </section>
                 <nav id="menuNav">
                     <ul>
-                       <li><a href="../../Index.html">Home</a></li>
-                        <li><a href="menu.html">Menú</a></li>
-                        <li><a href="reservaciones.html">Reservación</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
+                       <li class="li_menu"><a href="../../Index.html">Home</a></li>
+                        <li class="li_menu"><a href="menu.html">Menú</a></li>
+                        <li class="li_menu"><a href="agenda_reservacion.html">Reservación</a></li>
+                        <li class="li_menu"><a href="contacto.html">Contacto</a></li>
+                        <li class="li_menu"><a href="nosotros.html">Nosotros</a></li>
                     </ul>
                 </nav>
             </div>
-<!--
-            <div id="inicioSesion">
-
-            </div>
--->
         </div>
     </header>
-
-
-
-
-
-
-
-
-
-
-
-<!--
-
-	<nav id="menuNav">
-			<ul>
-				<li><img src="../img/Logo.jpg" id="logoNav"></li>
-            	<li>Home</li>
-            	<li>Menú</li>
-            	<li>Reservacion</li>
-            	<li>Contacto</li>
-            	<li>Nosotros</li>
-
-			</ul>
-		</nav>
-
--->
-
 <br>
-	<div id="menu_barra">soy el menu
-		<ul>
-			<li class="lineas"></li>
-			<li class="lineas"></li>
-			<li class="lineas"></li>
-			<li class="lineas"></li>
-			<li class="lineas"></li>
-			<li class="lineas"></li>
-			<li class="lineas"></li>
-			<li class="lineas"></li>
-			<li class="lineas"></li>
-		</ul>
-	</div>
-	<div id="galeria_menu">soy la galeria
-		<div id="descripcion_Alimento">soy la descripcion</div>
-	</div>
+    <div id="menu_barra"><h3 style="color:black; text-align: center">Menú</h3>
+        <ul>
+            <li class="lin" ><button id="cafe_gal">Cafe</button></li>
+            <li class="lin" id="infudion">Infusiones</li>
+            <li class="lin" id="chai">Te Chai</li>
+            <li class="lin" id="capuchino">Capuchino</li>
+            <li class="lin" id="malteada">Malteadas</li>
+            <li class="lin" id="soda">Soda Italiana</li>
+            <li class="lin" id="smoot">Smoothies</li>
+            <li class="lin" id="frap">Frappes</li>
+            <li class="lin" id="snack">Snack</li>
+            <li class="lin" id="otros">Otros</li>
+        </ul>
+    </div>
+
+    <!--Galeria-->
+    <div class="fluid_container" id="galeria">
+
+        <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+            <div data-thumb="../images/home/slides/thumbs/bridge.jpg" data-src="../images/home/slides/bridge.jpg">
+
+
+
+            </div>
+            <div data-thumb="../images/home/slides/thumbs/leaf.jpg" data-src="../images/home/slides/leaf.jpg">
+
+            </div>
+            <div data-thumb="../images/home/thumbs/road.jpg" data-src="../images/home/slides/road.jpg">
+
+            </div>
+            <div data-thumb="../images/home/thumbs/sea.jpg" data-src="../images/home/slides/sea.jpg">
+
+            </div>
+            <div data-thumb="../images/home/thumbs/shelter.jpg" data-src="../images/home/slides/shelter.jpg">
+
+            </div>
+            <div data-thumb="../images/home/thumbs/tree.jpg" data-src="../images/home/slides/tree.jpg">
+
+            </div>
+    </div>
+    <!--Galeria-->
+        <div id="descripcion_Alimento">soy la descripcion</div>
 </body>
 </html>

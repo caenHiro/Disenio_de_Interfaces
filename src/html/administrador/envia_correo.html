@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" >
+	<title>El Kfetal®</title>
+	<link rel="stylesheet" type="text/css" href="../css/estilo_menu.css">
+	<link rel="stylesheet" href="../css/estilos1.css">
+	<script type="text/javascript" src="../ckeditor/ckeditor.js"></script>
+	</head>
+	<body>
+
+  	<header>
+        <div id="menu">
+
+            <div id="logo">
+                <img src="../images/Logo1.jpg" id="logoNav">
+            </div>
+
+            <div id="navegacion">
+
+                <section id="espacio_sup">
+                <a href="inicio.html" style = " float:right">Inicio de sesion</a>
+                </section>
+                <nav id="menuNav">
+                    <ul>
+			            	<li><a href="reservaciones.html">Reservaciones</a></li>
+			            	<li><a href="administra_promociones.html">Promociones</a></li>
+			            	<li><a href="envia_correo.html">Envia promociones</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+		<h1>Ejemplo CK Editor</h1>
+		<textarea cols="50" id="editor1" name="editor1" rows="10">
+		</textarea>
+		<script type="text/javascript">
+		CKEDITOR.replace( 'editor1', {
+		toolbar: [
+			['Source','-','Save','NewPage','Preview','-','Templates'],
+			['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
+			['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+			['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'],
+			'/',
+			['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
+			['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
+			['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+			['Link','Unlink','Anchor'],
+			['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'],
+			'/',
+			['Styles','Format','Font','FontSize'],
+			['TextColor','BGColor'],
+			['Maximize', 'ShowBlocks','-','About','EqnEditor']
+		]
+		});
+		</script>
+</body>
+</html>
