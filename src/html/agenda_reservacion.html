@@ -36,11 +36,11 @@
 
 					<nav id="menuNav">
 						<ul>
-			            	<li><a href="../../Index.html">Home</a></li>
-                     		<li><a href="menu.html">Menú</a></li>
-                        	<li><a href="agenda_reservacion.html">Reservación</a></li>
-			            	<li><a href="contacto.html">Contacto</a></li>
-			            	<li><a href="nosotros.html">Nosotros</a></li>
+		            	<li><a class="boton_menu" href="../../Index.html">Home</a></li>
+		            	<li><a class="boton_menu" href="menu.html">Menú</a></li>
+		            	<li><a class="boton_menu" href="agenda_reservacion.html">Reservación</a></li>
+		            	<li><a class="boton_menu" href="contacto.html">Contacto</a></li>
+		            	<li><a class="boton_menu" href="nosotros.html">Nosotros</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -75,9 +75,13 @@
 				<input list="fechas" id="fecha" onclick="recogeFecha()">
 					<datalist id="fechas"></datalist>
 				<br>
-				<span>Hora</span>
+				<span>Hora de llegada</span>
 				<br>
-				<input type="text" id="hora">
+				<input type="date" id="fecha_llegada">
+				<br>
+				<span>Hora de salida</span>
+				<br>
+				<input type="date" id="hora_salida">
 				<br>
 				<span>No. de personas</span>
 				<br>
