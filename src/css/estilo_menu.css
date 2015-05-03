@@ -22,4 +22,21 @@
 
 #descripcion_menu{
 	width: 30%;
+	margin: 20px;
+}
+
+.lin{
+	border: 1px solid green;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	vertical-align: center;
+	text-align: center;
+}
+
+.lin:hover {
+	background-color: #3B170B;
+	/*padding: 2% 2% 0.85em 2%;*/
+}
+.lin:hover a {
+	color:#00FFBF;
 }

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#cafe_gal").click(function(){
+	$("#cafe").click(function(){
 		$("div").empty();
 	});
 });

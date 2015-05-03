@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>El Kfetal®</title>
+    <script type='text/javascript' src='../js/jquery-2.1.3.min.js'></script>
+    <script type='text/javascript' src='../js/script_menu.js'></script>
     <link rel="stylesheet" type="text/css" href="../css/estilo_menu.css">
     <link rel="stylesheet" type="text/css" href="../css/estilo1.css">
     <!--COpia de INdex-->
@@ -14,15 +16,15 @@
         }
         #back_to_camera {
             clear: both;
-            display: block;
+            display: inline;
             height: 80px;
             line-height: 40px;
             padding: 20px;
         }
         .fluid_container {
             margin: 0 auto;
-            max-width: 500px;
-            width: 90%;
+            max-width: 1000px;
+            width: 100%;
         }
     </style>
 
@@ -45,7 +47,8 @@
             });
         });
     </script>
-    <!--COpia de INdex-->
+    <!--e INdex-->
+
 </head>
     <body>
         <header>
@@ -73,54 +76,53 @@
             </div>
         </header>
         <div id="principal">
-            <div class="contenido" id="menu_almientos">
-            <ul>
-                <li>Cafe</li>
-                <li>Cosa2</li>
-                <li>Cosa2</li>
-                <li>Cosa2</li>
-                <li>Cosa2</li>
-                <li>Cosa2</li>
-                <li>Cosa2</li>
-                <li>Cosa2</li>
-                <li>Cosa2</li>
-                <li>Cosa2</li>
-            </ul>
-                
-            </div>
+                <div class="contenido" id="menu_almientos">
+                    <ul>
+                        <li class="lin" id="cafe">Cafe</li>
+                        <li class="lin" id="infusion">Infusiones</li>
+                        <li class="lin" id="chai">Te Chai</li>
+                        <li class="lin" id="capuchino">Capuchino</li>
+                        <li class="lin" id="malteada">Malteadas</li>
+                        <li class="lin" id="soda">Soda Italiana</li>
+                        <li class="lin" id="smoot">Smoothies</li>
+                        <li class="lin" id="frap">Frappes</li>
+                        <li class="lin" id="snack">Snack</li>
+                        <li class="lin" id="otros">Otros</li>
+                    </ul>  
+                </div>
             <div class="contenido" id="galeria_menu">
-            <!--
-            <div class="fluid_container" id="galeria">
 
-                <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
-                    <div data-thumb="../images/home/slides/thumbs/bridge.jpg" data-src="../images/home/slides/bridge.jpg">
+            <!--Galeria-->
+                <div class="fluid_container" id="galeria">
+
+                    <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+                        <div data-thumb="../images/home/slides/thumbs/bridge.jpg" data-src="../images/home/slides/bridge.jpg">
 
 
+
+                        </div>
+                        <div data-thumb="../images/home/slides/thumbs/leaf.jpg" data-src="../images/home/slides/leaf.jpg">
+
+                        </div>
+                        <div data-thumb="../images/home/thumbs/road.jpg" data-src="../images/home/slides/road.jpg">
+
+                        </div>
+                        <div data-thumb="../images/home/thumbs/sea.jpg" data-src="../images/home/slides/sea.jpg">
+
+                        </div>
+                        <div data-thumb="../images/home/thumbs/shelter.jpg" data-src="../images/home/slides/shelter.jpg">
+
+                        </div>
+                        <div data-thumb="../images/home/thumbs/tree.jpg" data-src="../images/home/slides/tree.jpg">
 
                     </div>
-                    <div data-thumb="../images/home/slides/thumbs/leaf.jpg" data-src="../images/home/slides/leaf.jpg">
-
-                    </div>
-                    <div data-thumb="../images/home/thumbs/road.jpg" data-src="../images/home/slides/road.jpg">
-
-                    </div>
-                    <div data-thumb="../images/home/thumbs/sea.jpg" data-src="../images/home/slides/sea.jpg">
-
-                    </div>
-                    <div data-thumb="../images/home/thumbs/shelter.jpg" data-src="../images/home/slides/shelter.jpg">
-
-                    </div>
-                    <div data-thumb="../images/home/thumbs/tree.jpg" data-src="../images/home/slides/tree.jpg">
-
-                    </div>
-            </div>
-            -->
+                </div>
+             </div>
+                <!--Galeria-->
             </div>
             <div class="contenido" id="descripcion_menu">
              descripcion
-                
             </div>
         </div>
-        
     </body>
 </html>
