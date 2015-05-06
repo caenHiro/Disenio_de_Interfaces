@@ -2,27 +2,31 @@
 	border: 1px solid black;
 	width: 100%;
 	height: 100%;
-	display: table;
-	margin-top: 10px;
+	/*display: table;*/
+	margin-top: 0px;
 }
 
 .contenido{
 	border: 1px solid green;
-	height: 100%;
-	display: table-cell;
+	
+	/*display: table-cell;*/
+	margin-top: none;
 }
 
 #menu_almientos{
 	width: 10%;
+	float: left;
+
 }
 
 #galeria_menu{
-	width: 60%;
+	width: 50%;
+	float: left;
 }
 
 #descripcion_menu{
-	width: 30%;
-	margin: 20px;
+	width: 25%;
+	float: right;
 }
 
 .lin{
@@ -40,3 +44,8 @@
 .lin:hover a {
 	color:#00FFBF;
 }
+
+div{
+	border: 1px solid red;
+}
+
