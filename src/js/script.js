@@ -131,9 +131,8 @@ function valida_reservacion(){
 
 
 
-
+  dia = dia.replace(new RegExp(/-/g),"/");
   if(estado){
-      alert("here");
       var parametros = "nombre="+nombre+"&telefono="+telefono+"&correo="+correo+"&dia="+dia+"&hora_llegada="+hora_llegada+"&hora_salida="+hora_salida+"&n_personas="+n_personas;
       mandaReservacion(parametros);
   } else {
@@ -269,7 +268,7 @@ function confirma(id){
           ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
-                document.getElementById('reservaciones').innerHTML = ajax.responseText;
+                document.getElementById('info_hojita').innerHTML = ajax.responseText;
               }
             }
   ajax.send("id_reservacion="+id);
