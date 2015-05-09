@@ -30,6 +30,7 @@ CREATE TABLE  recervacion (
   horaSalida varchar(120) NOT NULL,
   numPer Integer NOT NULL,
   numMesa varchar(120) NOT NULL,
+  estado boolean NOT NULL,
   FOREIGN KEY (idUsuario) REFERENCES cliente(id)  ON DELETE CASCADE,
   PRIMARY KEY (id)
 ) ;
@@ -54,7 +55,7 @@ insert into cliente (nombre , correo ,telefono) values ('jp','jeanpierre@ciencia
 
 insert into cliente (nombre , correo ,telefono) values ('caen','caen@ciencias.unam.mx','5522669988');
 
-  insert into recervacion (idUsuario , fecha, horaLlegada , horaSalida, numPer , numMesa) values (1,'12/12/12','10:56','12:00',4,'2');
+  insert into recervacion (idUsuario , fecha, horaLlegada , horaSalida, numPer , numMesa , estado) values (1,'12/12/12','10:56','12:00',4,'2',true);
 
     insert into promocion (fechaInicio,fechaTermino, titulo, cuerpo) values ('12/01/12','12/12/12','Titulo !','Esta promocion ....................................................        bla bla bla =P ');
 
