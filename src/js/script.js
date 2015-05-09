@@ -276,7 +276,9 @@ function confirma(id){
 
 }
 function cancela(id){
-
+  var href = "../../html/administrador/confirma_reservacion.html";
+  window.location = href;
+  
 }
 
 
