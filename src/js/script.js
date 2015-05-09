@@ -129,7 +129,7 @@ function valida_reservacion(){
     estado = false;
   }
 
-  
+
 
 
   if(estado){
@@ -190,6 +190,33 @@ function envia_promo_correo(){
 function manda_promo_correo(parametros){
           var ajax = new XMLHttpRequest();
          ajax.open("POST", "../../php/envia__promo_correo.php", true);
+         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+
+                alert(ajax.responseText);
+
+              }
+         }
+         ajax.send(parametros);
+       }
+
+
+
+
+function envia_confirmacion_correo(){
+
+  var correo = CKEDITOR.instances['editor1'].getData();
+ // var receptor =  document.getElementById("id_recervacion").value;
+  var parametros = "correo="+correo;//+"&receptor="+receptor;
+;
+  parametros = parametros.split("<p>&nbsp;</p>").join(" <br> ");
+  manda_promo_correo(parametros);
+}
+
+function manda_confirmacion_correo(parametros){
+          var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/envia__confirmacion_correo.php", true);
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
