@@ -1,6 +1,13 @@
 <?php
 
 
+$_CuerpoCorreo = $_POST["correo"];
+$_total = 0;
+$_contador = 0;
+
+
+function mandaCorreo($i){//, $j) {
+
 include("class.phpmailer.php");
 include("class.smtp.php");
 
@@ -10,25 +17,53 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure = "ssl";
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 465;
-$mail->Username = "correo";
-$mail->Password = "contraseña";
-$mail->From = "caen@ciencias.unam.mx";
-$mail->FromName = "caen";
-$mail->Subject = "[Prueba]";
-$mail->MsgHTML( $_POST["correo"]);
+$mail->Username = "Correo del kfetal";
+$mail->Password = "contraseña del cafetal";
+$mail->From = "CorreoDelKfetal";
+$mail->FromName = "El Kfetal";
+$mail->Subject = "[Promocion del mes ]";
+$mail->MsgHTML($i);
 
-$mail->AddAddress("e.sc.a@hotmail.com");
+
+
+    $conx = mysqli_connect('localhost', 'root', '308264113', 'Kfetal');
+    if(!$conx){
+
+        die("Error: " . mysqli_connect_error());
+    }
+
+
+ $sql = "SELECT correo FROM cliente" ;
+
+    $query = mysqli_query($conx, $sql);
+
+
+    while($row = mysqli_fetch_assoc($query) ){
+
+
+      $mail->AddAddress($row['correo']);
+    }
+
+  mysqli_close();
+
+
 
 $mail->IsHTML(true);
 
 if(!$mail->Send()) {
 
-  echo "Error: " . $mail->ErrorInfo;
+  return "Error: " . $mail->ErrorInfo;
 } else {
-  echo "Mensaje enviado correctamente";
+  return "Mensaje enviado correctamente";
 
 }
 
+}
+
+
+
+
+echo mandaCorreo ($_CuerpoCorreo );
 
 
 ?>

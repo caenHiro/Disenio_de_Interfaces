@@ -104,7 +104,7 @@ function valida_reservacion(){
     mandaError("error_form","Debes proporcionar un teléfono váildo");
     return;
   }
-  
+
   if(!validaCorreo(correo)){
     mandaError("error_form","Poporciona un correo valido");
     return;
@@ -182,7 +182,6 @@ function envia_promo_correo(){
 
   var parametros = "correo="+correo;
   parametros = parametros.split("<p>&nbsp;</p>").join(" <br> ");
-  console.log( parametros);
   manda_promo_correo(parametros);
 }
 
