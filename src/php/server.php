@@ -3,7 +3,7 @@
 
 $total = 0;
 
-    $conx = mysqli_connect('localhost', 'root', '308264113', 'pruebas');
+    $conx = mysqli_connect('localhost', 'root', '308264113', 'Kfetal');
     if(!$conx){
 
         die("Error: " . mysqli_connect_error());
