@@ -189,7 +189,7 @@ function envia_promo_correo(){
 }
 
 function manda_promo_correo(parametros){
-          var ajax = new XMLHttpRequest();
+        var ajax = new XMLHttpRequest();
          ajax.open("POST", "../../php/envia__promo_correo.php", true);
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
@@ -201,3 +201,18 @@ function manda_promo_correo(parametros){
          }
          ajax.send(parametros);
        }
+
+
+function generaHojas(){
+        var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/genera_Hojitas.php", true);
+         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+
+                document.getElementById('reservaciones').innerHTML = ajax.responseText;
+
+              }
+         }
+         ajax.send("");
+}

@@ -11,5 +11,11 @@ $n_personas = $_POST['n_personas'];
 
 echo $hora_llegada;
 
+$conx = mysqli_connect('localhost', 'root', '308264113', 'Kfetal');
+if(!$conx){
+    die("Error: " . mysqli_connect_error());
+}
+
+
 
 ?>

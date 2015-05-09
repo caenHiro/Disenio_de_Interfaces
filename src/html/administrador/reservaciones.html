@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<html lang="es">
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../../css/estilo1.css">
+	
 </head>
 	<body>
 		<header>
@@ -21,7 +23,7 @@
 					</section>
 					<nav id="menuNav">
 						<ul>
-			            	<li><a class="boton_menu" href="reservaciones.html">Reservaciones</a></li>
+			            	<li><a class="boton_menu" onclick="generaHojas()">Reservaciones</a></li>
 			            	<li><a class="boton_menu" href="administra_promociones.html">Promociones</a></li>
 			            	<li><a class="boton_menu" href="envia_correo.html">Envia promociones</a></li>
 						</ul>
@@ -32,6 +34,12 @@
 		</header>
 		<br>
 		<h2>Reservaciones por día </h2>
+		<select id="lista_dias" data-placeholder="Selecciona un dia..." >
+            <option value=""></option>
+            <option value="United States">United States</option>
+          </select>
+          <button id="boton_mostrar" onclick="muestra_reservaciones()">Mostrar</button>
+
 		<div id = "reservaciones">
 			<h3> 19 Mayo </h3>
 			<div class="recuadro"></div>
