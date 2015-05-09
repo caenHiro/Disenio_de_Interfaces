@@ -94,20 +94,20 @@ function valida_reservacion(){
   var hora_salida = document.getElementById("hora_salida").value;
   var n_personas = document.getElementById("n_personas").value;
 
-
+  var estado = true;
   if(nombre == "") {
     mandaError("error_form", "Debes proporcionar un nombre");
-    return;
+    estado = false;
   }
 
   if(!validaTelefono(telefono)){
     mandaError("error_form","Debes proporcionar un teléfono váildo");
-    return;
+    estado = false;
   }
 
   if(!validaCorreo(correo)){
     mandaError("error_form","Poporciona un correo valido");
-    return;
+    estado = false;
   }
   /*
   if(!validaDia(dia)){
@@ -122,15 +122,24 @@ function valida_reservacion(){
   */
   if(n_personas == ""){
     mandaError("error_form","Debes proporcionar un # váildo");
-    return;
+    estado = false;
   }
   if(n_personas <= 0){
-    mandaError("error_form","AL menos debe haber alquien en la reservacion ");
-    return;
+    mandaError("error_form","Al menos debe haber alquien en la reservacion ");
+    estado = false;
   }
 
-  limpiaDiv("error_form");
-  return;
+  
+
+
+  if(estado){
+      alert("here");
+      var parametros = "nombre="+nombre+"&telefono="+telefono+"&correo="+correo+"&dia="+dia+"&hora_llegada="+hora_llegada+"&hora_salida="+hora_salida+"&n_personas="+n_personas;
+      mandaReservacion(parametros);
+  } else {
+    //limpiaDiv("error_form");
+
+  }
 }
 function limpiaDiv(div){
   document.getElementById(div).innerHTML = "";
@@ -148,13 +157,6 @@ function validaTelefono(tel){
 }
 function mandaError(idError,mensaje){
   document.getElementById(idError).innerHTML = mensaje;
-}
-function envia_reservacion(){
-
-
-
-  var parametros = "nombre="+nombre+"&telefono="+telefono+"&correo="+correo+"&dia="+dia+"&hora_llegada="+hora_llegada+"&hora_salida="+hora_salida+"&n_personas="+n_personas;
-  mandaReservacion(parametros);
 }
 
 function mandaReservacion(parametros){
