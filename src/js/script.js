@@ -223,7 +223,25 @@ function manda_confirmacion_correo(parametros){
         ajax.send(parametros);
        }
 
+
+
+//-----------------------------------------------------------------------------
+// reservaciones.html
+
+
+/*
+* funcion que hace una peticion via ajax
+* para brindar la imformacion de las reservaciones
+*/
 function generaHojas(){
+        var fecha = document.getElementById("calendario_reservacion").value;
+        //Hacer validacion de la fecha
+        fecha = fecha.replace(new RegExp(/-/g),"/");
+        if(fecha === ""){
+          document.getElementById("error_busqueda").innerHTML = "Debes introducir una fecha válida.";
+          return;
+        }
+        limpiaDiv("error_busqueda");
         var ajax = new XMLHttpRequest();
          ajax.open("POST", "../../php/genera_Hojitas.php", true);
           ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -232,5 +250,34 @@ function generaHojas(){
                 document.getElementById('reservaciones').innerHTML = ajax.responseText;
               }
             }
-        ajax.send("");
+        ajax.send("fecha="+fecha);
        }
+
+
+/*
+* Funcion para confirmar y cancelar la reservacion,
+* id es el id de la reservacion en la base de datos
+*/
+function confirma(id){
+  var href = "../../html/administrador/confirma_reservacion.html";
+  window.location = href;
+
+  //Enviamos peticion al servidor para que me de la informacion
+  //de la reservacion con ese id
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/obtenReservacion_id.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+                document.getElementById('reservaciones').innerHTML = ajax.responseText;
+              }
+            }
+  ajax.send("id_reservacion="+id);
+  
+}
+function cancela(id){
+
+}
+
+
+//-------------------------------------------------------------------------------

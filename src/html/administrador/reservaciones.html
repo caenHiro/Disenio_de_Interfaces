@@ -24,7 +24,7 @@
 					</section>
 					<nav id="menuNav">
 						<ul>
-			            	<li><a class="boton_menu" onclick="generaHojas()">Reservaciones</a></li>
+			            	<li><a class="boton_menu" href="reservaciones.html">Reservaciones</a></li>
 			            	<li><a class="boton_menu" href="administra_promociones.html">Promociones</a></li>
 			            	<li><a class="boton_menu" href="envia_correo.html">Envia promociones</a></li>
 						</ul>
@@ -33,30 +33,13 @@
 
 			</div>
 		</header>
-		<br>
-		<h2>Reservaciones por día </h2>
-		<select id="lista_dias" data-placeholder="Selecciona un dia..." >
-            <option value=""></option>
-            <option value="United States">United States</option>
-          </select>
-          <button id="boton_mostrar" onclick="muestra_reservaciones()">Mostrar</button>
-
-		<div id = "reservaciones">
-			<h3> 19 Mayo </h3>
-			<div class="recuadro"></div>
-			<div class="recuadro"></div>
-			<div class="recuadro"></div>
-			<div class="recuadro"></div>
-			<div class="recuadro"></div>
-			<div class="recuadro"></div>
-			<div class="recuadro"></div>
-			<div class="recuadro"></div>
-			<h3 style="float:left; width:100%">20 Mayo</h3>
-			<div class="recuadro"></div>
-			<div class="recuadro"></div>
-			<div class="recuadro"></div>
-			<div class="recuadro"></div>
-		</div>
+		<div id="busqueda">
+			<h2>Reservaciones por día </h2>
+			<input id="calendario_reservacion" type="date">
+	        <button id="boton_mostrar" onclick="generaHojas()">Mostrar</button>
+	    </div>
+        <div id="error_busqueda"></div>
+		<div id = "reservaciones"></div>
 
 	</body>
 
