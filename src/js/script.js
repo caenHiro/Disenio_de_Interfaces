@@ -104,7 +104,7 @@ function valida_reservacion(){
     mandaError("error_form","Debes proporcionar un teléfono váildo");
     estado = false;
   }
-  
+
   if(!validaCorreo(correo)){
     mandaError("error_form","Poporciona un correo valido");
     estado = false;
@@ -129,7 +129,7 @@ function valida_reservacion(){
     estado = false;
   }
 
-  
+
 
 
   if(estado){
@@ -184,7 +184,6 @@ function envia_promo_correo(){
 
   var parametros = "correo="+correo;
   parametros = parametros.split("<p>&nbsp;</p>").join(" <br> ");
-  console.log( parametros);
   manda_promo_correo(parametros);
 }
 
@@ -203,16 +202,35 @@ function manda_promo_correo(parametros){
        }
 
 
-function generaHojas(){
-        var ajax = new XMLHttpRequest();
-         ajax.open("POST", "../../php/genera_Hojitas.php", true);
+function envia_confirmacion_correo(){
+
+  var correo = CKEDITOR.instances['editor1'].getData();
+ // var receptor =  document.getElementById("id_recervacion").value;
+  var parametros = "correo="+correo;//+"&receptor="+receptor;
+  parametros = parametros.split("<p>&nbsp;</p>").join(" <br> ");
+  manda_promo_correo(parametros);
+}
+
+function manda_confirmacion_correo(parametros){
+          var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/envia__confirmacion_correo.php", true);
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
-
-                document.getElementById('reservaciones').innerHTML = ajax.responseText;
-
+                alert(ajax.responseText);
               }
-         }
-         ajax.send("");
-}
+            }
+        ajax.send(parametros);
+       }
+
+function generaHojas(){
+        var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/genera_Hojitas.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+                document.getElementById('reservaciones').innerHTML = ajax.responseText;
+              }
+            }
+        ajax.send("");
+       }

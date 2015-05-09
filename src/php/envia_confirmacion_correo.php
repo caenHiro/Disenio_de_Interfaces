@@ -2,8 +2,7 @@
 
 
 $_CuerpoCorreo = $_POST["correo"];
-$_total = 0;
-$_contador = 0;
+
 
 
 function mandaCorreo($i){//, $j) {
@@ -24,27 +23,7 @@ $mail->FromName = "El Kfetal";
 $mail->Subject = "[Promocion del mes ]";
 $mail->MsgHTML($i);
 
-
-
-    $conx = mysqli_connect('localhost', 'root', '308264113', 'Kfetal');
-    if(!$conx){
-
-        die("Error: " . mysqli_connect_error());
-    }
-
-
- $sql = "SELECT correo FROM cliente" ;
-
-    $query = mysqli_query($conx, $sql);
-
-
-    while($row = mysqli_fetch_assoc($query) ){
-
-
-      $mail->AddAddress($row['correo']);
-    }
-
-  mysqli_close();
+$mail->AddAddress("micorreo");//$_POST["receptor"]);
 
 
 
