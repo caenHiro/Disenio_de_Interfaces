@@ -1,5 +1,5 @@
 <?php
-$_fecha ="12/12/12";
+$_fecha =$_POST["fecha"];
 
 
 

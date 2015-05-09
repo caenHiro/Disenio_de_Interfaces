@@ -241,6 +241,7 @@ function generaHojas(){
           document.getElementById("error_busqueda").innerHTML = "Debes introducir una fecha válida.";
           return;
         }
+        //alert(fecha);
         limpiaDiv("error_busqueda");
         var ajax = new XMLHttpRequest();
          ajax.open("POST", "../../php/genera_Hojitas.php", true);
@@ -273,7 +274,7 @@ function confirma(id){
               }
             }
   ajax.send("id_reservacion="+id);
-  
+
 }
 function cancela(id){
 
