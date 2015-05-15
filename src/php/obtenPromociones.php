@@ -1,5 +1,35 @@
 <?php
 
-echo "<div class=recuadro></div>"."<br>"
+
+
+
+
+    $conx = mysqli_connect('localhost', 'root', '308264113', 'Kfetal');
+    if(!$conx){
+
+        die("Error: " . mysqli_connect_error());
+    }
+
+ $sql = "SELECT  fechaInicio , fechaTermino , titulo , cuerpo  FROM promocion ";
+    $query = mysqli_query($conx, $sql);
+
+
+    while($row = mysqli_fetch_assoc($query)){
+
+    	echo "<div class="."'recuadro' >";
+	echo "<div class="."'contenido_recuadro' >";
+	echo "<span> fecha de Inicio: </span> ".$row['fechaInicio']."<br>";
+	echo "<span> fecha de Termino: </span> ".$row['fechaTermino']."<br>";
+	echo "<span> Titulo: </span> ".$row['titulo']."<br>";
+	echo "<span> La promocion es : </span> ".$row['cuerpo']."<br>";
+	echo "<button > Editar </button>";
+	echo "<button  > Eliminar </button>";
+	echo "</div></div>";
+
+//echo $row['T'];
+    }
+
+
+
 
 ?>

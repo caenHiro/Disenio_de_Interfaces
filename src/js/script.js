@@ -310,8 +310,7 @@ function pidePromociones(){
           ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
-                document.getElementById('reservaciones').innerHTML = ajax.responseText;
-                alert(ajax.responseText);
+               window.location.href ="../../html/administrador/administra_promociones.html?"+encodeURIComponent(ajax.responseText);
               }
             }
   ajax.send();
