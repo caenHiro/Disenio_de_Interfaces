@@ -22,8 +22,10 @@
 	echo "<span> fecha de Termino: </span> ".$row['fechaTermino']."<br>";
 	echo "<span> Titulo: </span> ".$row['titulo']."<br>";
 	echo "<span> La promocion es : </span> ".$row['cuerpo']."<br>";
+	echo "<span> El estado de la promocion es : </span> ".$row['cuerpo']."<br>";
 	echo "<button > Editar </button>";
 	echo "<button  > Eliminar </button>";
+	echo "<button  > Cambia estado </button>";
 	echo "</div></div>";
 
 //echo $row['T'];
