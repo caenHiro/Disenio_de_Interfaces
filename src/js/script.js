@@ -261,7 +261,6 @@ function generaHojas(){
 function confirma(id){
   //var href = "../../html/administrador/confirma_reservacion.html";
   //window.location = href;
-  window.location.href ="../../html/administrador/confirma_reservacion.html";
   //Enviamos peticion al servidor para que me de la informacion
   //de la reservacion con ese id
   var ajax = new XMLHttpRequest();
@@ -269,8 +268,8 @@ function confirma(id){
           ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
-                document.getElementById('info_hojita').innerHTML = ajax.responseText;
-                alert(ajax.responseText);
+                window.location.href ="../../html/administrador/confirma_reservacion.html?id="+encodeURIComponent(id);
+                
               }
             }
   ajax.send("id_reservacion="+id);
@@ -284,3 +283,16 @@ function cancela(id){
 
 
 //-------------------------------------------------------------------------------
+
+function pidePromociones(){
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/obtenPromociones.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+                document.getElementById('reservaciones').innerHTML = ajax.responseText;
+                alert(ajax.responseText);
+              }
+            }
+  ajax.send();  
+}
