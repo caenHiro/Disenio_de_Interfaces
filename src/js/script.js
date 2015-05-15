@@ -207,6 +207,7 @@ function envia_confirmacion_correo(){
  // var receptor =  document.getElementById("id_recervacion").value;
   var parametros = "correo="+correo;//+"&receptor="+receptor;
   parametros = parametros.split("<p>&nbsp;</p>").join(" <br> ");
+
   manda_promo_correo(parametros);
 }
 
@@ -270,9 +271,8 @@ function confirma(id){
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
 
-                window.location.href ="../../html/administrador/confirma_reservacion.html";
-                 document.getElementById('info_hojita').innerHTML = mensaje;
-                alert(ajax.responseText);
+                window.location.href ="../../html/administrador/confirma_reservacion.html?id="+encodeURIComponent(ajax.responseText);
+
 
               }
             }
@@ -290,3 +290,16 @@ function cancela(id){
 
 
 //-------------------------------------------------------------------------------
+
+function pidePromociones(){
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/obtenPromociones.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+                document.getElementById('reservaciones').innerHTML = ajax.responseText;
+                alert(ajax.responseText);
+              }
+            }
+  ajax.send();
+}
