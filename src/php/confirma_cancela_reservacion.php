@@ -1,8 +1,6 @@
 <?php
-
-
-$_CuerpoCorreo = $_POST["cuerpo"];
-$_correo = $_POST["correo"];
+$correo = $_POST["correo"];
+$cuerpo = $_POST["cuerpo"];
 
 
 function mandaCorreo($correo,$cuerpo){//, $j) {
@@ -36,10 +34,7 @@ if(!$mail->Send()) {
 
 }
 
-
-
-
-echo mandaCorreo ($_CuerpoCorreo );
+echo mandaCorreo($correo,$cuerpo);
 
 
 ?>

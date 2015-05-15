@@ -188,7 +188,7 @@ function envia_promo_correo(){
 
 function manda_promo_correo(parametros){
         var ajax = new XMLHttpRequest();
-         ajax.open("POST", "../../php/envia__promo_correo.php", true);
+         ajax.open("POST", "../php/envia__promo_correo.php", true);
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
@@ -202,14 +202,27 @@ function manda_promo_correo(parametros){
 
 
 function envia_confirmacion_correo(){
-
-  var correo = CKEDITOR.instances['editor1'].getData();
+  var correo = "jeanpierre@ciencias.unam.mx";//document.getElementById("correo").value;
+  var cuerpo = CKEDITOR.instances['editor1'].getData();
  // var receptor =  document.getElementById("id_recervacion").value;
-  var parametros = "correo="+correo;//+"&receptor="+receptor;
+  var parametros = "correo="+correo+"&cuerpo="+cuerpo;//+"&receptor="+receptor;
   parametros = parametros.split("<p>&nbsp;</p>").join(" <br> ");
 
-  manda_promo_correo(parametros);
+  manda_correo_personal(parametros);
 }
+
+function manda_correo_personal(parametros){
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/confirma_cancela_reservacion.php", true);
+         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+                alert(ajax.responseText);
+              }
+            }
+        ajax.send(parametros);
+}
+
 
 function manda_confirmacion_correo(parametros){
           var ajax = new XMLHttpRequest();
