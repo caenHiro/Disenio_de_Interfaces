@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../../css/estilo1.css">
+	<link rel="stylesheet" href="../../css/formularioPromo.css">
      <script type='text/javascript' src='../../js/jquery.min.js'></script>
     <script type='text/javascript' src='../../js/script1.js'></script>
     <script type='text/javascript' src='../../js/llena_promocion.js'></script>
@@ -37,9 +38,44 @@
 		</header>
 		<br>
 		<h2>Promociones</h2>
+
 		<div id = "reservaciones1">
 
 		</div>
+			<div id = "form_reservacion_promo">
+			<div class ="contact_form">
+
+
+				<span>Fecha Inicio</span>
+				<br>
+				<input type="date" id="dia_inicio"  required>
+				<br>
+				<span>Fecha termino</span>
+				<br>
+				<input type="date" id="dia_termino"  required>
+				<br>
+
+				<span>Titulo</span>
+				<br>
+				<input type="text" id="titulo" placeholder="Carlos Augusto" required >
+				<br>
+				<span>Cuerpo de la promocion</span>
+				<br>
+				<textarea name="" id="cuerpo" cols="30" rows="10">
+
+				</textarea>
+
+				<br>
+				<br><br>
+				<button onclick="inserta_promocion()"> Agrega</button>
+				<br>
+
+
+				<div id="error_form"></div>
+			</div>
+
+		</div>
+
 
 	</body>
 
