@@ -257,3 +257,25 @@ form:after {
 
 	margin-top: 5%;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+.container {
+	  margin-left: 25%;
+  	margin-top: 60%;
+  	position: relative;
+  	width: 50%;
+  }
+
+#data{
+
+	margin-top: 5%;
+	position: relative;
+}
+
+
+
+}

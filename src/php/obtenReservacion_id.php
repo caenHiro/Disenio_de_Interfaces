@@ -1,5 +1,5 @@
 <?php
-$_fecha =$_POST["id_recervacion"];
+$_fecha =$_POST["id_reservacion"];
 
 
 
