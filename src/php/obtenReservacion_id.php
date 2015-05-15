@@ -19,12 +19,12 @@ $_fecha =$_POST["id_reservacion"];
 
     while($row = mysqli_fetch_assoc($query)){
 
-   	echo " Nombre:  ".$row['nombre']."<br>";
-	echo " Correo:  ".$row['correo']."<br>";
-	echo " Telefono:  ".$row['telefono']."<br>";
-	echo " Hora de llegada:  ".$row['horaLlegada']."<br>";
-	echo " Hora de salida:  ".$row['horaSalida']."<br>";
-	echo " Número de personas:  ".$row['numPer']."<br>";
+   	echo " <span id='nombre'> Nombre:  ".$row['nombre']."</span><br>";
+	echo " Correo: <span id='correo'>".$row['correo']."</span><br>";
+	echo " <span id='telefono'> Telefono:  ".$row['telefono']."</span><br>";
+	echo " <span id='hora_ll'> Hora de llegada:  ".$row['horaLlegada']."</span><br>";
+	echo " <span id='hora_sa'> Hora de salida:  ".$row['horaSalida']."</span><br>";
+	echo " <span id='num_personas'> Número de personas:  ".$row['numPer']."</span><br>";
 
 //echo $row['T'];
     }
