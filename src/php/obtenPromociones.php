@@ -16,7 +16,7 @@
 
     while($row = mysqli_fetch_assoc($query)){
 
-    	echo "<div class="."'recuadro' >";
+    	echo "<div class="."'recuadro1' >";
 	echo "<div class="."'contenido_recuadro' >";
 	echo "<span> fecha de Inicio: </span> ".$row['fechaInicio']."<br>";
 	echo "<span> fecha de Termino: </span> ".$row['fechaTermino']."<br>";

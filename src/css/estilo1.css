@@ -185,8 +185,29 @@ body{
 	height: 12em;
 	margin: 1em;
 }
-.contenido_recuadro{
 
+
+#reservaciones1{
+  margin: 1em 0em 0em 2em;
+  /*border: 0.3em solid black;*/
+  width: 60%;
+  height:100%;
+  padding: 2em 2em 2em 2em;
+}
+.recuadro1{
+  float: left;
+  border-radius: 1px 60px 1px;
+  background: #BADA55;
+  width: 40%;
+  height: 12em;
+  margin: 1em;
+}
+
+
+
+
+.contenido_recuadro{
+/*Estilo letra*/
 }
 
 #menuNav{
