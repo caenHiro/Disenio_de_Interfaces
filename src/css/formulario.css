@@ -1,0 +1,159 @@
+
+
+*:focus { outline: none; }
+/* === Form Typography === */
+body {
+	font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+
+
+#form_reservacion div{
+
+	margin-left: 10%;
+}
+
+
+.contact_form h2, .contact_form label {
+	font-family: Georgia, Times, "Times New Roman", serif;
+}
+.form_hint, .required_notification {
+	font-size: 11px;
+}
+/* === List Styles === */
+.contact_form ul {
+	width: 935px;
+	list-style-type: none;
+	list-style-position: outside;
+	  margin-top: 75px;
+	/* margin: 0px;*/
+	 padding: 0px;
+}
+.contact_form li {
+	padding: 12px;
+	 border-bottom: 1px solid #eee;
+	 /*position: relative;*/
+}
+.contact_form li:first-child, .contact_form li:last-child {
+	border-bottom: 1px solid #777;
+}
+
+
+/* === Form Header === */
+.contact_form h2 {
+	margin: 0; display: inline;
+}
+.required_notification {
+	color: #d45252; margin: -6px 0 0 0; display: inline; float: right;
+}
+/* === Form Elements === */
+.contact_form label {
+	width: 140px;
+	 margin-top: 3px;
+	 /*
+	 display: inline-block;
+	  float: left;*/
+	   padding: 3px;
+}
+.contact_form input {
+	height: 20px; width: 140px; padding: 5px 8px;
+}
+
+
+.contact_form select {
+
+	height: 30px;
+	 width: 140px;
+
+
+	 background: #eee url(../images/arrow.png);
+	  background-size: 15px 22px;
+  	background-position: 121px center;
+	 background-repeat: no-repeat;
+
+   	border-radius: 3px;
+   	-webkit-appearance: none;
+   	-webkit-transition: all 0.4s;
+   	-moz-transition: all 0.4s;
+   	transition: all 0.4s;
+   	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.contact_form select:hover{
+	background-color: #ddd;
+}
+
+.contact_form  input[type="time"] {
+	height: 20px; width: 160px; padding: 5px 8px;
+}
+
+.contact_form  input[type="number"] {
+	height: 20px; width: 160px; padding: 5px 8px;
+}
+.contact_form textarea {
+	padding: 8px; width: 300px;
+}
+.contact_form button {
+	margin-left: 20%;
+}
+/* form element visual styles */
+.contact_form input, .contact_form textarea {
+	border: 1px solid #aaa;
+	box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+	border-radius: 2px;
+	 padding-right: 30px;
+	-moz-transition: padding .25s;
+	-webkit-transition: padding .25s;
+	-o-transition: padding .25s;
+	transition: padding .25s;
+}
+.contact_form input:focus, .contact_form textarea:focus {
+	background: #fff; border: 1px solid #555; box-shadow: 0 0 3px #aaa; padding-right: 70px;
+}
+/* === HTML5 validation styles === */
+
+.contact_form input:required:valid, .contact_form textarea:required:valid  {
+	background: #fff url(../images/valid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #5cd053;
+	border-color: #28921f;
+}
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
+	background: #fff url(../images/invalid.png) no-repeat 98% center;
+	box-shadow: 0 0 5px #d45252;
+	border-color: #b03535;
+}
+
+/* === Form hints === */
+.form_hint {
+	background: #d45252; border-radius: 3px 3px 3px 3px; color: white; margin-left: 8px; padding: 1px 6px; z-index: 999; /* hints stay above all other elements */ position: absolute; /* allows proper formatting if hint is two lines */ display: none;
+}
+.form_hint::before {
+	content: "\25C0"; color: #d45252; position: absolute; top: 1px; left: -6px;
+}
+
+.contact_form input:focus + .form_hint {
+	display: inline;
+}
+.contact_form input:required:valid + .form_hint {
+	background: #28921f;
+}
+.contact_form input:required:valid + .form_hint::before{
+	color: #28921f;
+}
+
+/* === Button Style === */
+.contact_form button.submit {
+	background-color: #1813CA; background: -webkit-gradient(linear, left top, left bottom, from(#1813CA), to(#1813CA)); background: -webkit-linear-gradient(top, #1813CA, #1813CA); background: -moz-linear-gradient(top, #1813CA, #1813CA); background: -ms-linear-gradient(top, #1813CA, #1813CA); background: -o-linear-gradient(top, #1813CA, #1813CA); background: linear-gradient(top, #1813CA, #1813CA); border: 1px solid #1813CA border-bottom: 1px solid #5b992b; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; box-shadow: inset 0 1px 0 0 #1813CA; -webkit-box-shadow: 0 1px 0 0 #1813CA inset; -moz-box-shadow: 0 1px 0 0 #1813CA inset; -ms-box-shadow: 0 1px 0 0 #1813CA inset; -o-box-shadow: 0 1px 0 0 #1813CA inset; color: white; font-weight: bold; padding: 6px 20px; text-align: center; text-shadow: 0 -1px 0 #1813CA
+}
+.contact_form button.submit:hover {
+	opacity: .85; cursor: pointer;
+}
+.contact_form button.submit:active {
+	border: 1px solid #20911e; box-shadow: 0 0 10px 5px #356b0b inset; -webkit-box-shadow: 0 0 10px 5px #356b0b inset; -moz-box-shadow: 0 0 10px 5px #356b0b inset; -ms-box-shadow: 0 0 10px 5px #356b0b inset; -o-box-shadow: 0 0 10px 5px #356b0b inset;
+}
+
+.contact_form button a {
+
+  text-decoration: none;
+  color: white;
+}
+

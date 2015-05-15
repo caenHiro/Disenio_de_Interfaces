@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../css/estilo1.css">
+	<link rel="stylesheet" href="../css/formulario.css">
 	<script type='text/javascript' src='../js/script.js'></script>
 	<script type='text/javascript' src='../js/jquery.min.js'></script>
 
@@ -70,37 +71,40 @@
 		</div>
 
 		<div id = "form_reservacion">
-			<div id="form_reserva">
+			<div class ="contact_form">
+
 				<span>Nombre</span>
 				<br>
-				<input type="text" id="nombre">
+				<input type="text" id="nombre" placeholder="Carlos Augusto" required >
 				<br>
 				<span>Teléfono</span>
 				<br>
-				<input type="text" id="telefono">
+				<input type="text" id="telefono" placeholder="5623892311" required>
 				<br>
 				<span>Correo electrónico</span>
 				<br>
-				<input type="text" id="correo">
+				<input type="text" id="correo" placeholder="elkfetal@gmail.com" required>
 				<br>
 				<span>Fecha</span>
 				<br>
-				<input type="date" id="dia_reservacion">
+				<input type="date" id="dia_reservacion"  required>
 				<br>
 				<span>Hora de llegada</span>
 				<br>
-				<input type="time" id="hora_llegada">
+				<input type="time" id="hora_llegada"  required>
 				<br>
 				<span>Hora de salida</span>
 				<br>
-				<input type="time" id="hora_salida">
+				<input type="time" id="hora_salida"  required>
 				<br>
 				<span>No. de personas</span>
 				<br>
-				<input type="text" id="n_personas">
+				<input type="number" id="n_personas" placeholder="4" required>
 				<br><br>
 				<button onclick="valida_reservacion()"> Reservar</button>
 				<br>
+
+
 				<div id="error_form"></div>
 			</div>
 

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <title>El Kfetal®</title>
     <link rel="stylesheet" href="../css/estilo1.css">
+    <link rel="stylesheet" href="../css/login.css">
     <script type='text/javascript' src='../js/jquery.min.js'></script>
     <script type='text/javascript' src='../js/script1.js'></script>
+    <script src="../js/script.js"></script>
 
 </head>
 <body>
@@ -39,31 +41,35 @@
         </div>
     </header>
 
-<center  >
-    <h2>Bienvenido!!</h2>
 
-    <br>
-    <b>Correo :</b>
-    <br>
-    <input type="text" id="correo" >
-    <br>
-    <br>
-    <b>Contraseña :</b>
-    <br>
-    <input type="password" id="contra" >
-    <br>
-    <br>
-    <button onclick="recogeDatos()">Aceptar</button>
-    </center>
-<br>
-<br>
-<br>
-<br>
+
+<div class="container">
+    <section id="content">
+        <form action="">
+            <h1>Inicio de sesión</h1>
+            <div>
+                <input type="text" placeholder="Usuario" required=" Llenalo" id="correo" />
+            </div>
+            <div>
+                <input type="password" placeholder="Contraseña" required="" id="contra" />
+            </div>
+            <div>
+
+                <input type="button" value="Entrar" onclick="recogeDatos()">
+
+            </div>
+        </form><!-- form -->
+
+    </section><!-- content -->
+</div><!-- container -->
+
     <center >
     <div id="data"></div>
 </center>
 
-<script src="../js/script.js"></script>
+
+
+
 </body>
 </html>
 
