@@ -434,6 +434,9 @@ margin-top: 20%;
   float: left;
 
 }
+#mapa_mesas{
+  display: none;
+}
 
 }
 

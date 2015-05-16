@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>El Kfetal®</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
 	<link rel="stylesheet" href="../css/estilo1.css">
 	<link rel="stylesheet" href="../css/formulario.css">
 	<script type='text/javascript' src='../js/script.js'></script>
@@ -16,10 +18,8 @@
  	<script src= "../js/moverMesa.js"></script>
  	<script type='text/javascript' src='../js/letrero.js'></script>
 	<style>
-	.mesaTop{position: absolute; top: 17em; left: 3em;}
-	.mesaBottom{position: absolute; top: 28em; left: 3em;}
-	.mesaLeft{left: 50em;}
-	.cajaA{position: absolute; top: 17em; left: 3em;}
+	.mesa{display: inline-block; padding: 5%;}
+	table{width:100%;height: 100%;  text-align: center;}
 	</style>
 </head>
 	<body>
@@ -64,10 +64,16 @@
 
 		<h3> Mapa de Mesas </h3>
 		<div id = "mapa_mesas">
-		<img id = "1" src="../images/mesa.png" dragstart="" class = "mesaTop" draggable="true">
-		<img id = "2" src="../images/mesa.png" class = "mesaTop mesaLeft" draggable="true">
-		<img id = "3" src="../images/mesa.png" class = "mesaBottom" draggable="true">
-		<img id = "4" src="../images/mesa.png" class = "mesaBottom  mesaLeft" draggable="true">
+		<table>
+		<tr>
+		<td><img id = "1" src="../images/mesa.png" dragstart="" class = "mesa" draggable="true"></td>
+		<td><img id = "2" src="../images/mesa.png" class = "mesa" draggable="true"></td>
+		</tr>
+		<tr>
+		<td><img id = "3" src="../images/mesa.png" class = "mesa" draggable="true"></td>
+		<td><img id = "4" src="../images/mesa.png" class = "mesa" draggable="true"></td>
+		</tr>
+		</table>
 		</div>
 
 		<div id = "form_reservacion">
