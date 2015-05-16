@@ -2,22 +2,22 @@ $(document).ready(function(){
 	$(ini);
 function ini(){
   $('#1').draggable({
-    containment: 'parent',
+    containment: $("tr").parent(),//'parent',
     cursor: 'move',
     stop: handleDragStop
   });
   $('#2').draggable({
-    containment: 'parent',
+    containment: $("tr").parent(),//'parent',
     cursor: 'move',
     stop: handleDragStop
   });
   $('#3').draggable({
-    containment: 'parent',
+    containment: $("tr").parent(),//'parent',
     cursor: 'move',
     stop: handleDragStop 
   });
   $('#4').draggable({
-    containment: 'parent',
+    containment: $("tr").parent(),//'parent',
     cursor: 'move',
     stop: handleDragStop
   });
