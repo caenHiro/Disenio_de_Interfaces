@@ -21,19 +21,31 @@
 	border-color: rgb(192, 187, 187);
 }
 
+.contenedor{
+width: 80%;	
+margin: 0 auto;
+}
 .texto{
-	margin: 10%;
-	position:absolute;
-	top:15%;
-	padding: 5% 10% 0% 0%;
+	padding: 5%;
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+	
 }
 
 #mapa{
-	margin:10%;
-	position: absolute;
-	left: 120%;
-	top:0%;
+	padding-top: 5%;
+	width:50%;
+	height:60%;
+	display: inline-block;
+	
 }
+#mapa > iframe{
+	width: 100%;
+	height: 100%;
+	
+}
+
 @media only screen and (max-width: 768px) {
 
 .cuadro{
@@ -45,5 +57,11 @@
 	width: 100%;
 	padding: 0;
 	margin: 0;
+}
+.texto{
+	width: 100%;
+}
+#mapa{
+	width:100%;
 }
 }
