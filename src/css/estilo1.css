@@ -126,7 +126,9 @@ body{
 	float: left;
 	border: 0.2em solid blue;
 	width: 75%;
-	height: 25em;
+	height: 35em;
+  background-size:cover;
+  background-image: url('../images/fondoRestaurante.jpg');
 
 }
 #form_reservacion{
