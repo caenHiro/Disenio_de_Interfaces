@@ -402,6 +402,9 @@ body{
 
 
 @media only screen and (max-width: 768px) {
+  #mapa_mesas{
+    display: none;
+  }
   #logo{
     width: 100%;
 
