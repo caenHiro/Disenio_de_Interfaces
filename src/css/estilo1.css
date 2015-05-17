@@ -305,7 +305,7 @@ body{
   /*FOndoROjo*/
   color: #d8232b;
   /*FOndo al girar*/
-  background: #f18e30;
+  background: #e5a630;
   content: attr(data-title);
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
@@ -434,21 +434,22 @@ margin-top: 20%;
   float: left;
 
 }
-#mapa_mesas{
-  display: none;
-}
 
 }
 
-.inicioAdmin{
-  width: 50px;
-  height: 100%;
+.btnAdmin{
+  width: 100px;
+  height: 100% ;
   float: right;
   background-color: #d9222e;
   color: #d9222e;
+  text-align: center;
+  font-size: 30px;
+  padding-top: auto;
+  padding-bottom: auto;
 }
 
-.inicioAdmin:hover {
-  background-color: black;
+.btnAdmin:hover {
+  background-color: #ec8b2e;
 
 }
