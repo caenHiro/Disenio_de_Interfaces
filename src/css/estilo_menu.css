@@ -1,51 +1,44 @@
 #principal{
-	border: 1px solid black;
+	background-color: black;
 	width: 100%;
 	height: 100%;
-	/*display: table;*/
 	margin-top: 0px;
 }
 
-.contenido{
-	border: 1px solid green;
-	
-	/*display: table-cell;*/
+.contenido{	
 	margin-top: none;
 }
 
 #menu_almientos{
-	width: 10%;
+	width: 15%;
 	float: left;
 
 }
 
 #galeria_menu{
-	width: 50%;
+	width: 62%;
 	float: left;
+	margin-left: 5px;
 }
 
 #descripcion_menu{
-	width: 25%;
+	width: 20%;
 	float: right;
 }
 
 .lin{
-	border: 1px solid green;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	vertical-align: center;
 	text-align: center;
+	background-color: #ec8b2e;
+	color: white;
+
 }
 
 .lin:hover {
-	background-color: green;
+	background-color: #d9222e;
 	/*padding: 2% 2% 0.85em 2%;*/
 }
-.lin:hover a {
-	color:#00FFBF;
-}
 
-div{
-	border: 1px solid red;
-}
 
