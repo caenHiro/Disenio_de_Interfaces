@@ -1,6 +1,7 @@
 html{
 	background-image: url(../images/fondo.jpg);
   background-size: contain;
+  background-repeat: repeat-x;
 }
 
 header {
