@@ -1,5 +1,7 @@
-html,body{
-	/*height: 50em;*/
+html{
+	background-image: url(../images/fondo.jpg);
+  background-size: contain;
+  background-repeat: repeat-x;
 }
 
 header {
@@ -8,6 +10,7 @@ header {
 #menu{
 	width: 100%;
 	height: 9em;
+  margin-bottom: 5px;
 }
 
 #logo {
@@ -24,7 +27,7 @@ header {
 }
 
 #espacio_sup{
-	background-color: #FE2E2E;
+	background-color: #d9222e;
 	width: 100%;
 	height: 55%;
 	float: left;
@@ -117,8 +120,10 @@ li:hover a {
 
 
 body{
-	width: 98%;
-	/*height: 500px;	*/
+	width: 90%;
+  margin-right: 5%;
+  margin-left: 5%;  
+  background-color: white;
 }
 
 #mapa_mesas{
@@ -126,7 +131,9 @@ body{
 	float: left;
 	border: 0.2em solid blue;
 	width: 75%;
-	height: 25em;
+	height: 35em;
+  background-size:cover;
+  background-image: url('../images/fondoRestaurante.jpg');
 
 }
 #form_reservacion{
@@ -234,7 +241,8 @@ body{
   line-height: 1;
 }
 #cssmenu > ul {
-  background: #3db2e1;
+  /**/
+  background: #ec8b2e;
 }
 #cssmenu > ul > li {
   float: left;
@@ -260,7 +268,8 @@ body{
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
-  background: #3db2e1;
+  /**/
+  background: #ec8b2e;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -o-transition: all .3s;
@@ -273,11 +282,13 @@ body{
   transform-style: preserve-3d;
 }
 #cssmenu > ul > li.active > a {
-  color: #dff2fa;
+  //*FOndoROjo*/
+  color: #d8232b;
 }
 #cssmenu > ul > li:hover > a,
 #cssmenu > ul > li > a:hover {
-  color: #dff2fa;
+  /*FOndoROjo*/
+  color: #d8232b;
   -webkit-transform: rotateX(90deg) translateY(-23px);
   -moz-transform: rotateX(90deg) translateY(-23px);
   transform: rotateX(90deg) translateY(-23px);
@@ -294,8 +305,10 @@ body{
   width: 100%;
   height: 100%;
   padding: 16px 20px;
-  color: #dff2fa;
-  background: #19799f;
+  /*FOndoROjo*/
+  color: #d8232b;
+  /*FOndo al girar*/
+  background: #e5a630;
   content: attr(data-title);
   -webkit-transition: background 0.3s;
   -moz-transition: background 0.3s;
@@ -310,7 +323,8 @@ body{
 }
 #cssmenu > ul > li:hover > a::before,
 #cssmenu > ul > li > a:hover::before {
-  background: #3db2e1;
+  /**/
+  background: #ec8b2e;
 }
 #cssmenu.small-screen {
   width: 100%;
@@ -329,7 +343,8 @@ body{
 }
 #cssmenu.small-screen > ul > li:hover > a,
 #cssmenu.small-screen > ul > li > a:hover {
-  color: #dff2fa;
+  /*FOndoROjo*/
+  color: #d8232b;
   -webkit-transform: none;
   -moz-transform: none;
   transform: none;
@@ -347,7 +362,8 @@ body{
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 1px;
-  background: #3db2e1;
+  /**/
+  background: #ec8b2e;
 }
 #cssmenu.small-screen #menu-button:after {
   content: "";
@@ -364,8 +380,10 @@ body{
   height: 3px;
 }
 #cssmenu.small-screen #menu-button.menu-opened:after {
-  border-top: 2px solid #dff2fa;
-  border-bottom: 2px solid #dff2fa;
+  /*FOndoROjo*/
+  border-top: 2px solid #d8232b;
+  /*FOndoROjo*/
+  border-bottom: 2px solid #d8232b;
 }
 #cssmenu.small-screen #menu-button:before {
   content: "";
@@ -378,12 +396,16 @@ body{
   background: #ffffff;
 }
 #cssmenu.small-screen #menu-button.menu-opened:before {
-  background: #dff2fa;
+  /*FOndoROjo*/
+  background: #d8232b;
 }
 
 
 
 @media only screen and (max-width: 768px) {
+  #mapa_mesas{
+    display: none;
+  }
   #logo{
     width: 100%;
 
@@ -418,5 +440,22 @@ margin-top: 20%;
   float: left;
 
 }
+
+}
+
+.btnAdmin{
+  width: 100px;
+  height: 100% ;
+  float: right;
+  background-color: #d9222e;
+  color: #d9222e;
+  text-align: center;
+  font-size: 30px;
+  padding-top: auto;
+  padding-bottom: auto;
+}
+
+.btnAdmin:hover {
+  background-color: #ec8b2e;
 
 }
