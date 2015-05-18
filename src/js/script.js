@@ -316,20 +316,3 @@ function pidePromociones(){
   ajax.send();
 }
 
-function llena_Cubo(url){
-        
-        
-        var ajax = new XMLHttpRequest();
-         
-         ajax.open("POST", url+"src/php/obtenPromosCubo.php", true);
-
-          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          ajax.onreadystatechange = function(){
-             if(ajax.status == 200 && ajax.readyState == 4){
-
-               window.location.href =url+"home.html?"+encodeURIComponent(ajax.responseText);
-              }
-            }
-  ajax.send(); 
-  
-}
