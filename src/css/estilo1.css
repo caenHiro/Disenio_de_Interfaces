@@ -163,7 +163,8 @@ body{
 
 	/*border-radius:80px/70px;*/
 	/*border: 3px solid #BADA55;*/
-	background: #BADA55;
+  border: 3px solid #E79703;
+  background: #EC8B2E;
 	width: 30%;
 	height: 12em;
 	margin: 1em;
@@ -180,7 +181,7 @@ body{
 .recuadro1{
   float: left;
   border-radius: 1px 60px 1px;
-  background: #BADA55;
+  background: #EC8B2E;
   width: 40%;
   height: 12em;
   margin: 1em;
