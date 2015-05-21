@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php 
+session_start();
+if(!isset($_SESSION["login"])){
+	header('Location: index.php');
+}
+ ?>
+ <!DOCTYPE html>
 <html lang="en">
 <html>
 	<head>
@@ -11,7 +17,8 @@
 	<script type='text/javascript' src='../../js/script.js'></script>
      <script type='text/javascript' src='../../js/jquery.min.js'></script>
     <script type='text/javascript' src='../../js/script1.js'></script>
-    <script type='text/javascript' src='../../js/llena_promocion.js'></script>
+    <script type='text/javascript' src='../../js/jquery.js'></script>
+
 	</head>
 	<body>
 
@@ -31,7 +38,7 @@
                 <nav id='cssmenu'>
                     <ul>
 			            	<li><a class="boton_menu" href="reservaciones.html">Reservaciones</a></li>
-			            	<li><a class="boton_menu" onclick="pidePromociones()">Promociones</a></li>
+			           <li><a class="boton_menu" onclick="pidePromociones()">Promociones</a></li>
 			            	<li><a class="boton_menu" href="envia_correo.html">Envia promociones</a></li>
                     </ul>
                 </nav>
@@ -40,9 +47,20 @@
     </header>
 
 		<center>
-		<h1>Envia promociones</h1>
+		<h1>Confirma recervaciones </h1>
 		</center>
 		<br>
+
+
+		<div id="info_hojita" class="muestraHojita" style="
+    border: 1px solid;   width: 650px;   height: 90px;   margin-top: -35px;   margin-left: 290px;   margin-bottom: 5px;
+">
+
+
+		</div>
+
+
+
 
 		<div style = "width: 100.6%">
 
@@ -77,7 +95,7 @@
 
 
 
-<button onclick="envia_promo_correo()" > Aceptar </button>
+<button onclick="envia_confirmacion_correo()" > Aceptar </button>
 <br>
 <br>
 <br>
