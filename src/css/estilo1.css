@@ -1,4 +1,6 @@
 
+
+/*
 html{
 	background-image: url(../images/fondo.jpg);
   background-size: contain;
@@ -33,7 +35,7 @@ header {
 	height: 55%;
 	float: left;
 	border-bottom: 0.3em solid white;
-}*/
+}
 
 #contenido{
   float: left;
@@ -70,7 +72,7 @@ span {
 }
 
 h1,h2,h3 {
-	color: #09f;
+	color: black;
 	text-decoration: none;
 	font-family: sans-serif;
 }
@@ -79,7 +81,6 @@ ul{
 	height: 100%;
 	padding-left: 0%;
 	margin: 0%;
-	/*margin: 0px 0px 0px 0px;*/
 }
 
 nav ul li{
@@ -88,10 +89,7 @@ nav ul li{
 	width: 20%;
 	height: 100%;
 	float: left;
-	/*padding: 10px 4% 10px 4%;*/
 	display: inline;
-	/*border: 1px solid blue;*/
-	/*padding: 2% 2% 2% 2%;*/
 }
 
 
@@ -99,11 +97,11 @@ nav ul li{
 
 li:hover {
 	background-color: #FFFF00;
-	/*padding: 2% 2% 0.85em 2%;*/
 }
 li:hover a {
 	color:#B40431;
 }
+
 #logoNav{
 	width: 100%;
 	height: 100%;
@@ -135,18 +133,18 @@ body{
 
 }
 #form_reserva{
-	/*width: 97%;*/
-	/*padding: 1em;*/
+	
 	margin: 1em 0em 0em 2em;
 }
 
 #reservaciones{
 	margin: 1em 0em 0em 2em;
-	/*border: 0.3em solid black;*/
 	width: 90%;
 	height:100%;
 	padding: 2em 2em 2em 2em;
-}
+}*/
+
+/*v parte del Admin*/
 .recuadro{
 	float: left;
 
@@ -193,9 +191,9 @@ body{
 
 }
 
+/*^parteAdmin*/
 
-
-/*desdearribaya*/
+/*desdearribaya
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 #cssmenu,
 #cssmenu ul,
@@ -233,7 +231,7 @@ body{
   line-height: 1;
 }
 #cssmenu > ul {
-  /**/
+  /*
   background: #ec8b2e;
 }
 #cssmenu > ul > li {
@@ -260,7 +258,7 @@ body{
   letter-spacing: 1px;
   text-transform: uppercase;
   text-decoration: none;
-  /**/
+  /*
   background: #ec8b2e;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
@@ -274,12 +272,12 @@ body{
   transform-style: preserve-3d;
 }
 #cssmenu > ul > li.active > a {
-  //*FOndoROjo*/
+  //*FOndoROjo
   color: #d8232b;
 }
 #cssmenu > ul > li:hover > a,
 #cssmenu > ul > li > a:hover {
-  /*FOndoROjo*/
+  /*FOndoROjo
   color: #d8232b;
   -webkit-transform: rotateX(90deg) translateY(-23px);
   -moz-transform: rotateX(90deg) translateY(-23px);
@@ -297,9 +295,9 @@ body{
   width: 100%;
   height: 100%;
   padding: 16px 20px;
-  /*FOndoROjo*/
+  /*FOndoROjo
   color: #d8232b;
-  /*FOndo al girar*/
+  /*FOndo al girar
   background: #e5a630;
   content: attr(data-title);
   -webkit-transition: background 0.3s;
@@ -315,7 +313,7 @@ body{
 }
 #cssmenu > ul > li:hover > a::before,
 #cssmenu > ul > li > a:hover::before {
-  /**/
+  /*
   background: #ec8b2e;
 }
 #cssmenu.small-screen {
@@ -335,7 +333,7 @@ body{
 }
 #cssmenu.small-screen > ul > li:hover > a,
 #cssmenu.small-screen > ul > li > a:hover {
-  /*FOndoROjo*/
+  /*FOndoROjo
   color: #d8232b;
   -webkit-transform: none;
   -moz-transform: none;
@@ -354,7 +352,7 @@ body{
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 1px;
-  /**/
+  /**
   background: #ec8b2e;
 }
 #cssmenu.small-screen #menu-button:after {
@@ -372,9 +370,9 @@ body{
   height: 3px;
 }
 #cssmenu.small-screen #menu-button.menu-opened:after {
-  /*FOndoROjo*/
+  /*FOndoROjo*
   border-top: 2px solid #d8232b;
-  /*FOndoROjo*/
+  /*FOndoROjo*
   border-bottom: 2px solid #d8232b;
 }
 #cssmenu.small-screen #menu-button:before {
@@ -388,7 +386,7 @@ body{
   background: #ffffff;
 }
 #cssmenu.small-screen #menu-button.menu-opened:before {
-  /*FOndoROjo*/
+  /*FOndoROjo*
   background: #d8232b;
 }
 /*desdearribaya*/
@@ -434,7 +432,7 @@ margin-top: 20%;
 }
 
 }
-
+/*
 .btnAdmin{
   width: 100px;
   height: 100% ;
@@ -450,4 +448,4 @@ margin-top: 20%;
 .btnAdmin:hover {
   background-color: #ec8b2e;
 
-}
+}*/
