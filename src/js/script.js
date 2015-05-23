@@ -99,6 +99,10 @@ function valida_reservacion(){
     mandaError("error_form", "Debes proporcionar un nombre");
     estado = false;
   }
+  if(!isNaN(nombre)){
+    mandaError("error_form", "Proporcione un nombre valido");
+    estado = false;
+  }
 
   if(!validaTelefono(telefono)){
     mandaError("error_form","Debes proporcionar un teléfono váildo");
@@ -125,7 +129,7 @@ function valida_reservacion(){
     estado = false;
   }
   if(n_personas <= 0){
-    mandaError("error_form","Al menos debe haber alquien en la reservacion ");
+    mandaError("error_form","Al menos debe haber alguien en la reservacion ");
     estado = false;
   }
 
@@ -159,7 +163,7 @@ function mandaError(idError,mensaje){
 }
 
 function mandaReservacion(parametros){
-          var ajax = new XMLHttpRequest();
+         var ajax = new XMLHttpRequest();
          ajax.open("POST", "../php/envia_reservacion.php", true);
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
