@@ -250,3 +250,30 @@
   /*FOndoROjo*/
   background: #d8232b;
 }
+
+/*Footer*/
+footer {
+    position: relative;
+    /* Altura total del footer en px con valor negativo */
+    margin-top: -50px;
+    /* Altura del footer en px. Se han restado los 5px del margen
+    superior mas los 5px del margen inferior
+    */
+    height: 50px;
+    padding:5px 0px;
+    clear: both;
+    background: #d9222e;
+}
+
+#foot{
+  width: 100%;
+  height: 100% ;
+  background-color: #d9222e;
+  color: white;
+  float: right;
+  text-align: right;
+}
+
+#footText{
+  margin-right: 2em;
+}

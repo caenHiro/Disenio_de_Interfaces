@@ -3,8 +3,8 @@
 	float: left;
 	border: 0.2em solid blue;
 	width: 75%;
-	height: 35em;
-  background-size: cover;
+	height: 29em;
+  background-size: 100% 100%;
   background-image: url('../images/fondoRestaurante.jpg');
 
 }
