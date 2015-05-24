@@ -10,6 +10,8 @@ if(!isset($_SESSION["login"])){
 <head>
 	<meta charset="UTF-8">
 	<title>El Kfetal®</title>
+	<link rel="stylesheet" href="../../css/estilo_nav.css">
+    <link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo1.css">
 	<script src="../../js/script.js" type="text/javascript"></script>
 

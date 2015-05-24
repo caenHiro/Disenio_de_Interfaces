@@ -11,7 +11,8 @@ if(!isset($_SESSION["login"])){
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" >
 	<title>El Kfetal®</title>
-
+	<link rel="stylesheet" href="../../css/estilo_nav.css">
+    <link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo1.css">
 	<script type="text/javascript" src="../../ckeditor/ckeditor.js"></script>
 	<script type='text/javascript' src='../../js/script.js'></script>

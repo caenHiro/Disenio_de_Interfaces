@@ -11,6 +11,8 @@ if(!isset($_SESSION["login"])){
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../../css/formularioPromo.css">
 	<link rel="stylesheet" href="../../css/estilo1.css">
+	<link rel="stylesheet" href="../../css/estilo_nav.css">
+    <link rel="stylesheet" href="../../css/estilo_html.css">
 <script type='text/javascript' src='../../js/script.js'></script>
      <script type='text/javascript' src='../../js/jquery.min.js'></script>
     <script type='text/javascript' src='../../js/script1.js'></script>
