@@ -58,33 +58,39 @@ Cambia el Color de la mesa
 */
 function cambia(idN){
 
-if(id==idN)
+if(id==idN){
+  if(id==1||id==2)
+  $("#"+idN).attr('src','../images/mesa2.png');
+  else
+  $("#"+idN).attr('src','../images/mesa.png');  
+  id=-1;
   return;
+}
 
 //Cambia color verde
 switch(idN){
   case '1':
-  $("#"+idN).attr('src','../images/mesaV.jpg');
+  $("#"+idN).attr('src','../images/mesa2V.jpg');
   break;
 
   case '2':
-  $("#"+idN).attr('src','../images/mesaV.jpg');
+  $("#"+idN).attr('src','../images/mesa2V.jpg');
   break;
 
   case '3':
-  $("#"+idN).attr('src','../images/mesa2V.jpg');
+  $("#"+idN).attr('src','../images/mesaV.jpg');
   break;
 
   case '4':
-  $("#"+idN).attr('src','../images/mesa2V.jpg');
+  $("#"+idN).attr('src','../images/mesaV.jpg');
   break;
 }
 //Quita color verde
 
 if(id==1||id==2)
-$("#"+id).attr('src','../images/mesa.png');
-else
 $("#"+id).attr('src','../images/mesa2.png');
+else
+$("#"+id).attr('src','../images/mesa.png');
 
 id = idN
   

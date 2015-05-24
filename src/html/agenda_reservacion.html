@@ -19,8 +19,7 @@
  	<script src= "../js/moverMesa.js"></script>
 	<style>
 	.mesa{display: inline-block; padding: 1%;}
-	table{width:75%;height: 48%;  text-align: center; }
-	.espacio{height: 10%; padding: 4%;}
+	table{width:75%;height: 100%;  text-align: center;}
 	</style>
 </head>
 	<body>
@@ -57,15 +56,14 @@
 
 		<h3> Mapa de Mesas </h3>
 		<div id = "mapa_mesas">
-		<div class="espacio"></div>
 		<table>
-		<tr>
-		<td><img id = "1" src="../images/mesa.png" dragstart="" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
-		<td><img id = "2" src="../images/mesa.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
+		<tr style="margin-bottom:5%;">
+		<td><img id = "1" src="../images/mesa2.png" dragstart="" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
+		<td><img id = "2" src="../images/mesa2.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
 		</tr>
-		<tr>
-		<td><img id = "3" src="../images/mesa2.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
-		<td><img id = "4" src="../images/mesa2.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
+		<tr style="margin-top:5%;">
+		<td><img id = "3" src="../images/mesa.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
+		<td><img id = "4" src="../images/mesa.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
 		</tr>
 		</table>
 		</div>
