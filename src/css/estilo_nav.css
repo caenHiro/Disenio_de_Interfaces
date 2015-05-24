@@ -90,6 +90,7 @@
   width: 100%;
   font-family: Raleway, sans-serif;
   line-height: 1;
+  z-index: 1;
 }
 #cssmenu > ul {
   /**/
