@@ -1,25 +1,4 @@
-function validarNumerosCantidad(e) { // 1
-        tecla = (document.all) ? e.keyCode : e.which; // 2
-        if (tecla==8) return true; // backspace
-        if (tecla==190) {return true} ;
-        if (tecla>=96 && tecla<=105) { return true;} //numpad
 
-        patron = /[0-9]/; // patron
-
-        te = String.fromCharCode(tecla);
-        return patron.test(te); // prueba
-    }
-
-    function validarNumeros(e) { // 1
-        tecla = (document.all) ? e.keyCode : e.which; // 2
-        if (tecla==8) return true; // backspace
-        if (tecla>=96 && tecla<=105) { return true;} //numpad
-
-        patron = /[0-9]/; // patron
-
-        te = String.fromCharCode(tecla);
-        return patron.test(te); // prueba
-    }
 
        function recogeDatos(){
             var correo = document.getElementById("correo").value;
@@ -46,7 +25,7 @@ function validarNumerosCantidad(e) { // 1
         ajax.onreadystatechange = function(){
             if(ajax.status == 200 && ajax.readyState == 4){
             if(ajax.responseText ==  10 ){
-                window.location.href = "../html/administrador/reservaciones.html" ;
+                window.location.href = "../html/administrador/reservaciones.php" ;
             }
               document.getElementById("data").innerHTML = ajax.responseText;
 
@@ -71,7 +50,7 @@ function validarNumerosCantidad(e) { // 1
           ajax.onreadystatechange = function(){
               if(ajax.status == 200 && ajax.readyState == 4){
                 if(ajax.responseText ==  10 ){
-                  window.location.href = "../html/reservaciones.html" ;
+                  window.location.href = "../html/reservaciones.php" ;
                 }
                 document.getElementById("fechas").innerHTML = ajax.responseText;
 
@@ -113,17 +92,7 @@ function valida_reservacion(){
     mandaError("error_form","Poporciona un correo valido");
     estado = false;
   }
-  /*
-  if(!validaDia(dia)){
 
-  }
-  if(!validaHora(hora_llegada)){
-
-  }
-  if(!validaHora(hora_salida)){
-
-  }
-  */
   if(n_personas == ""){
     mandaError("error_form","Debes proporcionar un # váildo");
     estado = false;
@@ -133,20 +102,19 @@ function valida_reservacion(){
     estado = false;
   }
 
-
-
-  dia = dia.replace(new RegExp(/-/g),"/");
+ dia = dia.replace(new RegExp(/-/g),"/");
   if(estado){
       var parametros = "nombre="+nombre+"&telefono="+telefono+"&correo="+correo+"&dia="+dia+"&hora_llegada="+hora_llegada+"&hora_salida="+hora_salida+"&n_personas="+n_personas;
       mandaReservacion(parametros);
   } else {
-    //limpiaDiv("error_form");
+
 
   }
 }
 function limpiaDiv(div){
   document.getElementById(div).innerHTML = "";
 }
+
 function validaCorreo(email){
   var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   return re.test(email);
@@ -206,13 +174,11 @@ function manda_promo_correo(parametros){
 
 
 function envia_confirmacion_correo(){
-  var correo = "jeanpierre@ciencias.unam.mx";//document.getElementById("correo").value;
+  var correo = document.getElementById("correo").value;
   var cuerpo = CKEDITOR.instances['editor1'].getData();
- // var receptor =  document.getElementById("id_recervacion").value;
   var parametros = "correo="+correo+"&cuerpo="+cuerpo;//+"&receptor="+receptor;
   parametros = parametros.split("<p>&nbsp;</p>").join(" <br> ");
-
-  manda_correo_personal(parametros);
+ manda_correo_personal(parametros);
 }
 
 function manda_correo_personal(parametros){
@@ -314,7 +280,7 @@ function pidePromociones(){
           ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
-               window.location.href ="../../html/administrador/administra_promociones.html?"+encodeURIComponent(ajax.responseText);
+               window.location.href ="../../html/administrador/administra_promociones.php?"+encodeURIComponent(ajax.responseText);
               }
             }
   ajax.send();

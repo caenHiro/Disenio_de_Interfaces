@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 
 $total = 0;
 
@@ -19,7 +21,9 @@ $total = 0;
     }
 
 
+
 if ($total == 1) {
+  $_SESSION["correo"] = $_POST["correo"];
 	echo 10;
 
 }else{
