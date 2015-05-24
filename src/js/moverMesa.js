@@ -2,22 +2,22 @@ $(document).ready(function(){
 	$(ini);
 function ini(){
   $('#1').draggable({
-    containment: $("tr").parent(),//'parent',
+    containment: $("table").parent(),//'parent',
     cursor: 'move',
     stop: handleDragStop
   });
   $('#2').draggable({
-    containment: $("tr").parent(),//'parent',
+    containment: $("table").parent(),
     cursor: 'move',
     stop: handleDragStop
   });
   $('#3').draggable({
-    containment: $("tr").parent(),//'parent',
+    containment: $("table").parent(),
     cursor: 'move',
     stop: handleDragStop 
   });
   $('#4').draggable({
-    containment: $("tr").parent(),//'parent',
+    containment: $("table").parent(),
     cursor: 'move',
     stop: handleDragStop
   });
@@ -52,4 +52,42 @@ switch(id){
 }
 
 });
+var id = -1;
+/*
+Cambia el Color de la mesa
+*/
+function cambia(idN){
+
+if(id==idN)
+  return;
+
+//Cambia color verde
+switch(idN){
+  case '1':
+  $("#"+idN).attr('src','../images/mesaV.jpg');
+  break;
+
+  case '2':
+  $("#"+idN).attr('src','../images/mesaV.jpg');
+  break;
+
+  case '3':
+  $("#"+idN).attr('src','../images/mesa2V.jpg');
+  break;
+
+  case '4':
+  $("#"+idN).attr('src','../images/mesa2V.jpg');
+  break;
+}
+//Quita color verde
+
+if(id==1||id==2)
+$("#"+id).attr('src','../images/mesa.png');
+else
+$("#"+id).attr('src','../images/mesa2.png');
+
+id = idN
+  
+}
+
  
