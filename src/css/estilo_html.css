@@ -9,7 +9,7 @@ body{
 	height: 100%;
 	margin-right: 5%;
 	margin-left: 5%;  
-	background-image: url(../images/fondo2.jpg);
+	background-color: rgb(244, 240, 230);
 	background-repeat: repeat-y;
 }
 
