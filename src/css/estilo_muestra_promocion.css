@@ -1,0 +1,23 @@
+
+#reservaciones1{
+  margin: 1em 0em 0em 2em;
+  padding: 2em 2em 2em 2em;
+}
+
+
+.recuadro1 {
+
+ /* border-radius: 1px 60px 1px;*/
+  background: #EC8B2E;
+
+  width: 30%;
+  height: 12em;
+  margin: 1em;
+  display: -webkit-inline-box;
+
+}
+
+
+.contenido_recuadro{
+/*Estilo letra*/
+}

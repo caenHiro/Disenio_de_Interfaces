@@ -12,7 +12,7 @@ if(!isset($_SESSION["correo"])){
 	<link rel="stylesheet" href="../../css/formularioPromo.css">
 	<link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo_nav.css">
-
+<link rel="stylesheet" href="../../css/estilo_muestra_promocion.css">
 <script type='text/javascript' src='../../js/script.js'></script>
      <script type='text/javascript' src='../../js/jquery.min.js'></script>
     <script type='text/javascript' src='../../js/script1.js'></script>
@@ -55,7 +55,15 @@ if(!isset($_SESSION["correo"])){
 
 		</div>
 
-			<div id = "form_reservacion_promo">
+
+
+	</body>
+
+</html>
+
+
+<!--
+<div id = "form_reservacion_promo">
 			<div class ="contact_form">
 
 
@@ -88,9 +96,4 @@ if(!isset($_SESSION["correo"])){
 				</div>
 
 			</div>
-
-
-
-	</body>
-
-</html>
+-->
