@@ -32,7 +32,7 @@ if(!isset($_SESSION["correo"])){
 				<div id="navegacion">
 
 					<section id="espacio_sup">
-				<a href="../../../home.html" style = " float:right">Cerrar sesion</a>
+				<a onclick="cerrarSesion()" style = " float:right">Cerrar sesion</a>
 
 					</section>
 					<nav id='cssmenu'>

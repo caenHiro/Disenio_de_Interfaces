@@ -10,9 +10,9 @@ if(!isset($_SESSION["correo"])){
 	<meta charset="UTF-8">
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../../css/formularioPromo.css">
-	<link rel="stylesheet" href="../../css/estilo1.css">
+	<link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo_nav.css">
-    <link rel="stylesheet" href="../../css/estilo_html.css">
+
 <script type='text/javascript' src='../../js/script.js'></script>
      <script type='text/javascript' src='../../js/jquery.min.js'></script>
     <script type='text/javascript' src='../../js/script1.js'></script>
@@ -31,7 +31,7 @@ if(!isset($_SESSION["correo"])){
 				<div id="navegacion">
 
 					<section id="espacio_sup">
-				<a href="../../../home.html" style = " float:right">Cerrar sesion</a>
+				<a onclick="cerrarSesion()" style = " float:right">Cerrar sesion</a>
 
 					</section>
 					<nav id='cssmenu'>
@@ -46,11 +46,15 @@ if(!isset($_SESSION["correo"])){
 			</div>
 		</header>
 		<br>
+
+
 		<h2>Promociones</h2>
+
 
 		<div id = "reservaciones1">
 
 		</div>
+
 			<div id = "form_reservacion_promo">
 			<div class ="contact_form">
 
@@ -81,9 +85,10 @@ if(!isset($_SESSION["correo"])){
 
 
 				<div id="error_form"></div>
+				</div>
+
 			</div>
 
-		</div>
 
 
 	</body>

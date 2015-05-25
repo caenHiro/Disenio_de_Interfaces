@@ -281,6 +281,21 @@ function pidePromociones(){
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
                window.location.href ="../../html/administrador/administra_promociones.php?"+encodeURIComponent(ajax.responseText);
+
+              }
+            }
+  ajax.send();
+}
+
+
+
+function cerrarSesion(){
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../html/administrador/salir.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+               window.location.href ="../../../home.html";
               }
             }
   ajax.send();

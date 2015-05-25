@@ -10,10 +10,11 @@ body {
 #form_reservacion_promo {
 
   float: right;
-  margin-top: -17%;
+  margin-top: -5%;
   margin-right: 9%;
   border: 3px blue solid;
   padding: 1%;
+  background-color: white;
 
 }
 
