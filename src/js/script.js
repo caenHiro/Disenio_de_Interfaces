@@ -69,9 +69,9 @@ function valida_reservacion(){
   var telefono = document.getElementById("telefono").value;
   var correo = document.getElementById("correo").value;
   var dia = document.getElementById("dia_reservacion").value;
-  var hora_llegada = document.getElementById("hora_llegada").value;
-  var hora_salida = document.getElementById("hora_salida").value;
-  var n_personas = document.getElementById("n_personas").value;
+//  var hora_llegada = document.getElementById("hora_llegada").value;
+//  var hora_salida = document.getElementById("hora_salida").value;
+//  var n_personas = document.getElementById("n_personas").value;
 
   var estado = true;
   if(nombre == "") {
@@ -93,14 +93,14 @@ function valida_reservacion(){
     estado = false;
   }
 
-  if(n_personas == ""){
-    mandaError("error_form","Debes proporcionar un # váildo");
-    estado = false;
-  }
-  if(n_personas <= 0){
-    mandaError("error_form","Al menos debe haber alguien en la reservacion ");
-    estado = false;
-  }
+ // if(n_personas == ""){
+ //   mandaError("error_form","Debes proporcionar un # váildo");
+ //   estado = false;
+  //}
+ // if(n_personas <= 0){
+  //  mandaError("error_form","Al menos debe haber alguien en la reservacion ");
+  //  estado = false;
+  //}
 
  dia = dia.replace(new RegExp(/-/g),"/");
   if(estado){
@@ -160,7 +160,7 @@ function envia_promo_correo(){
 
 function manda_promo_correo(parametros){
         var ajax = new XMLHttpRequest();
-         ajax.open("POST", "../php/envia__promo_correo.php", true);
+         ajax.open("POST", "../../php/envia_promo_correo.php", true);
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
@@ -295,3 +295,19 @@ function cerrarSesion(){
   ajax.send();
 }
 
+
+function inserta_promocion(){
+alert("Insertaste una promocion");
+
+}
+
+
+function estado(id){
+alert("Insertaste una promocion" + id );
+
+}
+
+function elimina(id){
+alert("Insertaste una promocion" + id );
+
+}
