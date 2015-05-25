@@ -194,17 +194,6 @@ function manda_correo_personal(parametros){
 }
 
 
-function manda_confirmacion_correo(parametros){
-          var ajax = new XMLHttpRequest();
-         ajax.open("POST", "../../php/envia__confirmacion_correo.php", true);
-         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          ajax.onreadystatechange = function(){
-             if(ajax.status == 200 && ajax.readyState == 4){
-                alert(ajax.responseText);
-              }
-            }
-        ajax.send(parametros);
-       }
 
 
 
@@ -243,18 +232,14 @@ function generaHojas(){
 * id es el id de la reservacion en la base de datos
 */
 function confirma(id){
-  //var href = "../../html/administrador/confirma_reservacion.html";
-  //window.location = href;
 
-  //Enviamos peticion al servidor para que me de la informacion
-  //de la reservacion con ese id
   var ajax = new XMLHttpRequest();
          ajax.open("POST", "../../php/obtenReservacion_id.php", true);
           ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
 
-                window.location.href ="../../html/administrador/confirma_reservacion.html?id="+encodeURIComponent(ajax.responseText);
+                window.location.href ="../../html/administrador/confirma_reservacion.php?"+encodeURIComponent(ajax.responseText);
 
 
               }
@@ -266,9 +251,18 @@ function confirma(id){
 
 
 function cancela(id){
-  var href = "../../html/administrador/confirma_reservacion.html";
-  window.location = href;
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/obtenReservacion_id.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
 
+                window.location.href ="../../html/administrador/confirma_reservacion.php?"+encodeURIComponent(ajax.responseText);
+
+
+              }
+            }
+  ajax.send("id_reservacion="+id);
 }
 
 

@@ -11,14 +11,16 @@ if(!isset($_SESSION["correo"])){
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" >
 	<title>El Kfetal®</title>
+
 	<link rel="stylesheet" href="../../css/estilo_nav.css">
-    <link rel="stylesheet" href="../../css/estilo_html.css">
+	<link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo1.css">
-	<script type="text/javascript" src="../../ckeditor/ckeditor.js"></script>
+	<link rel="stylesheet" href="../../css/confirma_reservacion.css">
+    	<script type="text/javascript" src="../../ckeditor/ckeditor.js"></script>
 	<script type='text/javascript' src='../../js/script.js'></script>
-     <script type='text/javascript' src='../../js/jquery.min.js'></script>
-    <script type='text/javascript' src='../../js/script1.js'></script>
-    <script type='text/javascript' src='../../js/jquery.js'></script>
+     	<script type='text/javascript' src='../../js/jquery.min.js'></script>
+  	  <script type='text/javascript' src='../../js/script1.js'></script>
+  	  <script type='text/javascript' src='../../js/jquery.js'></script>
 
 	</head>
 	<body>
@@ -48,14 +50,14 @@ if(!isset($_SESSION["correo"])){
     </header>
 
 		<center>
-		<h1>Confirma recervaciones </h1>
+		<h1>Confirma reservaciones </h1>
 		</center>
 		<br>
 
+		<br>
 
-		<div id="info_hojita" class="muestraHojita" style="
-    border: 1px solid;   width: 650px;   height: 90px;   margin-top: -35px;   margin-left: 290px;   margin-bottom: 5px;
-">
+		<h5>Datos del solicitante :</h5>
+		<div id="info_hojita" class="muestraHojita" >
 
 
 		</div>
