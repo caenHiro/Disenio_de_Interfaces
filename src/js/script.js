@@ -285,6 +285,22 @@ function pidePromociones(){
 
 
 
+function pideReservacionPendiente(){
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/obtenReservacionP.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+
+               document.getElementById('reservaciones1').innerHTML = ajax.responseText;
+             // window.location.href ="../../html/administrador/reservaciones.php?"+encodeURIComponent(ajax.responseText);
+
+              }
+            }
+  ajax.send();
+}
+
+
 function cerrarSesion(){
   var ajax = new XMLHttpRequest();
          ajax.open("POST", "../../html/administrador/salir.php", true);

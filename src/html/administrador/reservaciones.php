@@ -13,6 +13,7 @@ if(!isset($_SESSION["correo"])){
 	<link rel="stylesheet" href="../../css/estilo_nav.css">
     <link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo1.css">
+	<link rel="stylesheet" href="../../css/estilo_muestra_promocion.css">
 	<script src="../../js/script.js" type="text/javascript"></script>
 
      <script type='text/javascript' src='../../js/jquery.min.js'></script>
@@ -21,7 +22,7 @@ if(!isset($_SESSION["correo"])){
     <script type='text/javascript' src='../../js/llena_promocion.js'></script>
 
 </head>
-	<body>
+	<body  onload="pideReservacionPendiente()" >
 		<header>
 			<div id="menu">
 
@@ -51,9 +52,11 @@ if(!isset($_SESSION["correo"])){
 			<input id="calendario_reservacion" type="date">
 	        <button id="boton_mostrar" onclick="generaHojas()">Mostrar</button>
 	    </div>
-        <div id="error_busqueda"></div>
+                        <div id="error_busqueda"></div>
 		<div id = "reservaciones"></div>
+		<div id = "reservaciones1">
 
+		</div>
 	</body>
 
 </html>
