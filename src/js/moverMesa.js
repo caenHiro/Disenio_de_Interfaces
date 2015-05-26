@@ -96,4 +96,15 @@ id = idN
   
 }
 
+       $("#nombre").focus(function(){
+        console.log("Uju");
+         if(!isNaN($("#nombre").val())){
+           $("#nombre").removeClass('invalido');
+         }else{
+           $("#nombre").addClass('invalido');
+           $("#nombre").removeClass('valido');
+         }
+       });
+       
+
  
