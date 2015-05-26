@@ -18,7 +18,7 @@ if(!isset($_SESSION["correo"])){
     <script type='text/javascript' src='../../js/script1.js'></script>
     <script type='text/javascript' src='../../js/llena_promocion.js'></script>
 </head>
-	<body>
+	<body onload="pidePromociones()">
 		<header>
 			<div id="menu">
 
@@ -37,7 +37,7 @@ if(!isset($_SESSION["correo"])){
 					<nav id='cssmenu'>
 						<ul>
 			            	<li><a class="boton_menu" href="reservaciones.php">Reservaciones</a></li>
-			           <li><a class="boton_menu" onclick="pidePromociones()">Promociones</a></li>
+			           <li><a class="boton_menu" href="administra_promociones.php">Promociones</a></li>
 			            	<li><a class="boton_menu" href="envia_correo.php">Envia promociones</a></li>
 						</ul>
 					</nav>
@@ -50,8 +50,15 @@ if(!isset($_SESSION["correo"])){
 
 		<h2>Promociones</h2>
 
+		<div id = "reservaciones">
+		<h4> Agrega una promociones</h4>
+
+		<button onclick="_____" > Agregar </button>
+
+		</div>
 
 		<div id = "reservaciones1">
+		<h4>Tus promociones son :</h4>
 
 		</div>
 

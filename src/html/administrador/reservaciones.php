@@ -39,7 +39,7 @@ if(!isset($_SESSION["correo"])){
 					<nav id='cssmenu'>
 						<ul>
 			            	<li><a class="boton_menu" href="reservaciones.php">Reservaciones</a></li>
-			            	<li><a class="boton_menu" onclick="pidePromociones()">Promociones</a></li>
+			            	<li><a class="boton_menu" href="administra_promociones.php">Promociones</a></li>
 			            	<li><a class="boton_menu" href="envia_correo.php">Envia promociones</a></li>
 						</ul>
 					</nav>
@@ -48,12 +48,16 @@ if(!isset($_SESSION["correo"])){
 			</div>
 		</header>
 		<div id="busqueda">
-			<h2>Reservaciones por día </h2>
-			<input id="calendario_reservacion" type="date">
+			<h2 style="margin-left: 2%;">Reservaciones por día </h2>
+			<input id="calendario_reservacion" type="date" style="margin-left: 11%;">
 	        <button id="boton_mostrar" onclick="generaHojas()">Mostrar</button>
 	    </div>
                         <div id="error_busqueda"></div>
-		<div id = "reservaciones"></div>
+		<div id = "reservaciones">
+
+		</div>
+
+		<h4 style="margin-left: 2%;">Reservaciones pendientes</h4>
 		<div id = "reservaciones1">
 
 		</div>

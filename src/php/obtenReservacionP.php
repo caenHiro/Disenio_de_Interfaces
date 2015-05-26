@@ -18,14 +18,16 @@
 
     while($row = mysqli_fetch_assoc($query)){
     	echo "<div class="."'recuadro1' >";
-	echo "<div class="."'contenido_recuadro' >";
-   	echo " <span id='nombre'> Nombre:  ".$row['nombre']."</span><br>";
-	echo " Correo: <span id='correo'>".$row['correo']."</span><br>";
-	echo " <span id='telefono'> Telefono:  ".$row['telefono']."</span><br>";
-	echo " <span id='hora_ll'> Hora de llegada:  ".$row['horaLlegada']."</span><br>";
-	echo " <span id='hora_sa'> Hora de salida:  ".$row['horaSalida']."</span><br>";
-	echo " <span id='num_personas'> Número de personas:  ".$row['numPer']."</span><br>";
-	echo "</div></div>";
+    echo "<div class="."'contenido_recuadro1' >";
+    echo "<span> Nombre: </span> ".$row['nombre']."<br>";
+    echo "<span> Correo: </span> ".$row['correo']."<br>";
+    echo "<span> Telefono: </span> ".$row['telefono']."<br>";
+    echo "<span> Hora de llegada: </span> ".$row['horaLlegada']."<br>";
+    echo "<span> Hora de salida: </span> ".$row['horaSalida']."<br>";
+    echo "<span> Número de personas: </span> ".$row['numPer']."<br>";
+    echo "<button onclick= "."'confirma(".$row['T'].")'"."> Aceptar </button>";
+    echo "<button onclick= "."'cancela(".$row['T'].")'"." > Cancelar </button>";
+    echo "</div></div>";
 
 //echo $row['T'];
     }

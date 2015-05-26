@@ -41,7 +41,7 @@ if(!isset($_SESSION["correo"])){
                 <nav id='cssmenu'>
                     <ul>
 			            	<li><a class="boton_menu" href="reservaciones.php">Reservaciones</a></li>
-			           <li><a class="boton_menu" onclick="pidePromociones()">Promociones</a></li>
+			           <li><a class="boton_menu" href="administra_promociones.php">Promociones</a></li>
 			            	<li><a class="boton_menu" href="envia_correo.php">Envia promociones</a></li>
                     </ul>
                 </nav>

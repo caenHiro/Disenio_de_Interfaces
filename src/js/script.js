@@ -69,8 +69,8 @@ function valida_reservacion(){
   var dia = document.getElementById("dia_reservacion").value;
   var hora = document.getElementById("hora").value;
   var n_personas = document.getElementById("personas").value;
-  
- 
+
+
   if(nombre == "") {
     mandaError("error_form", "Debes proporcionar un nombre");
     return;
@@ -83,7 +83,7 @@ function valida_reservacion(){
     mandaError("error_form","Debes proporcionar un teléfono válido");
     return;
   }
-  
+
   if(!validaCorreo(correo)){
     mandaError("error_form","Proporciona un correo valido");
     return;
@@ -92,12 +92,12 @@ function valida_reservacion(){
     return;
   if(!validahora(hora,dia))
     return;
-  
+
   var hora_llegada = hora.substring(0,5);
   var hora_salida = hora.substring(11,16);
   var parametros = "nombre="+nombre+"&telefono="+telefono+"&correo="+correo+"&dia="+dia+"&hora_llegada="+hora_llegada+"&hora_salida="+hora_salida+"&n_personas="+n_personas;
   mandaReservacion(parametros);
-  
+
 }
 function limpiaDiv(div){
   document.getElementById(div).innerHTML = "";
@@ -124,7 +124,7 @@ function validaTelefono(tel){
 function validaDia(dia){
   var ano = dia.substring(0,4);
   var fecha = new Date();
-  
+
   if(ano<fecha.getFullYear()||(ano==fecha.getFullYear()+1&&fecha.getMonth()==11)){
      mandaError("error_form","Proporciona un año valido");
      return false;
@@ -309,8 +309,8 @@ function pidePromociones(){
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
 
-
-              window.location.href ="../../html/administrador/administra_promociones.php?"+encodeURIComponent(ajax.responseText);
+                document.getElementById('reservaciones1').innerHTML = ajax.responseText;
+             // window.location.href ="../../html/administrador/administra_promociones.php?"+encodeURIComponent(ajax.responseText);
 
               }
             }

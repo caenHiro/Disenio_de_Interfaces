@@ -19,6 +19,7 @@ $_fecha =$_POST["id_reservacion"];
 
     while($row = mysqli_fetch_assoc($query)){
 
+
    	echo " <span id='nombre'> Nombre:  ".$row['nombre']."</span><br>";
 	echo " Correo: <span id='correo'>".$row['correo']."</span><br>";
 	echo " <span id='telefono'> Telefono:  ".$row['telefono']."</span><br>";
