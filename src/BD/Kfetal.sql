@@ -27,9 +27,8 @@ CREATE TABLE  recervacion (
   idUsuario  MEDIUMINT NOT NULL,
   fecha varchar(120) NOT NULL,
   horaLlegada varchar(120) NOT NULL,
-  horaSalida varchar(120) NOT NULL,
-  numPer Integer NOT NULL,
-  numMesa varchar(120) NOT NULL,
+  numPer varchar(120) NOT NULL,
+  numMesa Integer NOT NULL,
   estado boolean NOT NULL,
   FOREIGN KEY (idUsuario) REFERENCES cliente(id)  ON DELETE CASCADE,
   PRIMARY KEY (id)
@@ -44,6 +43,7 @@ CREATE TABLE promocion (
   fechaTermino varchar(120) NOT NULL,
   titulo varchar(120) NOT NULL,
   cuerpo varchar(1200) NOT NULL,
+   estado boolean NOT NULL,
 PRIMARY KEY (id)
 );
 

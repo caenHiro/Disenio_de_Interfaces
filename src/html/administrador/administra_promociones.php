@@ -51,26 +51,21 @@ if(!isset($_SESSION["correo"])){
 		<h2>Promociones</h2>
 
 		<div id = "reservaciones">
-		<h4> Agrega una promociones</h4>
-
-		<button onclick="_____" > Agregar </button>
-
-		</div>
-
-		<div id = "reservaciones1">
-		<h4>Tus promociones son :</h4>
-
-		</div>
+		<h4> Agrega una promocion</h4>
 
 
+		<button  >
+		<a href="#openModal">Agregar</a>
+		</button>
 
-	</body>
+		<div id="openModal" class="modalDialog">
+		<div>
+		<a href="#close" title="Cerrar" class="close">X</a>
 
-</html>
+		<h2>Agrega una promocion</h2>
 
 
-<!--
-<div id = "form_reservacion_promo">
+		<div id = "form_reservacion_promo">
 			<div class ="contact_form">
 
 
@@ -103,4 +98,19 @@ if(!isset($_SESSION["correo"])){
 				</div>
 
 			</div>
--->
+</div>
+</div>
+
+		</div>
+
+		<div id = "reservaciones1">
+		<h4>Tus promociones son :</h4>
+
+		</div>
+
+
+
+	</body>
+
+</html>
+
