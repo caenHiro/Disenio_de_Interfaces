@@ -2,14 +2,20 @@ html{
 	background-image: url(../images/fondo.jpg);
   background-size: contain;
   background-repeat: repeat;
-  font-family: Raleway, sans-serif;
+  font-family: 'Roboto';
+  src: url('Roboto-ThinItalic-webfont.eot');
+  src: url('Roboto-ThinItalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('Roboto-ThinItalic-webfont.woff') format('woff'),
+       url('Roboto-ThinItalic-webfont.ttf') format('truetype'),
+       url('Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg'); 
+  font-weight: 200;
 }
 body{
 	width: 90%;
 	height: 100%;
 	margin-right: 5%;
 	margin-left: 5%;
-	background-color: rgb(244, 240, 230);
+	background-color: white;
 	background-repeat: repeat-y;
 }
 
@@ -19,9 +25,10 @@ header {
 
 span {
 	position: relative;
-	color: #09f;
+  /*color texto en reservacione*/
+	color: black;
 	text-decoration: none;
-	font-family: sans-serif;
+	/*font-family: sans-serif;*/
 }
 
 

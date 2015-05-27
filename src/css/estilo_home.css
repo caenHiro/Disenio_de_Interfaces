@@ -52,7 +52,8 @@
   						  width: 85%;
   						height: 400%;
   						border: 2px solid #fff;
-  					background: rgba(231, 149, 0, 1);
+  						/*color del cubo*/
+  					background: #ab7842;
   						font-weight: bold;
   					font-size: 14px;
   					text-align: center;

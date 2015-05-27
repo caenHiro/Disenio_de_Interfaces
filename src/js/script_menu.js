@@ -66,6 +66,8 @@ $(document).ready(function(){
 		$("#postre").css({"background-color" : "#d9222e"});
 		$("#descripcion_menu").empty();
 		$("#descripcion_menu").html("<strong>Postres:</strong>Variedad de postres para cada gusto...");
+		$("#camaraCambio").empty();
+		$("#camaraCambio").html('<div data-thumb="../images/menu/postre/postre_prew/postre01.jpg" data-src="../images/menu/postre/postre01.jpg"></div><div data-thumb="../images/menu/postre/postre_prew/postre02.jpg" data-src="../images/menu/postre/postre02.jpg"></div><div data-thumb="../images/menu/postre/postre_prew/postre03.jpg" data-src="../images/menu/postre/postre03.jpg"></div><div data-thumb="../images/menu/postre/postre_prew/postre04.jpg" data-src="../images/menu/postre/postre04.jpg"></div>');
 	});
 
 });

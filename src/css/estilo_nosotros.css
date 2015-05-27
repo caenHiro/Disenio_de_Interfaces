@@ -8,17 +8,19 @@
 	margin-top: none;
 	background-color: white;
 	display: inline-block;
+	margin-bottom: 2em;
 }
 
 
 #info{
 	float: left;
 	width: 60%;
+	margin-left: 1em;
 }
 
 #imagen{
 	float: left;
-	width: 38%;
+	width: 35%;
 	padding-left: 1%;
 }
 
