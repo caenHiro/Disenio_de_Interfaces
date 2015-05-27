@@ -10,9 +10,8 @@
         die("Error: " . mysqli_connect_error());
     }
 
- $sql = "SELECT (recervacion.id) as T , nombre , correo , telefono , horaLlegada,
- horaSalida, numPer  FROM recervacion  join cliente on cliente.id = recervacion.idUsuario" ;
- //where  recervacion.id ='" .$_fecha."'";//'" .$_POST["fecha"]."'";
+ $sql = "SELECT (recervacion.id) as T , nombre , correo , telefono , fecha ,horaLlegada,
+  numPer  FROM recervacion  join cliente on cliente.id = recervacion.idUsuario where  estado = false ";//'" .$_POST["fecha"]."'";
     $query = mysqli_query($conx, $sql);
 
 
@@ -22,8 +21,8 @@
     echo "<span> Nombre: </span> ".$row['nombre']."<br>";
     echo "<span> Correo: </span> ".$row['correo']."<br>";
     echo "<span> Telefono: </span> ".$row['telefono']."<br>";
+    echo "<span> Fecha: </span> ".$row['fecha']."<br>";
     echo "<span> Hora de llegada: </span> ".$row['horaLlegada']."<br>";
-    echo "<span> Hora de salida: </span> ".$row['horaSalida']."<br>";
     echo "<span> Número de personas: </span> ".$row['numPer']."<br>";
     echo "<button onclick= "."'confirma(".$row['T'].")'"."> Aceptar </button>";
     echo "<button onclick= "."'cancela(".$row['T'].")'"." > Cancelar </button>";

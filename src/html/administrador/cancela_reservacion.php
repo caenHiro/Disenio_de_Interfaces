@@ -11,7 +11,6 @@ if(!isset($_SESSION["correo"])){
 
 
  ?>
-
  <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -120,4 +119,3 @@ if(!isset($_SESSION["correo"])){
 
 <script src="../../js/script.js"></script>
 </html>
-

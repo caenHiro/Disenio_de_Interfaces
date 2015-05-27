@@ -4,9 +4,9 @@ $nombre = $_POST['nombre'];
 $telefono = $_POST['telefono'];
 $correo = $_POST['correo'];
 $dia = $_POST['dia'];
-$hora_llegada = $_POST['hora_llegada'];
-$hora_salida = $_POST['hora_salida'];
-$n_personas = $_POST['n_personas'];
+$hora_llegada = $_POST['hora'];
+
+$n_personas = $_POST['personas'];
 $total =0 ;
 $idUser=0;
 
@@ -45,9 +45,9 @@ if ($total > 0) {
 
 }
 
-$sql = "INSERT INTO  recervacion ( idUsuario , fecha , horaLlegada , horaSalida , numPer , numMesa) VALUES
+$sql = "INSERT INTO  recervacion ( idUsuario , fecha , horaLlegada ,  numPer , numMesa , estado) VALUES
 
-(".$idUser.",'" .$dia."','" .$hora_llegada."','" .$hora_salida."',".$n_personas.",1);";
+(".$idUser.",'" .$dia."','" .$hora_llegada."','".$n_personas."',1 , false);";
 
   mysqli_query($conx,$sql);
 
@@ -73,10 +73,9 @@ $sql = "INSERT INTO  cliente ( nombre , correo , telefono) VALUES
 
 }
 
-$sql = "INSERT INTO  recervacion ( idUsuario , fecha , horaLlegada , horaSalida , numPer , numMesa) VALUES
+$sql = "INSERT INTO  recervacion ( idUsuario , fecha , horaLlegada ,  numPer , numMesa , estado) VALUES
 
-(".$idUser.",'" .$dia."','" .$hora_llegada."','" .$hora_salida."',".$n_personas.",1);";
-
+(".$idUser.",'" .$dia."','" .$hora_llegada."','".$n_personas."',1 , false);";
   mysqli_query($conx,$sql);
 
   echo "Gracias por hacer un recervacion en el kfetal  ".$nombre;

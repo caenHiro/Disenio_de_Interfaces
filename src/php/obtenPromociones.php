@@ -10,7 +10,7 @@
         die("Error: " . mysqli_connect_error());
     }
 
- $sql = "SELECT id, fechaInicio , fechaTermino , titulo , cuerpo  FROM promocion ";
+ $sql = "SELECT id, fechaInicio , fechaTermino , titulo , cuerpo , estado  FROM promocion ";
     $query = mysqli_query($conx, $sql);
 
 
@@ -22,7 +22,7 @@
 	echo "<span> fecha de Termino: </span> ".$row['fechaTermino']."<br>";
 	echo "<span> Titulo: </span> ".$row['titulo']."<br>";
 	echo "<span> La promocion es : </span> ".$row['cuerpo']."<br>";
-	echo "<span> El estado de la promocion es : </span> ".$row['cuerpo']."<br>";
+	echo "<span> El estado de la promocion es : </span> ".$row['estado']."<br>";
 	//echo "<button > Editar </button>";
 	echo "<button onclick= "."'elimina(".$row['id'].")'"."  > Eliminar </button>";
 	echo "<button onclick= "."'estado(".$row['id'].")'"."  > Cambia estado </button>";

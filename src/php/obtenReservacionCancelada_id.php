@@ -30,7 +30,7 @@ $_fecha =$_POST["id_reservacion"];
     }
 
 
-$sql = "UPDATE recervacion SET estado= true WHERE id= '" .$_fecha."'";
+$sql = "UPDATE recervacion SET estado= false WHERE id= '" .$_fecha."'";
     $query = mysqli_query($conx, $sql);
 
 

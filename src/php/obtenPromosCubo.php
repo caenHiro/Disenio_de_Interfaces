@@ -8,7 +8,7 @@
         die("Error: " . mysqli_connect_error());
     }
 
- $sql = "SELECT id, fechaInicio , fechaTermino , titulo , cuerpo  FROM promocion ";
+ $sql = "SELECT id, fechaInicio , fechaTermino , titulo , cuerpo , estado FROM promocion;";
     $query = mysqli_query($conx, $sql);
 
 $_contador =10001;
@@ -23,7 +23,7 @@ $replace = array('uno', 'dos', 'tres', 'cuatro');
 	 " fecha de Termino:  ".$row['fechaTermino']."<br>".
 	 " Titulo:  ".$row['titulo']."<br>".
 	 " La promocion es :  ".$row['cuerpo']."<br>".
-	 " El estado de la promocion es :  ".$row['cuerpo']."<br>".
+	 " El estado de la promocion es :  ".$row['estado']."<br>".
 	 " </span>";
 	 $_contador = $_contador +1;
 	 echo str_replace($search, $replace, $_promo);

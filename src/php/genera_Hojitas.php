@@ -12,8 +12,8 @@ $_fecha =$_POST["fecha"];
         die("Error: " . mysqli_connect_error());
     }
 
- $sql = "SELECT (recervacion.id) as T , nombre , correo , telefono , horaLlegada,
- horaSalida, numPer  FROM recervacion  join cliente on cliente.id = recervacion.idUsuario where  fecha ='" .$_fecha."'";//'" .$_POST["fecha"]."'";
+ $sql = "SELECT (recervacion.id) as T , nombre , correo , telefono , horaLlegada, numPer  FROM recervacion  join cliente on cliente.id = recervacion.idUsuario where  fecha ='" .$_fecha."'
+ 	and  estado = true";
     $query = mysqli_query($conx, $sql);
 
 
@@ -25,7 +25,7 @@ $_fecha =$_POST["fecha"];
 	echo " Correo: <span id='correo'>".$row['correo']."</span><br>";
 	echo " <span id='telefono'> Telefono:  ".$row['telefono']."</span><br>";
 	echo " <span id='hora_ll'> Hora de llegada:  ".$row['horaLlegada']."</span><br>";
-	echo " <span id='hora_sa'> Hora de salida:  ".$row['horaSalida']."</span><br>";
+
 	echo " <span id='num_personas'> Número de personas:  ".$row['numPer']."</span><br>";
 	echo "</div></div>";
 

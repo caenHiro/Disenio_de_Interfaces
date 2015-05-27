@@ -88,14 +88,14 @@ function valida_reservacion(){
     mandaError("error_form","Proporciona un correo valido");
     return;
   }
-  if(!validaDia(dia))
-    return;
+//  if(!validaDia(dia))
+  //  return;
   if(!validahora(hora,dia))
     return;
 
   var hora_llegada = hora.substring(0,5);
   var hora_salida = hora.substring(11,16);
-  var parametros = "nombre="+nombre+"&telefono="+telefono+"&correo="+correo+"&dia="+dia+"&hora_llegada="+hora_llegada+"&hora_salida="+hora_salida+"&n_personas="+n_personas;
+  var parametros = "nombre="+nombre+"&telefono="+telefono+"&correo="+correo+"&dia="+dia+"&hora="+hora+"&personas="+personas;
   mandaReservacion(parametros);
 
 }
@@ -286,12 +286,12 @@ function confirma(id){
 
 function cancela(id){
   var ajax = new XMLHttpRequest();
-         ajax.open("POST", "../../php/obtenReservacion_id.php", true);
+         ajax.open("POST", "../../php/obtenReservacionCancelada_id.php", true);
           ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
 
-                window.location.href ="../../html/administrador/confirma_reservacion.php?"+encodeURIComponent(ajax.responseText);
+                window.location.href ="../../html/administrador/cancela_reservacion.php?" +encodeURIComponent(ajax.responseText);
 
 
               }
@@ -310,7 +310,7 @@ function pidePromociones(){
              if(ajax.status == 200 && ajax.readyState == 4){
 
                 document.getElementById('reservaciones1').innerHTML = ajax.responseText;
-             // window.location.href ="../../html/administrador/administra_promociones.php?"+encodeURIComponent(ajax.responseText);
+
 
               }
             }
@@ -349,17 +349,54 @@ function cerrarSesion(){
 
 
 function inserta_promocion(){
-alert("Insertaste una promocion");
+  var dia_inicio = document.getElementById("dia_inicio").value;
+  var dia_termino= document.getElementById("dia_termino").value;
+  var titulo = document.getElementById("titulo").value;
+  var cuerpo = document.getElementById("cuerpo").value;
+   var parametros = "dia_inicio="+dia_inicio+"&dia_termino="+dia_termino+"&titulo="+titulo+"&cuerpo="+cuerpo;
+  mandaPromo(parametros);
 
 }
+
+
+function mandaPromo(parametros){
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/insertaPromo.php", true);
+         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+                alert(ajax.responseText);
+              }
+            }
+        ajax.send(parametros);
+}
+
+
 
 
 function estado(id){
-alert("Insertaste una promocion" + id );
 
-}
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/cambiaEstadoPromo.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+              alert(ajax.responseText);
+              }
+            }
+  ajax.send("id="+id);
+  }
 
 function elimina(id){
-alert("Insertaste una promocion" + id );
+
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/eliminaPromo.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+              alert(ajax.responseText);
+              }
+            }
+  ajax.send("id="+id);
 
 }
