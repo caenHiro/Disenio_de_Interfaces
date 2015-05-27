@@ -9,18 +9,17 @@
 	<link rel="stylesheet" href="../css/estilo_nav.css">
     <link rel="stylesheet" href="../css/estilo_html.css">
 	<link rel="stylesheet" href="../css/estilo_agenda_reservacion.css">
-	<script type='text/javascript' src='../js/script.js'></script>
+	
 	<script type='text/javascript' src='../js/jquery.min.js'></script>
-    <script type='text/javascript' src='../js/script1.js'></script>
-
+	<script type='text/javascript' src='../js/script.js'></script>
+	<script type='text/javascript' src='../js/script1.js'></script>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 
  	<script src= "../js/moverMesa.js"></script>
 	<style>
 	.mesa{display: inline-block; padding: 1%;}
-	table{width:75%;height: 48%;  text-align: center; }
-	.espacio{height: 10%; padding: 4%;}
+	table{width:75%;height: 100%;  text-align: center;}
 	</style>
 </head>
 	<body>
@@ -58,15 +57,14 @@
 
 		<h3> Mapa de Mesas </h3>
 		<div id = "mapa_mesas">
-		<div class="espacio"></div>
 		<table>
-		<tr>
-		<td><img id = "1" src="../images/mesa.png" dragstart="" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
-		<td><img id = "2" src="../images/mesa.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
+		<tr style="margin-bottom:5%;">
+		<td><img id = "1" src="../images/mesa2.png" dragstart="" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
+		<td><img id = "2" src="../images/mesa2.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
 		</tr>
-		<tr>
-		<td><img id = "3" src="../images/mesa2.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
-		<td><img id = "4" src="../images/mesa2.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
+		<tr style="margin-top:5%;">
+		<td><img id = "3" src="../images/mesa.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
+		<td><img id = "4" src="../images/mesa.png" class = "mesa" draggable="true" onClick="cambia(this.id)"></td>
 		</tr>
 		</table>
 		</div>
@@ -90,17 +88,50 @@
 				<br>
 				<input type="date" id="dia_reservacion"  required>
 				<br>
-				<span>Hora de llegada</span>
+				<span>Hora de  tu reservacion</span>
 				<br>
-				<input type="time" id="hora_llegada"  required>
-				<br>
+<<<<<<< HEAD
 				<!--span>Hora de salida</span>
 				<br>
 				<input type="time" id="hora_salida"  required>
 				<br-->
+=======
+				<select id = "hora">
+  				<option >10:00 am - 10:30 am</option>
+  				<option >10:30 am - 11:00 am</option>
+  				<option >11:00 am - 11:30 am</option>
+  				<option >11:30 am - 12:00 pm</option>
+  				<option >12:00 pm - 12:30 pm</option>
+  				<option >12:30 pm - 13:00 pm</option>
+  				<option >13:00 pm - 13:30 pm</option>
+				<option >13:30 pm - 14:00 pm</option>
+  				<option >14:00 pm - 14:30 pm</option>
+  				<option >14:30 pm - 15:00 pm</option>
+  				<option >15:00 pm - 15:30 pm</option>
+  				<option >15:30 pm - 16:00 pm</option>
+  				<option >16:00 pm - 16:30 pm</option>
+				<option >16:30 pm - 17:00 pm</option>
+  				<option >17:00 pm - 17:30 pm</option>
+  				<option >17:30 pm - 18:00 pm</option>
+  				<option >18:00 pm - 18:30 pm</option>
+  				<option >18:30 pm - 19:00 pm</option>
+  				<option >19:00 pm - 19:30 pm</option>
+				<option >19:30 pm - 20:00 pm</option>
+  				<option >20:00 pm - 20:30 pm</option>
+				<option >20:30 pm - 21:00 pm</option>
+  				<option >21:00 pm - 21:30 pm</option>
+				<option >21:30 pm - 22:00 pm</option>
+  				</select>
+
+				<br>
+>>>>>>> 278efea0d0820a2f28ed8ca975b698caaad894c2
 				<span>No. de personas</span>
 				<br>
-				<input type="number" id="n_personas" placeholder="4" required>
+				<select  id = "personas">
+  				<option value="1 - 4" >1 - 4</option>
+  				<option > 4 -8</option>
+				</select>
+
 				<br><br>
 				<button onclick="valida_reservacion()"> Reservar</button>
 				<br>

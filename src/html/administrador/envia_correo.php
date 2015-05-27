@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION["login"])){
-	header('Location: index.php');
+if(!isset($_SESSION["correo"])){
+	header('Location: ../inicio.html');
 }
  ?>
  <!DOCTYPE html>
@@ -32,14 +32,14 @@ if(!isset($_SESSION["login"])){
             <div id="navegacion">
 
                 <section id="espacio_sup">
-	<a href="../../../home.html" style = " float:right">Cerrar sesion</a>
+	<a  onclick="cerrarSesion()" style = " float:right">Cerrar sesion</a>
 
                 </section>
                 <nav id='cssmenu'>
                     <ul>
-			            	<li><a class="boton_menu" href="reservaciones.html">Reservaciones</a></li>
-			            	<li><a class="boton_menu" onclick="pidePromociones()">Promociones</a></li>
-			            	<li><a class="boton_menu" href="envia_correo.html">Envia promociones</a></li>
+			            	<li><a class="boton_menu" href="reservaciones.php">Reservaciones</a></li>
+			            	<li><a class="boton_menu" href="administra_promociones.php">Promociones</a></li>
+			            	<li><a class="boton_menu" href="envia_correo.php">Envia promociones</a></li>
                     </ul>
                 </nav>
             </div>

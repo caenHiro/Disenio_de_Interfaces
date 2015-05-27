@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION["login"])){
-	header('Location: index.php');
+if(!isset($_SESSION["correo"])){
+	header('Location: ../inicio.html');
 }
  ?>
  <!DOCTYPE html>
@@ -13,6 +13,7 @@ if(!isset($_SESSION["login"])){
 	<link rel="stylesheet" href="../../css/estilo_nav.css">
     <link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo1.css">
+	<link rel="stylesheet" href="../../css/estilo_muestra_promocion.css">
 	<script src="../../js/script.js" type="text/javascript"></script>
 
      <script type='text/javascript' src='../../js/jquery.min.js'></script>
@@ -21,7 +22,7 @@ if(!isset($_SESSION["login"])){
     <script type='text/javascript' src='../../js/llena_promocion.js'></script>
 
 </head>
-	<body>
+	<body  onload="pideReservacionPendiente()" >
 		<header>
 			<div id="menu">
 
@@ -32,14 +33,14 @@ if(!isset($_SESSION["login"])){
 				<div id="navegacion">
 
 					<section id="espacio_sup">
-				<a href="../../../home.html" style = " float:right">Cerrar sesion</a>
+				<a onclick="cerrarSesion()" style = " float:right">Cerrar sesion</a>
 
 					</section>
 					<nav id='cssmenu'>
 						<ul>
-			            	<li><a class="boton_menu" href="reservaciones.html">Reservaciones</a></li>
-			            	<li><a class="boton_menu" onclick="pidePromociones()">Promociones</a></li>
-			            	<li><a class="boton_menu" href="envia_correo.html">Envia promociones</a></li>
+			            	<li><a class="boton_menu" href="reservaciones.php">Reservaciones</a></li>
+			            	<li><a class="boton_menu" href="administra_promociones.php">Promociones</a></li>
+			            	<li><a class="boton_menu" href="envia_correo.php">Envia promociones</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -47,13 +48,19 @@ if(!isset($_SESSION["login"])){
 			</div>
 		</header>
 		<div id="busqueda">
-			<h2>Reservaciones por día </h2>
-			<input id="calendario_reservacion" type="date">
+			<h2 style="margin-left: 2%;">Reservaciones por día </h2>
+			<input id="calendario_reservacion" type="date" style="margin-left: 11%;">
 	        <button id="boton_mostrar" onclick="generaHojas()">Mostrar</button>
 	    </div>
-        <div id="error_busqueda"></div>
-		<div id = "reservaciones"></div>
+                        <div id="error_busqueda"></div>
+		<div id = "reservaciones">
 
+		</div>
+
+		<h4 style="margin-left: 2%;">Reservaciones pendientes</h4>
+		<div id = "reservaciones1">
+
+		</div>
 	</body>
 
 </html>

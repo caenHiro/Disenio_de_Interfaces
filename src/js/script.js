@@ -1,25 +1,3 @@
-function validarNumerosCantidad(e) { // 1
-        tecla = (document.all) ? e.keyCode : e.which; // 2
-        if (tecla==8) return true; // backspace
-        if (tecla==190) {return true} ;
-        if (tecla>=96 && tecla<=105) { return true;} //numpad
-
-        patron = /[0-9]/; // patron
-
-        te = String.fromCharCode(tecla);
-        return patron.test(te); // prueba
-    }
-
-    function validarNumeros(e) { // 1
-        tecla = (document.all) ? e.keyCode : e.which; // 2
-        if (tecla==8) return true; // backspace
-        if (tecla>=96 && tecla<=105) { return true;} //numpad
-
-        patron = /[0-9]/; // patron
-
-        te = String.fromCharCode(tecla);
-        return patron.test(te); // prueba
-    }
 
        function recogeDatos(){
             var correo = document.getElementById("correo").value;
@@ -46,7 +24,7 @@ function validarNumerosCantidad(e) { // 1
         ajax.onreadystatechange = function(){
             if(ajax.status == 200 && ajax.readyState == 4){
             if(ajax.responseText ==  10 ){
-                window.location.href = "../html/administrador/reservaciones.html" ;
+                window.location.href = "../html/administrador/reservaciones.php" ;
             }
               document.getElementById("data").innerHTML = ajax.responseText;
 
@@ -71,7 +49,7 @@ function validarNumerosCantidad(e) { // 1
           ajax.onreadystatechange = function(){
               if(ajax.status == 200 && ajax.readyState == 4){
                 if(ajax.responseText ==  10 ){
-                  window.location.href = "../html/reservaciones.html" ;
+                  window.location.href = "../html/reservaciones.php" ;
                 }
                 document.getElementById("fechas").innerHTML = ajax.responseText;
 
@@ -84,69 +62,47 @@ function validarNumerosCantidad(e) { // 1
          ajax.send(parametros);
        }
 
-
 function valida_reservacion(){
   var nombre = document.getElementById("nombre").value;
   var telefono = document.getElementById("telefono").value;
   var correo = document.getElementById("correo").value;
   var dia = document.getElementById("dia_reservacion").value;
-  var hora_llegada = document.getElementById("hora_llegada").value;
-  var hora_salida = document.getElementById("hora_salida").value;
-  var n_personas = document.getElementById("n_personas").value;
+  var hora = document.getElementById("hora").value;
+  var n_personas = document.getElementById("personas").value;
 
-  var estado = true;
+
   if(nombre == "") {
     mandaError("error_form", "Debes proporcionar un nombre");
-    estado = false;
+    return;
   }
   if(!isNaN(nombre)){
     mandaError("error_form", "Proporcione un nombre valido");
-    estado = false;
+    return;
   }
-
   if(!validaTelefono(telefono)){
-    mandaError("error_form","Debes proporcionar un teléfono váildo");
-    estado = false;
+    mandaError("error_form","Debes proporcionar un teléfono válido");
+    return;
   }
 
   if(!validaCorreo(correo)){
-    mandaError("error_form","Poporciona un correo valido");
-    estado = false;
+    mandaError("error_form","Proporciona un correo valido");
+    return;
   }
-  /*
-  if(!validaDia(dia)){
+  if(!validaDia(dia))
+    return;
+  if(!validahora(hora,dia))
+    return;
 
-  }
-  if(!validaHora(hora_llegada)){
+  var hora_llegada = hora.substring(0,5);
+  var hora_salida = hora.substring(11,16);
+  var parametros = "nombre="+nombre+"&telefono="+telefono+"&correo="+correo+"&dia="+dia+"&hora_llegada="+hora_llegada+"&hora_salida="+hora_salida+"&n_personas="+n_personas;
+  mandaReservacion(parametros);
 
-  }
-  if(!validaHora(hora_salida)){
-
-  }
-  */
-  if(n_personas == ""){
-    mandaError("error_form","Debes proporcionar un # váildo");
-    estado = false;
-  }
-  if(n_personas <= 0){
-    mandaError("error_form","Al menos debe haber alguien en la reservacion ");
-    estado = false;
-  }
-
-
-
-  dia = dia.replace(new RegExp(/-/g),"/");
-  if(estado){
-      var parametros = "nombre="+nombre+"&telefono="+telefono+"&correo="+correo+"&dia="+dia+"&hora_llegada="+hora_llegada+"&hora_salida="+hora_salida+"&n_personas="+n_personas;
-      mandaReservacion(parametros);
-  } else {
-    //limpiaDiv("error_form");
-
-  }
 }
 function limpiaDiv(div){
   document.getElementById(div).innerHTML = "";
 }
+
 function validaCorreo(email){
   var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   return re.test(email);
@@ -156,7 +112,53 @@ function validaTelefono(tel){
   if(tel == ""){
     return false;
   }
+  var tem = tel;
+  tem = tem.replace('/','');
+  tem = tem.replace('-','');
+  if(tem.length==10||tem.length==13||tem.length==8||!isNaN(tem))
   return true;
+  else
+  return false;
+}
+
+function validaDia(dia){
+  var ano = dia.substring(0,4);
+  var fecha = new Date();
+
+  if(ano<fecha.getFullYear()||(ano==fecha.getFullYear()+1&&fecha.getMonth()==11)){
+     mandaError("error_form","Proporciona un año valido");
+     return false;
+  }
+  var mes = dia.substring(5,7);
+
+  if(mes<fecha.getMonth()+1){
+     mandaError("error_form","Proporciona un mes valido");
+     return false;
+  }
+
+  var date = dia.substring(8);
+
+  if(date<fecha.getDate()&&date<=daysInMonth(mes,ano)){
+     mandaError("error_form","Proporciona un dia valido");
+     return false;
+  }
+  return true;
+}
+
+function validahora(hora,dia){
+  var fecha = new Date();
+  var h = hora.substring(0,2);
+  var date = dia.substring(8);
+
+  if(h<=fecha.getHours()&&fecha.getDate()==date){
+  mandaError("error_form","Proporciona una hora correcta");
+  return false;
+  }
+  return true;
+}
+
+function daysInMonth(humanMonth, year) {
+  return new Date(year || new Date().getFullYear(), humanMonth, 0).getDate();
 }
 function mandaError(idError,mensaje){
   document.getElementById(idError).innerHTML = mensaje;
@@ -192,7 +194,7 @@ function envia_promo_correo(){
 
 function manda_promo_correo(parametros){
         var ajax = new XMLHttpRequest();
-         ajax.open("POST", "../php/envia__promo_correo.php", true);
+         ajax.open("POST", "../../php/envia_promo_correo.php", true);
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
@@ -206,13 +208,11 @@ function manda_promo_correo(parametros){
 
 
 function envia_confirmacion_correo(){
-  var correo = "jeanpierre@ciencias.unam.mx";//document.getElementById("correo").value;
+  var correo = document.getElementById("correo").value;
   var cuerpo = CKEDITOR.instances['editor1'].getData();
- // var receptor =  document.getElementById("id_recervacion").value;
   var parametros = "correo="+correo+"&cuerpo="+cuerpo;//+"&receptor="+receptor;
   parametros = parametros.split("<p>&nbsp;</p>").join(" <br> ");
-
-  manda_correo_personal(parametros);
+ manda_correo_personal(parametros);
 }
 
 function manda_correo_personal(parametros){
@@ -228,17 +228,6 @@ function manda_correo_personal(parametros){
 }
 
 
-function manda_confirmacion_correo(parametros){
-          var ajax = new XMLHttpRequest();
-         ajax.open("POST", "../../php/envia__confirmacion_correo.php", true);
-         ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-          ajax.onreadystatechange = function(){
-             if(ajax.status == 200 && ajax.readyState == 4){
-                alert(ajax.responseText);
-              }
-            }
-        ajax.send(parametros);
-       }
 
 
 
@@ -277,18 +266,14 @@ function generaHojas(){
 * id es el id de la reservacion en la base de datos
 */
 function confirma(id){
-  //var href = "../../html/administrador/confirma_reservacion.html";
-  //window.location = href;
 
-  //Enviamos peticion al servidor para que me de la informacion
-  //de la reservacion con ese id
   var ajax = new XMLHttpRequest();
          ajax.open("POST", "../../php/obtenReservacion_id.php", true);
           ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
 
-                window.location.href ="../../html/administrador/confirma_reservacion.html?id="+encodeURIComponent(ajax.responseText);
+                window.location.href ="../../html/administrador/confirma_reservacion.php?"+encodeURIComponent(ajax.responseText);
 
 
               }
@@ -300,9 +285,18 @@ function confirma(id){
 
 
 function cancela(id){
-  var href = "../../html/administrador/confirma_reservacion.html";
-  window.location = href;
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/obtenReservacion_id.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
 
+                window.location.href ="../../html/administrador/confirma_reservacion.php?"+encodeURIComponent(ajax.responseText);
+
+
+              }
+            }
+  ajax.send("id_reservacion="+id);
 }
 
 
@@ -314,9 +308,58 @@ function pidePromociones(){
           ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
-               window.location.href ="../../html/administrador/administra_promociones.html?"+encodeURIComponent(ajax.responseText);
+
+                document.getElementById('reservaciones1').innerHTML = ajax.responseText;
+             // window.location.href ="../../html/administrador/administra_promociones.php?"+encodeURIComponent(ajax.responseText);
+
               }
             }
   ajax.send();
 }
 
+
+
+function pideReservacionPendiente(){
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/obtenReservacionP.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+
+               document.getElementById('reservaciones1').innerHTML = ajax.responseText;
+             // window.location.href ="../../html/administrador/reservaciones.php?"+encodeURIComponent(ajax.responseText);
+
+              }
+            }
+  ajax.send();
+}
+
+
+function cerrarSesion(){
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../html/administrador/salir.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+               window.location.href ="../../../home.html";
+              }
+            }
+  ajax.send();
+}
+
+
+function inserta_promocion(){
+alert("Insertaste una promocion");
+
+}
+
+
+function estado(id){
+alert("Insertaste una promocion" + id );
+
+}
+
+function elimina(id){
+alert("Insertaste una promocion" + id );
+
+}

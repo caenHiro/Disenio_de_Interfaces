@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION["login"])){
-	header('Location: index.php');
+if(!isset($_SESSION["correo"])){
+	header('Location: ../inicio.html');
 }
  ?>
 <!DOCTYPE html>
@@ -10,15 +10,15 @@ if(!isset($_SESSION["login"])){
 	<meta charset="UTF-8">
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../../css/formularioPromo.css">
-	<link rel="stylesheet" href="../../css/estilo1.css">
+	<link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo_nav.css">
-    <link rel="stylesheet" href="../../css/estilo_html.css">
+<link rel="stylesheet" href="../../css/estilo_muestra_promocion.css">
 <script type='text/javascript' src='../../js/script.js'></script>
      <script type='text/javascript' src='../../js/jquery.min.js'></script>
     <script type='text/javascript' src='../../js/script1.js'></script>
     <script type='text/javascript' src='../../js/llena_promocion.js'></script>
 </head>
-	<body>
+	<body onload="pidePromociones()">
 		<header>
 			<div id="menu">
 
@@ -31,14 +31,14 @@ if(!isset($_SESSION["login"])){
 				<div id="navegacion">
 
 					<section id="espacio_sup">
-				<a href="../../../home.html" style = " float:right">Cerrar sesion</a>
+				<a onclick="cerrarSesion()" style = " float:right">Cerrar sesion</a>
 
 					</section>
 					<nav id='cssmenu'>
 						<ul>
-			            	<li><a class="boton_menu" href="reservaciones.html">Reservaciones</a></li>
-			           <li><a class="boton_menu" onclick="pidePromociones()">Promociones</a></li>
-			            	<li><a class="boton_menu" href="envia_correo.html">Envia promociones</a></li>
+			            	<li><a class="boton_menu" href="reservaciones.php">Reservaciones</a></li>
+			           <li><a class="boton_menu" href="administra_promociones.php">Promociones</a></li>
+			            	<li><a class="boton_menu" href="envia_correo.php">Envia promociones</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -46,12 +46,26 @@ if(!isset($_SESSION["login"])){
 			</div>
 		</header>
 		<br>
+
+
 		<h2>Promociones</h2>
 
-		<div id = "reservaciones1">
+		<div id = "reservaciones">
+		<h4> Agrega una promocion</h4>
 
-		</div>
-			<div id = "form_reservacion_promo">
+
+		<button  >
+		<a href="#openModal">Agregar</a>
+		</button>
+
+		<div id="openModal" class="modalDialog">
+		<div>
+		<a href="#close" title="Cerrar" class="close">X</a>
+
+		<h2>Agrega una promocion</h2>
+
+
+		<div id = "form_reservacion_promo">
 			<div class ="contact_form">
 
 
@@ -81,11 +95,22 @@ if(!isset($_SESSION["login"])){
 
 
 				<div id="error_form"></div>
+				</div>
+
 			</div>
+</div>
+</div>
 
 		</div>
+
+		<div id = "reservaciones1">
+		<h4>Tus promociones son :</h4>
+
+		</div>
+
 
 
 	</body>
 
 </html>
+
