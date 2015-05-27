@@ -54,8 +54,8 @@ if(!isset($_SESSION["correo"])){
 		<h4> Agrega una promocion</h4>
 
 
-		<button  id="formulario">
-		<a href="#openModal">Agregar</a>
+		<button  id="formulario"  onclick="location.href='#openModal'">
+		Agregar
 		</button>
 
 		<div id="openModal" class="modalDialog">

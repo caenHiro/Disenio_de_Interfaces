@@ -170,7 +170,7 @@ function mandaReservacion(parametros){
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
-
+                window.location.href ="../../home.html";
                 alert(ajax.responseText);
 
               }
@@ -365,7 +365,10 @@ function mandaPromo(parametros){
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
+              window.location.href ="../../html/administrador/administra_promociones.php";
+
                 alert(ajax.responseText);
+
               }
             }
         ajax.send(parametros);
@@ -381,6 +384,7 @@ function estado(id){
           ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
+              window.location.href ="../../html/administrador/administra_promociones.php";
               alert(ajax.responseText);
               }
             }
@@ -394,6 +398,7 @@ function elimina(id){
           ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
+              window.location.href ="../../html/administrador/administra_promociones.php";
               alert(ajax.responseText);
               }
             }

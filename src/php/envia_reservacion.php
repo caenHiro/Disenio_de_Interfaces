@@ -51,7 +51,7 @@ $sql = "INSERT INTO  recervacion ( idUsuario , fecha , horaLlegada ,  numPer , n
 
   mysqli_query($conx,$sql);
 
-  echo "Gracias por hacer un recervacion de nuevo  ".$nombre;
+  echo "Gracias por hacer una reservacion de nuevo  ".$nombre;
 
 } else{
 
@@ -78,7 +78,7 @@ $sql = "INSERT INTO  recervacion ( idUsuario , fecha , horaLlegada ,  numPer , n
 (".$idUser.",'" .$dia."','" .$hora_llegada."','".$n_personas."',1 , false);";
   mysqli_query($conx,$sql);
 
-  echo "Gracias por hacer un recervacion en el kfetal  ".$nombre;
+  echo "Gracias por hacer un reservacion en el kfetal  ".$nombre;
 
 
 }
