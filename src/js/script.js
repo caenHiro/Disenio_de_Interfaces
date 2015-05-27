@@ -242,7 +242,7 @@ function manda_correo_personal(parametros){
 function generaHojas(){
         var fecha = document.getElementById("calendario_reservacion").value;
         //Hacer validacion de la fecha
-        fecha = fecha.replace(new RegExp(/-/g),"/");
+        fecha = fecha;//.replace(new RegExp(/-/g),"/");
         if(fecha === ""){
           document.getElementById("error_busqueda").innerHTML = "Debes introducir una fecha válida.";
           return;
