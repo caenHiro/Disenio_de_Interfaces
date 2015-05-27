@@ -11,14 +11,15 @@ if(!isset($_SESSION["correo"])){
 	<meta charset="UTF-8">
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../../css/estilo_nav.css">
-    <link rel="stylesheet" href="../../css/estilo_html.css">
+   	 <link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo1.css">
 	<link rel="stylesheet" href="../../css/estilo_muestra_promocion.css">
-	<script src="../../js/script.js" type="text/javascript"></script>
 
-     <script type='text/javascript' src='../../js/jquery.min.js'></script>
-    <script type='text/javascript' src='../../js/script1.js'></script>
-    <script type='text/javascript' src='../../js/script.js'></script>
+	<script type='text/javascript' src='../../js/jquery.js'></script>
+   	  <script type='text/javascript' src='../../js/jquery.min.js'></script>
+  	  <script type='text/javascript' src='../../js/jquery-2.1.3.min.js'></script>
+    	<script type='text/javascript' src='../../js/script.js'></script>
+	<script type='text/javascript' src='../../js/script1.js'></script>
 
 
 </head>

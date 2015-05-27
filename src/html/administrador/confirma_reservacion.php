@@ -25,11 +25,12 @@ if(!isset($_SESSION["correo"])){
 	<link rel="stylesheet" href="../../css/estilo1.css">
 	<link rel="stylesheet" href="../../css/confirma_reservacion.css">
     	<script type="text/javascript" src="../../ckeditor/ckeditor.js"></script>
+    	<script type='text/javascript' src='../../js/jquery.js'></script>
 	<script type='text/javascript' src='../../js/script.js'></script>
      	<script type='text/javascript' src='../../js/jquery.min.js'></script>
-  	  <script type='text/javascript' src='../../js/script1.js'></script>
-  	  <script type='text/javascript' src='../../js/jquery.js'></script>
-
+  	<script type='text/javascript' src='../../js/jquery-2.1.3.min.js'></script>
+    	<script type='text/javascript' src='../../js/script.js'></script>
+	<script type='text/javascript' src='../../js/script1.js'></script>
 	</head>
 	<body>
 
