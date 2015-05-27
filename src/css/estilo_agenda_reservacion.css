@@ -1,11 +1,8 @@
 #mapa_mesas{
 
 	float: left;
-<<<<<<< HEAD
 	border: 0.2em solid #ec8b2e;
-=======
 	/*border: 0.2em solid blue;*/
->>>>>>> 278efea0d0820a2f28ed8ca975b698caaad894c2
 	width: 75%;
 	height: 29em;
   background-size: 100% 100%;
@@ -210,11 +207,8 @@ body {
   text-decoration: none;
   color: white;
 }
-<<<<<<< HEAD
 
 input{
 margin-bottom: 1em;
 margin-top: 1px;
 }
-=======
->>>>>>> 278efea0d0820a2f28ed8ca975b698caaad894c2
