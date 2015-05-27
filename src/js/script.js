@@ -68,7 +68,7 @@ function valida_reservacion(){
   var correo = document.getElementById("correo").value;
   var dia = document.getElementById("dia_reservacion").value;
   var hora = document.getElementById("hora").value;
-  var n_personas = document.getElementById("personas").value;
+  var personas = document.getElementById("personas").value;
 
 
   if(nombre == "") {
@@ -93,8 +93,8 @@ function valida_reservacion(){
   if(!validahora(hora,dia))
     return;
 
-  var hora_llegada = hora.substring(0,5);
-  var hora_salida = hora.substring(11,16);
+
+
   var parametros = "nombre="+nombre+"&telefono="+telefono+"&correo="+correo+"&dia="+dia+"&hora="+hora+"&personas="+personas;
   mandaReservacion(parametros);
 
