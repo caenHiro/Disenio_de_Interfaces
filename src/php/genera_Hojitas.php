@@ -6,7 +6,7 @@ $_fecha =$_POST["fecha"];
 
 
 
-    $conx = mysqli_connect('localhost', 'root', '308264113', 'Kfetal');
+    $conx = mysqli_connect('localhost', 'fciencias', 'elkfetal', 'Kfetal');
     if(!$conx){
 
         die("Error: " . mysqli_connect_error());

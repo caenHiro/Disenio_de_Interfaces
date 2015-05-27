@@ -12,7 +12,7 @@ $idUser=0;
 
 //echo $hora_llegada;
 
-$conx = mysqli_connect('localhost', 'root', '308264113', 'Kfetal');
+$conx = mysqli_connect('localhost', 'fciencias', 'elkfetal', 'Kfetal');
 
 
 if(!$conx){
@@ -78,7 +78,7 @@ $sql = "INSERT INTO  recervacion ( idUsuario , fecha , horaLlegada ,  numPer , n
 (".$idUser.",'" .$dia."','" .$hora_llegada."','".$n_personas."',1 , false);";
   mysqli_query($conx,$sql);
 
-  echo "Gracias por hacer un reservacion en el kfetal  ".$nombre;
+  echo "Gracias por hacer un reservacion en el Kfetal  ".$nombre;
 
 
 }

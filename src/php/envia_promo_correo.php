@@ -17,16 +17,16 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure = "ssl";
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 465;
-$mail->Username = "Correo del kfetal";
-$mail->Password = "contraseña del cafetal";
-$mail->From = "CorreoDelKfetal";
+$mail->Username = "elkfetal@gmail.com";
+$mail->Password = "mximartinez22";
+$mail->From = "elkfetal@gmail.com";
 $mail->FromName = "El Kfetal";
 $mail->Subject = "[Promocion del mes ]";
 $mail->MsgHTML($i);
 
 
 
-    $conx = mysqli_connect('localhost', 'root', '308264113', 'Kfetal');
+    $conx = mysqli_connect('localhost', 'fciencias', 'elkfetal', 'Kfetal');
     if(!$conx){
 
         die("Error: " . mysqli_connect_error());
