@@ -55,7 +55,9 @@ insert into cliente (nombre , correo ,telefono) values ('jp','jeanpierre@ciencia
 
 insert into cliente (nombre , correo ,telefono) values ('caen','caen@ciencias.unam.mx','5522669988');
 
-  insert into recervacion (idUsuario , fecha, horaLlegada , horaSalida, numPer , numMesa , estado) values (1,'12/12/12','10:56','12:00',4,'2',true);
+  insert into recervacion (idUsuario , fecha, horaLlegada ,  numPer , numMesa , estado) values (1,'12/12/12','10:30 am - 11:00 am', '1 - 4' ,2 , true);
 
-    insert into promocion (fechaInicio,fechaTermino, titulo, cuerpo) values ('12/01/12','12/12/12','Titulo !','Esta promocion ....................................................        bla bla bla =P ');
+  insert into recervacion (idUsuario , fecha, horaLlegada ,  numPer , numMesa , estado) values (2,'12/12/12','10:30 am - 11:00 am', '1 - 4' ,2 , true);
+
+    insert into promocion (fechaInicio,fechaTermino, titulo, cuerpo , estado) values ('12/01/12','12/12/12','Cafes gratis','En la compra de 200 pesos llevate un capuchino gratis en tu siguiente visita ' , true);
 

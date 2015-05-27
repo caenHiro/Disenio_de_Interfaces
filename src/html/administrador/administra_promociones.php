@@ -54,7 +54,7 @@ if(!isset($_SESSION["correo"])){
 		<h4> Agrega una promocion</h4>
 
 
-		<button  >
+		<button  id="formulario">
 		<a href="#openModal">Agregar</a>
 		</button>
 
@@ -80,7 +80,7 @@ if(!isset($_SESSION["correo"])){
 
 				<span>Titulo</span>
 				<br>
-				<input type="text" id="titulo" placeholder="Carlos Augusto" required >
+				<input type="text" id="titulo"  required >
 				<br>
 				<span>Cuerpo de la promocion</span>
 				<br>
