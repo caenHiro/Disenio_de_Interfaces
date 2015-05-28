@@ -23,9 +23,9 @@ if ($conn->connect_error) {
 $sql = "DELETE FROM promocion WHERE id='".$id."'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Record deleted successfully";
+    echo "La promocion fue eliminada ";
 } else {
-    echo "Error deleting record: " . $conn->error;
+    echo "Error al borrar : " . $conn->error;
 }
 
 $conn->close();

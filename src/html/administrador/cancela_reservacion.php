@@ -6,10 +6,6 @@ if(!isset($_SESSION["correo"])){
 
 
 
-
-
-
-
  ?>
  <!DOCTYPE html>
 <html lang="en">
@@ -106,8 +102,9 @@ if(!isset($_SESSION["correo"])){
 <br>
 
 
-
 <button onclick="envia_confirmacion_correo()" > Aceptar </button>
+
+
 <br>
 <br>
 <br>

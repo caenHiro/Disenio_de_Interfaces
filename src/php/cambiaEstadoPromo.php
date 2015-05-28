@@ -54,9 +54,9 @@ $sql = "UPDATE promocion SET estado=false WHERE id='".$id."'";
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Record updated successfully";
+    echo "El estado se cambio ";
 } else {
-    echo "Error updating record: " . $conn->error;
+    echo "Error al cambiar el estado : " . $conn->error;
 }
 
 

@@ -18,17 +18,16 @@
 
     	echo "<div class="."'recuadro1' >";
 	echo "<div class="."'contenido_recuadro' >";
-	echo "<span> fecha de Inicio: </span> ".$row['fechaInicio']."<br>";
-	echo "<span> fecha de Termino: </span> ".$row['fechaTermino']."<br>";
-	echo "<span> Titulo: </span> ".$row['titulo']."<br>";
-	echo "<span> La promocion es : </span> ".$row['cuerpo']."<br>";
-	echo "<span> El estado de la promocion es : </span> ".$row['estado']."<br>";
-	//echo "<button > Editar </button>";
+	echo "<span> <b>Fecha de Inicio :</b> </span> ".$row['fechaInicio']."<br>";
+	echo "<span> <b> Fecha de Termino : </b> </span> ".$row['fechaTermino']."<br>";
+	echo "<span><b> Titulo :</b> </span> ".$row['titulo']."<br>";
+	echo "<span><b> La promocion es : </b></span> ".$row['cuerpo']."<br>";
+	echo "<span> <b>El estado de la promocion es :</b> </span> ".$row['estado']."<br>";
 	echo "<button onclick= "."'elimina(".$row['id'].")'"."  > Eliminar </button>";
 	echo "<button onclick= "."'estado(".$row['id'].")'"."  > Cambia estado </button>";
 	echo "</div></div>";
 
-//echo $row['T'];
+
     }
 
 

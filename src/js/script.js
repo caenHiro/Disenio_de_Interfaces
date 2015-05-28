@@ -116,7 +116,7 @@ function validaTelefono(tel){
   tem = tem.replace('/','');
   tem = tem.replace('-','');
   if(tem.length==10||tem.length==13||tem.length==8||!isNaN(tem))
-  return false;
+  return true;
   else
   return true;
 }
@@ -208,8 +208,9 @@ function manda_promo_correo(parametros){
 
 
 function envia_confirmacion_correo(){
-  var correo = document.getElementById("correo").value;
+
   var cuerpo = CKEDITOR.instances['editor1'].getData();
+  var correo = document.getElementById("correo").innerHTML;
   var parametros = "correo="+correo+"&cuerpo="+cuerpo;//+"&receptor="+receptor;
   parametros = parametros.split("<p>&nbsp;</p>").join(" <br> ");
  manda_correo_personal(parametros);
@@ -291,7 +292,7 @@ function cancela(id){
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
 
-                window.location.href ="../../html/administrador/cancela_reservacion.php?" +encodeURIComponent(ajax.responseText);
+                window.location.href ="../../html/administrador/cancela_reservacion.php?"+encodeURIComponent(ajax.responseText);
 
 
               }
