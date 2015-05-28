@@ -1,24 +1,26 @@
 .principal{
 	width: 100%;
 	margin-top: 0px;
-	background-color: white;
+	background-color: none;
 }
 
 .contenido{	
 	margin-top: none;
-	background-color: white;
+	background-color: none;
 	display: inline-block;
+	margin-bottom: 2em;
 }
 
 
 #info{
 	float: left;
 	width: 60%;
+	margin-left: 1em;
 }
 
 #imagen{
 	float: left;
-	width: 38%;
+	width: 35%;
 	padding-left: 1%;
 }
 

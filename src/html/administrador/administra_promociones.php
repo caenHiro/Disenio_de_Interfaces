@@ -12,13 +12,13 @@ if(!isset($_SESSION["correo"])){
 	<link rel="stylesheet" href="../../css/formularioPromo.css">
 	<link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo_nav.css">
-<link rel="stylesheet" href="../../css/estilo_muestra_promocion.css">
-<script type='text/javascript' src='../../js/script.js'></script>
-     <script type='text/javascript' src='../../js/jquery.min.js'></script>
-    <script type='text/javascript' src='../../js/script1.js'></script>
-    <script type='text/javascript' src='../../js/llena_promocion.js'></script>
+	<link rel="stylesheet" href="../../css/estilo_muestra_promocion.css">
+	<script type='text/javascript' src='../../js/jquery-2.1.3.min.js'></script>
+    	<script type='text/javascript' src='../../js/script.js'></script>
+	<script type='text/javascript' src='../../js/script1.js'></script>
+
 </head>
-	<body>
+	<body onload="pidePromociones()">
 		<header>
 			<div id="menu">
 
@@ -37,7 +37,7 @@ if(!isset($_SESSION["correo"])){
 					<nav id='cssmenu'>
 						<ul>
 			            	<li><a class="boton_menu" href="reservaciones.php">Reservaciones</a></li>
-			           <li><a class="boton_menu" onclick="pidePromociones()">Promociones</a></li>
+			           <li><a class="boton_menu" href="administra_promociones.php">Promociones</a></li>
 			            	<li><a class="boton_menu" href="envia_correo.php">Envia promociones</a></li>
 						</ul>
 					</nav>
@@ -50,20 +50,22 @@ if(!isset($_SESSION["correo"])){
 
 		<h2>Promociones</h2>
 
-
-		<div id = "reservaciones1">
-
-		</div>
+		<div id = "reservaciones">
+		<h4> Agrega una promocion</h4>
 
 
+		<button  id="formulario"  onclick="location.href='#openModal'">
+		Agregar
+		</button>
 
-	</body>
+		<div id="openModal" class="modalDialog">
+		<div>
+		<a href="#close" title="Cerrar" class="close">X</a>
 
-</html>
+		<h2>Agrega una promocion</h2>
 
 
-<!--
-<div id = "form_reservacion_promo">
+		<div id = "form_reservacion_promo">
 			<div class ="contact_form">
 
 
@@ -78,7 +80,7 @@ if(!isset($_SESSION["correo"])){
 
 				<span>Titulo</span>
 				<br>
-				<input type="text" id="titulo" placeholder="Carlos Augusto" required >
+				<input type="text" id="titulo"  required >
 				<br>
 				<span>Cuerpo de la promocion</span>
 				<br>
@@ -96,4 +98,24 @@ if(!isset($_SESSION["correo"])){
 				</div>
 
 			</div>
--->
+</div>
+</div>
+
+		</div>
+
+		<div id = "reservaciones1">
+		<h4>Tus promociones son :</h4>
+
+		</div>
+
+
+<footer>
+        <span id="foot">
+            <p  id="footText" style="font-size: 10px">Realizado por la Facultad de Ciencias, UNAM<br>
+                Todos los derecho reservados.</p>
+        </span>
+    </footer>
+	</body>
+
+</html>
+

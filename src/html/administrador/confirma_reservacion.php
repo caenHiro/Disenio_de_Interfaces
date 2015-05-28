@@ -3,7 +3,15 @@ session_start();
 if(!isset($_SESSION["correo"])){
 	header('Location: ../inicio.html');
 }
+
+
+
+
+
+
+
  ?>
+
  <!DOCTYPE html>
 <html lang="en">
 <html>
@@ -17,11 +25,12 @@ if(!isset($_SESSION["correo"])){
 	<link rel="stylesheet" href="../../css/estilo1.css">
 	<link rel="stylesheet" href="../../css/confirma_reservacion.css">
     	<script type="text/javascript" src="../../ckeditor/ckeditor.js"></script>
+    	<script type='text/javascript' src='../../js/jquery.js'></script>
 	<script type='text/javascript' src='../../js/script.js'></script>
      	<script type='text/javascript' src='../../js/jquery.min.js'></script>
-  	  <script type='text/javascript' src='../../js/script1.js'></script>
-  	  <script type='text/javascript' src='../../js/jquery.js'></script>
-
+  	<script type='text/javascript' src='../../js/jquery-2.1.3.min.js'></script>
+    	<script type='text/javascript' src='../../js/script.js'></script>
+	<script type='text/javascript' src='../../js/script1.js'></script>
 	</head>
 	<body>
 
@@ -41,7 +50,7 @@ if(!isset($_SESSION["correo"])){
                 <nav id='cssmenu'>
                     <ul>
 			            	<li><a class="boton_menu" href="reservaciones.php">Reservaciones</a></li>
-			           <li><a class="boton_menu" onclick="pidePromociones()">Promociones</a></li>
+			           <li><a class="boton_menu" href="administra_promociones.php">Promociones</a></li>
 			            	<li><a class="boton_menu" href="envia_correo.php">Envia promociones</a></li>
                     </ul>
                 </nav>
@@ -107,8 +116,14 @@ if(!isset($_SESSION["correo"])){
 
 </div>
 
-
+<footer>
+        <span id="foot">
+            <p  id="footText" style="font-size: 10px">Realizado por la Facultad de Ciencias, UNAM<br>
+                Todos los derecho reservados.</p>
+        </span>
+    </footer>
 </body>
 
 <script src="../../js/script.js"></script>
 </html>
+

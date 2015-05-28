@@ -48,15 +48,18 @@
 				}
 
 				#girando span {
+
 					  position: absolute;
   						  width: 85%;
   						height: 400%;
   						border: 2px solid #fff;
-  					background: rgba(231, 149, 0, 1);
+  						/*color del cubo*/
+  					background: #ab7842;
   						font-weight: bold;
   					font-size: 14px;
   					text-align: center;
-  					text-shadow: #fff 2px 2px 1px;
+  					color: white;
+  					/*text-shadow: #fff 2px 2px 1px;*/
 				  	/*position: absolute;
 					width: 180px;
 					height: 180px;

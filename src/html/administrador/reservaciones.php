@@ -11,15 +11,16 @@ if(!isset($_SESSION["correo"])){
 	<meta charset="UTF-8">
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../../css/estilo_nav.css">
-    <link rel="stylesheet" href="../../css/estilo_html.css">
+   	 <link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo1.css">
 	<link rel="stylesheet" href="../../css/estilo_muestra_promocion.css">
-	<script src="../../js/script.js" type="text/javascript"></script>
 
-     <script type='text/javascript' src='../../js/jquery.min.js'></script>
-    <script type='text/javascript' src='../../js/script1.js'></script>
-    <script type='text/javascript' src='../../js/script.js'></script>
-    <script type='text/javascript' src='../../js/llena_promocion.js'></script>
+	<script type='text/javascript' src='../../js/jquery.js'></script>
+   	  <script type='text/javascript' src='../../js/jquery.min.js'></script>
+  	  <script type='text/javascript' src='../../js/jquery-2.1.3.min.js'></script>
+    	<script type='text/javascript' src='../../js/script.js'></script>
+	<script type='text/javascript' src='../../js/script1.js'></script>
+
 
 </head>
 	<body  onload="pideReservacionPendiente()" >
@@ -39,7 +40,7 @@ if(!isset($_SESSION["correo"])){
 					<nav id='cssmenu'>
 						<ul>
 			            	<li><a class="boton_menu" href="reservaciones.php">Reservaciones</a></li>
-			            	<li><a class="boton_menu" onclick="pidePromociones()">Promociones</a></li>
+			            	<li><a class="boton_menu" href="administra_promociones.php">Promociones</a></li>
 			            	<li><a class="boton_menu" href="envia_correo.php">Envia promociones</a></li>
 						</ul>
 					</nav>
@@ -48,15 +49,25 @@ if(!isset($_SESSION["correo"])){
 			</div>
 		</header>
 		<div id="busqueda">
-			<h2>Reservaciones por día </h2>
-			<input id="calendario_reservacion" type="date">
+			<h2 style="margin-left: 2%;">Reservaciones por día </h2>
+			<input id="calendario_reservacion" type="date" style="margin-left: 11%;">
 	        <button id="boton_mostrar" onclick="generaHojas()">Mostrar</button>
 	    </div>
                         <div id="error_busqueda"></div>
-		<div id = "reservaciones"></div>
+		<div id = "reservaciones">
+
+		</div>
+
+		<h4 style="margin-left: 2%;">Reservaciones pendientes</h4>
 		<div id = "reservaciones1">
 
 		</div>
+		<footer>
+        <span id="foot">
+            <p  id="footText" style="font-size: 10px">Realizado por la Facultad de Ciencias, UNAM<br>
+                Todos los derecho reservados.</p>
+        </span>
+    </footer>
 	</body>
 
 </html>

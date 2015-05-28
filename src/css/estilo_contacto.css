@@ -7,14 +7,22 @@ margin: 0 auto;
 	width: 40%;
 	display: inline-block;
 	vertical-align: top;
+	text-align: center;
 	
+}
+
+#horarios{
+	line-height: 1.5em;
+	font-size: 20px;
 }
 
 #mapa{
 	padding-top: 5%;
 	width:50%;
-	height:29em;
+	height:25em;
 	display: inline-block;
+	margin-bottom: 5em;
+	border: 3px solid #ec8b2e;
 	
 }
 #mapa > iframe{
@@ -23,9 +31,15 @@ margin: 0 auto;
 	
 }
 
-p,h1{
-	text-align: center;
+#foot{
+  width: 100%;
+  height: 100% ;
+  background-color: #d9222e;
+  color: white;
+  float: right;
+  text-align: right;
 }
+
 
 @media only screen and (max-width: 768px) {
 

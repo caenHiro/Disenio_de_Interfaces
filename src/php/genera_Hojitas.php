@@ -6,30 +6,29 @@ $_fecha =$_POST["fecha"];
 
 
 
-    $conx = mysqli_connect('localhost', 'root', '308264113', 'Kfetal');
+    $conx = mysqli_connect('localhost', 'fciencias', 'elkfetal', 'Kfetal');
     if(!$conx){
 
         die("Error: " . mysqli_connect_error());
     }
 
- $sql = "SELECT (recervacion.id) as T , nombre , correo , telefono , horaLlegada,
- horaSalida, numPer  FROM recervacion  join cliente on cliente.id = recervacion.idUsuario where  fecha ='" .$_fecha."'";//'" .$_POST["fecha"]."'";
+ $sql = "SELECT (recervacion.id) as T , nombre , correo , telefono , horaLlegada, numPer  FROM recervacion  join cliente on cliente.id = recervacion.idUsuario where  fecha ='" .$_fecha."'
+ 	and  estado = true";
     $query = mysqli_query($conx, $sql);
 
 
     while($row = mysqli_fetch_assoc($query)){
 
-    	echo "<div class="."'recuadro' >";
+    	echo "<div class="."'recuadro1' >";
 	echo "<div class="."'contenido_recuadro' >";
-	echo "<span> Nombre: </span> ".$row['nombre']."<br>";
-	echo "<span> Correo: </span> ".$row['correo']."<br>";
-	echo "<span> Telefono: </span> ".$row['telefono']."<br>";
-	echo "<span> Hora de llegada: </span> ".$row['horaLlegada']."<br>";
-	echo "<span> Hora de salida: </span> ".$row['horaSalida']."<br>";
-	echo "<span> Número de personas: </span> ".$row['numPer']."<br>";
-	echo "<button onclick= "."'confirma(".$row['T'].")'"."> Aceptar </button>";
-	echo "<button onclick= "."'cancela(".$row['T'].")'"." > Cancelar </button>";
+   	echo " <span id='nombre'> Nombre:  ".$row['nombre']."</span><br>";
+	echo " Correo: <span id='correo'>".$row['correo']."</span><br>";
+	echo " <span id='telefono'> Telefono:  ".$row['telefono']."</span><br>";
+	echo " <span id='hora_ll'> Hora de llegada:  ".$row['horaLlegada']."</span><br>";
+
+	echo " <span id='num_personas'> Número de personas:  ".$row['numPer']."</span><br>";
 	echo "</div></div>";
+
 
 //echo $row['T'];
     }

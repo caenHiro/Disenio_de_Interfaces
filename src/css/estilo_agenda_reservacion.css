@@ -1,11 +1,13 @@
 #mapa_mesas{
 
 	float: left;
+	border: 0.2em solid #ec8b2e;
 	/*border: 0.2em solid blue;*/
 	width: 75%;
 	height: 29em;
   background-size: 100% 100%;
   background-image: url('../images/fondoRestaurante.jpg');
+  margin-bottom: 1em;
 
 }
 
@@ -47,10 +49,9 @@ body {
 
 
 #form_reservacion div{
-
+	margin-top: 0px;
 	margin-left: 10%;
 }
-
 
 .contact_form h2, .contact_form label {
 	font-family: Georgia, Times, "Times New Roman", serif;
@@ -205,4 +206,9 @@ body {
 
   text-decoration: none;
   color: white;
+}
+
+input{
+margin-bottom: 1em;
+margin-top: 1px;
 }
