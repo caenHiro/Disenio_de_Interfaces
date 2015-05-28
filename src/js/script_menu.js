@@ -24,7 +24,7 @@ $(document).ready(function(){
 	$("#smoot").click(function(){
 		$(".lin").css({"background-color" : "#ec8b2e"});
 		$("#smoot").css({"background-color" : "#d9222e"});
-		$("#image_menu").attr("src", "../images/menu/smoothies/smoo02.jpg");
+		$("#image_menu").attr("src", "../images/menu/snacks/snack03.jpg");
 		$("#descripcion_menu").empty();
 		$("#descripcion_menu").html("<strong>Smoothie:</strong> Hielo escarchado con agua (para los intolerantes a la leche puede ser buena opción), esencias generalmente frutales o cremosas si se prefiere y una base neutra para darle consistencia espumosa. Selección exquisita para la época de calor.");
 	}),
@@ -38,28 +38,28 @@ $(document).ready(function(){
 	$("#malteada").click(function(){
 		$(".lin").css({"background-color" : "#ec8b2e"});
 		$("#malteada").css({"background-color" : "#d9222e"});
-		$("#image_menu").attr("src", "../images/menu/malteada/malte01.jpg");
+		$("#image_menu").attr("src", "../images/menu/cafe/cafe02.jpg");
 		$("#descripcion_menu").empty();
 		$("#descripcion_menu").html("<strong>Malteada:</strong> Leche combinada con esencias de sabores cremosos y licuada con hielo.");
 	}),
 	$("#chamo").click(function(){
 		$(".lin").css({"background-color" : "#ec8b2e"});
 		$("#chamo").css({"background-color" : "#d9222e"});
-		$("#image_menu").attr("src", "../images/menu/chamoyada/chamo02.jpg");
+		$("#image_menu").attr("src", "../images/menu/soda_italiana/soda_ita05.jpg");
 		$("#descripcion_menu").empty();
 		$("#descripcion_menu").html("<strong>Chamoyada:</strong> Hielo escarchado combinado con agua, chamoy en polvo y salsas de sabores (mango, tamarindo y fresa).");
 	}),
 	$("#infusi").click(function(){
 		$(".lin").css({"background-color" : "#ec8b2e"});
 		$("#infusi").css({"background-color" : "#d9222e"});
-		$("#image_menu").attr("src", "../images/menu/infusiones/infu02.jpg");
+		$("#image_menu").attr("src", "../images/menu/snacks/ensalada04.jpg");
 		$("#descripcion_menu").empty();
 		$("#descripcion_menu").html("<strong>Infusiones:</strong> Preparación con agua caliente a la que se le agrega frutas naturales deshidratadas de diferentes sabores exóticos y dulces al paladar para relajarse. Buena selección para los intolerantes a la cafeína.");
 	}),
 	$("#te_chai").click(function(){
 		$(".lin").css({"background-color" : "#ec8b2e"});
 		$("#te_chai").css({"background-color" : "#d9222e"});
-		$("#image_menu").attr("src", "../images/menu/te_chai/chai02.jpg");
+		$("#image_menu").attr("src", "../images/menu/snacks/snack03.jpg");
 		$("#descripcion_menu").empty();
 		$("#descripcion_menu").html("<strong>Té Chaí:</strong> Variedad.");
 	}),
