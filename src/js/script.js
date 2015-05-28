@@ -116,9 +116,9 @@ function validaTelefono(tel){
   tem = tem.replace('/','');
   tem = tem.replace('-','');
   if(tem.length==10||tem.length==13||tem.length==8||!isNaN(tem))
-  return true;
-  else
   return false;
+  else
+  return true;
 }
 
 function validaDia(dia){
