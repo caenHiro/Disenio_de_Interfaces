@@ -8,7 +8,7 @@
 .recuadro1 {
 
  /* border-radius: 1px 60px 1px;*/
-    background: #FDE5CE;
+    background: white;
 
   width: 30%;
   height: 12em;
@@ -19,7 +19,8 @@
 
 
 .contenido_recuadro{
-/*Estilo letra*/
+	height: 1.2em;
+	margin-left: 1em;
 }
 
 

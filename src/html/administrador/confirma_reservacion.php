@@ -116,7 +116,12 @@ if(!isset($_SESSION["correo"])){
 
 </div>
 
-
+<footer>
+        <span id="foot">
+            <p  id="footText" style="font-size: 10px">Realizado por la Facultad de Ciencias, UNAM<br>
+                Todos los derecho reservados.</p>
+        </span>
+    </footer>
 </body>
 
 <script src="../../js/script.js"></script>

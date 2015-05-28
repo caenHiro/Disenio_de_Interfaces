@@ -1,12 +1,12 @@
 .principal{
 	width: 100%;
 	margin-top: 0px;
-	background-color: white;
+	background-color: none;
 }
 
 .contenido{	
 	margin-top: none;
-	background-color: white;
+	background-color: none;
 	display: inline-block;
 	margin-bottom: 2em;
 }

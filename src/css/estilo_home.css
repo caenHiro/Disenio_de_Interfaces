@@ -58,7 +58,8 @@
   						font-weight: bold;
   					font-size: 14px;
   					text-align: center;
-  					text-shadow: #fff 2px 2px 1px;
+  					color: white;
+  					/*text-shadow: #fff 2px 2px 1px;*/
 				  	/*position: absolute;
 					width: 180px;
 					height: 180px;
