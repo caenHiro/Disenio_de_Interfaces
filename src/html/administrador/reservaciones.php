@@ -63,6 +63,8 @@ if(!isset($_SESSION["correo"])){
 		<div id = "reservaciones1">
 
 		</div>
+		<br>
+		<br>
 		<footer>
         <span id="foot">
             <p  id="footText" style="font-size: 10px">Realizado por la Facultad de Ciencias, UNAM<br>
