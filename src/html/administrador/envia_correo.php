@@ -86,7 +86,7 @@ if(!isset($_SESSION["correo"])){
 
 
 
-<button onclick="envia_promo_correo()" > Aceptar </button>
+<button onclick="envia_promo_correo() ;" > Aceptar </button>
 <br>
 <br>
 <br>

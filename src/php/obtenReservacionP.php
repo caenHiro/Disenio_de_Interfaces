@@ -26,6 +26,7 @@
     echo "<span><b> Número de personas :</b> </span> ".$row['numPer']."<br>";
     echo "<button onclick= "."'confirma(".$row['T'].")'"."> Aceptar </button>";
     echo "<button onclick= "."'cancela(".$row['T'].")'"." > Cancelar </button>";
+    echo "<button onclick= "."'eliminaReservacion(".$row['T'].")'"." > Elimina </button>";
     echo "</div></div>";
 
     }
