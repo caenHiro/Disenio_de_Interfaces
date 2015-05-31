@@ -115,10 +115,10 @@ function validaTelefono(tel){
   var tem = tel;
   tem = tem.replace('/','');
   tem = tem.replace('-','');
-  if(tem.length==10||tem.length==13||tem.length==8||!isNaN(tem))
-  return false;
-  else
+  if(tem.length==10||tem.length==13||tem.length==8||isNaN(tem))
   return true;
+  else
+  return false;
 }
 
 function validaDia(dia){
