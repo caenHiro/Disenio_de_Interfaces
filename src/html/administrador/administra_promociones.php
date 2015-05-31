@@ -31,7 +31,7 @@ if(!isset($_SESSION["correo"])){
 				<div id="navegacion">
 
 					<section id="espacio_sup">
-				<a onclick="cerrarSesion()" style = " float:right">Cerrar sesion</a>
+				<a onclick="cerrarSesion()" style=" float:right; background-color: #ec8b2e; height: 80%;" class="btnAdmin">|o|</a>
 
 					</section>
 					<nav id='cssmenu'>
@@ -107,6 +107,8 @@ if(!isset($_SESSION["correo"])){
 		<h4>Tus promociones son :</h4>
 
 		</div>
+<br>
+<br>
 
 
 <footer>

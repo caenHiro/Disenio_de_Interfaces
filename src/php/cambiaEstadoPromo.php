@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "308264113";
+$username = "fciencias";
+$password = "elkfetal";
 $dbname = "Kfetal";
 
 
@@ -10,7 +10,7 @@ $edo = "";
 
 
 
-    $conx = mysqli_connect('localhost' 'fciencias', 'elkfetal', 'Kfetal');
+    $conx = mysqli_connect('localhost' ,'fciencias', 'elkfetal', 'Kfetal');
     if(!$conx){
 
         die("Error: " . mysqli_connect_error());
@@ -54,9 +54,9 @@ $sql = "UPDATE promocion SET estado=false WHERE id='".$id."'";
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Record updated successfully";
+    echo "El estado se cambio ";
 } else {
-    echo "Error updating record: " . $conn->error;
+    echo "Error al cambiar el estado : " . $conn->error;
 }
 
 

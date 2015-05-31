@@ -44,7 +44,8 @@ if(!isset($_SESSION["correo"])){
             <div id="navegacion">
 
                 <section id="espacio_sup">
-	<a  onclick="cerrarSesion()" style = " float:right">Cerrar sesion</a>
+	<a onclick="cerrarSesion()" style = " float:right; background-color: #ec8b2e" class="btnAdmin">|o|</a>
+
 
                 </section>
                 <nav id='cssmenu'>
@@ -115,7 +116,8 @@ if(!isset($_SESSION["correo"])){
 <div id="data">
 
 </div>
-
+<br>
+<br>
 <footer>
         <span id="foot">
             <p  id="footText" style="font-size: 10px">Realizado por la Facultad de Ciencias, UNAM<br>

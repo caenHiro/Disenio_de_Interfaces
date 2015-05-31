@@ -12,16 +12,14 @@ if(!isset($_SESSION["correo"])){
 	<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" >
 	<title>El Kfetal®</title>
 	<link rel="stylesheet" href="../../css/estilo_nav.css">
-    <link rel="stylesheet" href="../../css/estilo_html.css">
+    	<link rel="stylesheet" href="../../css/estilo_html.css">
 	<link rel="stylesheet" href="../../css/estilo1.css">
 	<script type="text/javascript" src="../../ckeditor/ckeditor.js"></script>
-
-     <script type='text/javascript' src='../../js/jquery.min.js'></script>
-<script type='text/javascript' src='../../js/jquery-2.1.3.min.js'></script>
+	<script type='text/javascript' src='../../js/jquery.min.js'></script>
+	<script type='text/javascript' src='../../js/jquery-2.1.3.min.js'></script>
     	<script type='text/javascript' src='../../js/script.js'></script>
 	<script type='text/javascript' src='../../js/script1.js'></script>
-    <script type='text/javascript' src='../../js/llena_promocion.js'></script>
-	</head>
+    	</head>
 	<body>
 
   	<header>
@@ -34,7 +32,9 @@ if(!isset($_SESSION["correo"])){
             <div id="navegacion">
 
                 <section id="espacio_sup">
-	<a  onclick="cerrarSesion()" style = " float:right">Cerrar sesion</a>
+                <a onclick="cerrarSesion()" style = " float:right; background-color: #ec8b2e" class="btnAdmin">|o|</a>
+
+	<!--a  onclick="cerrarSesion()" style = " float:right">Cerrar sesion</a-->
 
                 </section>
                 <nav id='cssmenu'>
@@ -86,7 +86,7 @@ if(!isset($_SESSION["correo"])){
 
 
 
-<button onclick="envia_promo_correo()" > Aceptar </button>
+<button onclick="envia_promo_correo() ;" > Aceptar </button>
 <br>
 <br>
 <br>
@@ -94,6 +94,8 @@ if(!isset($_SESSION["correo"])){
 <div id="data">
 
 </div>
+<br>
+<br>
 <footer>
         <span id="foot">
             <p  id="footText" style="font-size: 10px">Realizado por la Facultad de Ciencias, UNAM<br>

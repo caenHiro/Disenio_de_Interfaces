@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 $sql = "INSERT INTO promocion ( fechaInicio ,fechaTermino ,titulo ,cuerpo , estado ) VALUES  ( ' " .$dia_inicio. " ' , ' " .$dia_termino. " ' , ' " .$titulo. " '  ,  ' " .$cuerpo. " '  , false )";
 
 if ($conn->query($sql) === TRUE) {
-    echo "La promocion fue agregada con exicto";
+    echo "La promocion fue agregada";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

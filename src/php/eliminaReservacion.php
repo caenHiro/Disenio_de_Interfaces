@@ -20,10 +20,10 @@ if ($conn->connect_error) {
 
 
 // sql to delete a record
-$sql = "DELETE FROM promocion WHERE id='".$id."'";
+$sql = "DELETE FROM recervacion WHERE id='".$id."'";
 
 if ($conn->query($sql) === TRUE) {
-    echo "La promocion fue eliminada ";
+    echo "La reservacion fue eliminada ";
 } else {
     echo "Error al borrar : " . $conn->error;
 }

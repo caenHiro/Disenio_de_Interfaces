@@ -198,7 +198,7 @@ function manda_promo_correo(parametros){
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
-
+              window.location.href ="../../html/administrador/envia_correo.php";
                 alert(ajax.responseText);
 
               }
@@ -208,8 +208,9 @@ function manda_promo_correo(parametros){
 
 
 function envia_confirmacion_correo(){
-  var correo = document.getElementById("correo").value;
+
   var cuerpo = CKEDITOR.instances['editor1'].getData();
+  var correo = document.getElementById("correo").innerHTML;
   var parametros = "correo="+correo+"&cuerpo="+cuerpo;//+"&receptor="+receptor;
   parametros = parametros.split("<p>&nbsp;</p>").join(" <br> ");
  manda_correo_personal(parametros);
@@ -221,6 +222,7 @@ function manda_correo_personal(parametros){
          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
+              window.location.href ="../../html/administrador/reservaciones.php";
                 alert(ajax.responseText);
               }
             }
@@ -291,7 +293,7 @@ function cancela(id){
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
 
-                window.location.href ="../../html/administrador/cancela_reservacion.php?" +encodeURIComponent(ajax.responseText);
+                window.location.href ="../../html/administrador/cancela_reservacion.php?"+encodeURIComponent(ajax.responseText);
 
 
               }
@@ -399,6 +401,22 @@ function elimina(id){
           ajax.onreadystatechange = function(){
              if(ajax.status == 200 && ajax.readyState == 4){
               window.location.href ="../../html/administrador/administra_promociones.php";
+              alert(ajax.responseText);
+              }
+            }
+  ajax.send("id="+id);
+
+}
+
+
+function eliminaReservacion(id){
+
+  var ajax = new XMLHttpRequest();
+         ajax.open("POST", "../../php/eliminaReservacion.php", true);
+          ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+          ajax.onreadystatechange = function(){
+             if(ajax.status == 200 && ajax.readyState == 4){
+              window.location.href ="../../html/administrador/reservaciones.php";
               alert(ajax.responseText);
               }
             }

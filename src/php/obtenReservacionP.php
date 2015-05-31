@@ -18,17 +18,17 @@
     while($row = mysqli_fetch_assoc($query)){
     	echo "<div class="."'recuadro1' >";
     echo "<div class="."'contenido_recuadro1' >";
-    echo "<span> Nombre: </span> ".$row['nombre']."<br>";
-    echo "<span> Correo: </span> ".$row['correo']."<br>";
-    echo "<span> Telefono: </span> ".$row['telefono']."<br>";
-    echo "<span> Fecha: </span> ".$row['fecha']."<br>";
-    echo "<span> Hora de llegada: </span> ".$row['horaLlegada']."<br>";
-    echo "<span> Número de personas: </span> ".$row['numPer']."<br>";
+    echo "<span><b> Nombre :</b> </span> ".$row['nombre']."<br>";
+    echo "<span><b> Correo :</b> </span> ".$row['correo']."<br>";
+    echo "<span><b> Telefono :</b> </span> ".$row['telefono']."<br>";
+    echo "<span> <b>Fecha : </b> </span> ".$row['fecha']."<br>";
+    echo "<span> <b> Hora de llegada :</b> </span> ".$row['horaLlegada']."<br>";
+    echo "<span><b> Número de personas :</b> </span> ".$row['numPer']."<br>";
     echo "<button onclick= "."'confirma(".$row['T'].")'"."> Aceptar </button>";
     echo "<button onclick= "."'cancela(".$row['T'].")'"." > Cancelar </button>";
+    echo "<button onclick= "."'eliminaReservacion(".$row['T'].")'"." > Elimina </button>";
     echo "</div></div>";
 
-//echo $row['T'];
     }
 
 
