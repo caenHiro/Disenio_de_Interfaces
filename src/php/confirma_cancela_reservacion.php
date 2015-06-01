@@ -3,38 +3,43 @@ $correo = $_POST["correo"];
 $cuerpo = $_POST["cuerpo"];
 
 
-function mandaCorreo($correo,$cuerpo){//, $j) {
-
-include("class.phpmailer.php");
-include("class.smtp.php");
-
-$mail = new PHPMailer();
-$mail->IsSMTP();
-$mail->SMTPAuth = true;
-$mail->SMTPSecure = "ssl";
-$mail->Host = "smtp.gmail.com";
-$mail->Port = 465;
-$mail->Username = "caen@ciencias.unam.mx";//"elkfetal@gmail.com";
-$mail->Password ="308264113"; //"mximartinez22";
-$mail->From = "elkfetal@gmail.com";
-$mail->FromName = "El Kfetal";
-$mail->Subject = "Confirmación de reservación.";
-$mail->MsgHTML($cuerpo);
-
-$mail->AddAddress($correo);//$_POST["receptor"]);
-$mail->IsHTML(true);
-
-if(!$mail->Send()) {
-
-  return "Error: " . $mail->ErrorInfo;
-} else {
-  return "Mensaje enviado correctamente";
-
+header("Content-Type: text/html; charset=UTF-8");
+$subject = "El kfetal";
+/*
+	Funciones para enviar correos
+*/
+function enviaCorreoUno($subject, $message, $headers){
+	$resultado = "Correo Enviado";
+if (!(@$correo=mail($_POST["correo"],$subject,$message,$headers))){
+		$resultado = "Error al enviar el correo";
+	}
+	return $resultado;
 }
 
-}
 
-echo mandaCorreo($correo,$cuerpo);
+header("Content-Type: text/html; charset=UTF-8");
+$subject = "El Kfetal";
+$message = 
+		'
+		<html> 
+		<head> 
+		<meta charset="utf-8">
+		<title>El kfetal</title> 
+		</head> 
+		<body> '.
+		
+		$_POST["cuerpo"].'
+		
+		 
+		</body> 
+		</html>';
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=utf-8\r\n"; 
+$headers .= "X-Mailer:PHP/".phpversion();
+
+
+
+echo enviaCorreoUno($subject, $cuerpo, $headers);
 
 
 ?>

@@ -1,28 +1,54 @@
 <?php
 
 
-$_CuerpoCorreo = $_POST["correo"];
-$_total = 0;
-$_contador = 0;
 
 
-function mandaCorreo($i){//, $j) {
 
-include("class.phpmailer.php");
-include("class.smtp.php");
 
-$mail = new PHPMailer();
-$mail->IsSMTP();
-$mail->SMTPAuth = true;
-$mail->SMTPSecure = "ssl";
-$mail->Host = "smtp.gmail.com";
-$mail->Port = 465;
-$mail->Username = "caen@ciencias.unam.mx";//"elkfetal@gmail.com";
-$mail->Password ="308264113"; //"mximartinez22";
-$mail->From = "elkfetal@gmail.com";
-$mail->FromName = "El Kfetal";
-$mail->Subject = "[Promocion del mes ]";
-$mail->MsgHTML($i);
+header("Content-Type: text/html; charset=UTF-8");
+$subject = "El kfetal";
+/*
+  Funciones para enviar correos
+*/
+function enviaCorreoUno($correo ,$subject, $message, $headers){
+  $resultado = "Correo Enviado";
+if (!(@$correo=mail($correo , $subject,$message,$headers))){
+    $resultado = "Error al enviar el correo";
+  }
+  return $resultado;
+}
+
+
+header("Content-Type: text/html; charset=UTF-8");
+$subject = "El Kfetal";
+$message =
+    '
+    <html>
+    <head>
+    <meta charset="utf-8">
+    <title>El kfetal</title>
+    </head>
+    <body> '.
+
+    $_POST["correo"].'
+
+
+    </body>
+    </html>';
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=utf-8\r\n";
+$headers .= "X-Mailer:PHP/".phpversion();
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -41,29 +67,11 @@ $mail->MsgHTML($i);
     while($row = mysqli_fetch_assoc($query) ){
 
 
-      $mail->AddAddress($row['correo']);
+      echo enviaCorreoUno($row['correo'],$subject, $message, $headers);
     }
 
   mysqli_close();
 
-
-
-$mail->IsHTML(true);
-
-if(!$mail->Send()) {
-
-  return "Error: " . $mail->ErrorInfo;
-} else {
-  return "Mensaje enviado correctamente";
-
-}
-
-}
-
-
-
-
-echo mandaCorreo ($_CuerpoCorreo );
 
 
 ?>
